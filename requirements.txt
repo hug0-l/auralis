@@ -3,18 +3,18 @@
 # Floors mirror pyproject.toml.  The versions on the comment line are the ones
 # the alpha was last verified against (Python 3.15.0).
 #
-#   numpy>=2.0        # tested with 2.5.4
-#   scipy>=1.14       # tested with 1.18.1
-#   fastapi>=0.115    # tested with 0.146.0
-#   uvicorn>=0.30     # tested with 0.54.0
-#   soundfile>=0.12   # tested with 0.14.0
-#   websockets>=13    # tested with 17.3
-#   pytest>=8         # tested with 9.1.1
+#   numpy>=2.4.6        # tested with 2.5.4
+#   scipy>=1.17.1       # tested with 1.18.1
+#   fastapi>=0.148.0    # tested with 0.146.0
+#   uvicorn>=0.54.0     # tested with 0.54.0
+#   soundfile>=0.14.0   # tested with 0.14.0
+#   websockets>=17.2    # tested with 17.3
+#   pytest>=9.1.1         # tested with 9.1.1
 
-numpy>=2.0
-scipy>=1.14
-fastapi>=0.115
-uvicorn>=0.30
-soundfile>=0.12
-websockets>=13
-pytest>=8
+numpy>=2.4.6
+scipy>=1.17.1
+fastapi>=0.148.0
+uvicorn>=0.54.0
+soundfile>=0.14.0
+websockets>=17.2
+pytest>=9.1.1
