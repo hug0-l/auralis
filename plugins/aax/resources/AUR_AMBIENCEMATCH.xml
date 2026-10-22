@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='AMBI' plugID='MONO'>
+			<Desc>Ambience Match</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='AMBI' plugID='M2ST'>
+			<Desc>Ambience Match</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='AMBI' plugID='STER'>
+			<Desc>Ambience Match</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+				<Page num='6'>
+					<ID>261</ID>
+				</Page>
+				<Page num='7'>
+					<ID>260</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>259</ID>
+				</Page>
+				<Page num='3'>
+					<ID>261</ID>
+					<ID>260</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Amb</name>
+			<name typ='PgTL' sz='4'>Ambi</name>
+			<name typ='PgTL' sz='5'>Ambie</name>
+			<name typ='PgTL' sz='6'>Ambien</name>
+			<name typ='PgTL' sz='7'>Ambienc</name>
+			<name typ='PgTL' sz='8'>Ambience</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Amb</name>
+			<name typ='PgTL' sz='4'>Ambi</name>
+			<name typ='PgTL' sz='5'>Ambie</name>
+			<name typ='PgTL' sz='6'>Ambien</name>
+			<name typ='PgTL' sz='7'>Ambienc</name>
+			<name typ='PgTL' sz='8'>Ambience</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Mov</name>
+			<name typ='PgTL' sz='4'>Move</name>
+			<name typ='PgTL' sz='5'>Movem</name>
+			<name typ='PgTL' sz='6'>Moveme</name>
+			<name typ='PgTL' sz='7'>Movemen</name>
+			<name typ='PgTL' sz='8'>Movement</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Ran</name>
+			<name typ='PgTL' sz='4'>Rand</name>
+			<name typ='PgTL' sz='5'>Rando</name>
+			<name typ='PgTL' sz='6'>Random</name>
+			<name typ='PgTL' sz='7'>Randomn</name>
+			<name typ='PgTL' sz='8'>Randomne</name>
+			<name typ='PgTL' sz='9'>Randomnes</name>
+			<name typ='PgTL' sz='10'>Randomness</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Amb</name>
+			<name typ='PgTL' sz='4'>Amb </name>
+			<name typ='PgTL' sz='5'>Amb O</name>
+			<name typ='PgTL' sz='6'>Amb On</name>
+			<name typ='PgTL' sz='7'>Amb Onl</name>
+			<name typ='PgTL' sz='8'>Amb Only</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Gai</name>
+			<name typ='PgTL' sz='4'>Gain</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

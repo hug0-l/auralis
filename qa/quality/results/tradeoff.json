@@ -1,0 +1,2006 @@
+{
+  "current": {
+    "tone_noise": {
+      "12": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -19.4704,
+        "band_reduction_db": 10.8748,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9944
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0155
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0155,
+        "tone_shift_max_wanted_db": 0.0155,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 16.678,
+        "snr_improvement_db": -0.2915,
+        "gain_var_db2": 1.7746,
+        "gain_std_db": 1.3321,
+        "gain_band_var_db2": 0.0489,
+        "gain_range_db": 2.3223,
+        "gain_mean_db": -11.3551,
+        "notes": ""
+      },
+      "14": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -21.3569,
+        "band_reduction_db": 12.7614,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9945
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0156
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0156,
+        "tone_shift_max_wanted_db": 0.0156,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 15.9472,
+        "snr_improvement_db": -1.0223,
+        "gain_var_db2": 2.7237,
+        "gain_std_db": 1.6504,
+        "gain_band_var_db2": 0.0818,
+        "gain_range_db": 3.0963,
+        "gain_mean_db": -13.0226,
+        "notes": ""
+      },
+      "16": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -23.1265,
+        "band_reduction_db": 14.531,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9948
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0159
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0159,
+        "tone_shift_max_wanted_db": 0.0159,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 15.2959,
+        "snr_improvement_db": -1.6736,
+        "gain_var_db2": 3.8636,
+        "gain_std_db": 1.9656,
+        "gain_band_var_db2": 0.1234,
+        "gain_range_db": 3.761,
+        "gain_mean_db": -14.5593,
+        "notes": ""
+      },
+      "18": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -24.7242,
+        "band_reduction_db": 16.1286,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9955
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0166
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0166,
+        "tone_shift_max_wanted_db": 0.0166,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 14.7238,
+        "snr_improvement_db": -2.2456,
+        "gain_var_db2": 5.0596,
+        "gain_std_db": 2.2494,
+        "gain_band_var_db2": 0.1681,
+        "gain_range_db": 4.3263,
+        "gain_mean_db": -15.9457,
+        "notes": ""
+      },
+      "20": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -26.1145,
+        "band_reduction_db": 17.519,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9961
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0172
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0172,
+        "tone_shift_max_wanted_db": 0.0172,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 14.2229,
+        "snr_improvement_db": -2.7466,
+        "gain_var_db2": 6.0624,
+        "gain_std_db": 2.4622,
+        "gain_band_var_db2": 0.2076,
+        "gain_range_db": 4.6546,
+        "gain_mean_db": -17.1768,
+        "notes": ""
+      },
+      "24": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -28.3775,
+        "band_reduction_db": 19.782,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9963
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0174
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0174,
+        "tone_shift_max_wanted_db": 0.0174,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 13.3956,
+        "snr_improvement_db": -3.5739,
+        "gain_var_db2": 6.9332,
+        "gain_std_db": 2.6331,
+        "gain_band_var_db2": 0.2452,
+        "gain_range_db": 4.9494,
+        "gain_mean_db": -19.3123,
+        "notes": ""
+      }
+    },
+    "tone_hum": {
+      "12": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -22.9628,
+        "band_reduction_db": 8.3053,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9893
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.01
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.01,
+        "tone_shift_max_wanted_db": 0.01,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 16.1964,
+        "snr_improvement_db": 7.101,
+        "gain_var_db2": 3.7436,
+        "gain_std_db": 1.9348,
+        "gain_band_var_db2": 0.1167,
+        "gain_range_db": 3.4406,
+        "gain_mean_db": -10.0855,
+        "notes": ""
+      },
+      "14": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -24.2166,
+        "band_reduction_db": 9.559,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9897
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0104
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.0104,
+        "tone_shift_max_wanted_db": 0.0104,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 15.4193,
+        "snr_improvement_db": 6.3239,
+        "gain_var_db2": 4.6756,
+        "gain_std_db": 2.1623,
+        "gain_band_var_db2": 0.153,
+        "gain_range_db": 3.8088,
+        "gain_mean_db": -11.3111,
+        "notes": ""
+      },
+      "16": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -25.331,
+        "band_reduction_db": 10.6735,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9906
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0112
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.0112,
+        "tone_shift_max_wanted_db": 0.0112,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 14.76,
+        "snr_improvement_db": 5.6646,
+        "gain_var_db2": 5.262,
+        "gain_std_db": 2.2939,
+        "gain_band_var_db2": 0.1767,
+        "gain_range_db": 4.033,
+        "gain_mean_db": -12.4136,
+        "notes": ""
+      },
+      "18": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -26.3676,
+        "band_reduction_db": 11.7101,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9915
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0122
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.0122,
+        "tone_shift_max_wanted_db": 0.0122,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 14.1974,
+        "snr_improvement_db": 5.102,
+        "gain_var_db2": 5.4972,
+        "gain_std_db": 2.3446,
+        "gain_band_var_db2": 0.1864,
+        "gain_range_db": 4.1004,
+        "gain_mean_db": -13.4437,
+        "notes": ""
+      },
+      "20": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -27.3716,
+        "band_reduction_db": 12.714,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9916
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0122
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.0122,
+        "tone_shift_max_wanted_db": 0.0122,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 13.7132,
+        "snr_improvement_db": 4.6178,
+        "gain_var_db2": 5.5451,
+        "gain_std_db": 2.3548,
+        "gain_band_var_db2": 0.1888,
+        "gain_range_db": 4.1063,
+        "gain_mean_db": -14.446,
+        "notes": ""
+      },
+      "24": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -29.3656,
+        "band_reduction_db": 14.7081,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9916
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0122
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.0122,
+        "tone_shift_max_wanted_db": 0.0122,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 12.9249,
+        "snr_improvement_db": 3.8295,
+        "gain_var_db2": 5.5483,
+        "gain_std_db": 2.3555,
+        "gain_band_var_db2": 0.1887,
+        "gain_range_db": 4.1032,
+        "gain_mean_db": -16.4398,
+        "notes": ""
+      }
+    },
+    "voice_hiss": {
+      "12": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -37.1426,
+        "band_reduction_db": 32.0021,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.3936,
+          "240Hz": -30.4472,
+          "360Hz": -54.3199,
+          "480Hz": -46.6888
+        },
+        "tone_shift_db": {
+          "120Hz": -0.1617,
+          "240Hz": -0.259,
+          "360Hz": -9.9051,
+          "480Hz": -7.6368
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 9.9051,
+        "tone_shift_max_wanted_db": 7.6368,
+        "snr_in_db": 7.4482,
+        "snr_out_db": -1.514,
+        "snr_improvement_db": -8.9622,
+        "gain_var_db2": 0.559,
+        "gain_std_db": 0.7477,
+        "gain_band_var_db2": 0.0118,
+        "gain_range_db": 1.3995,
+        "gain_mean_db": -11.7908,
+        "notes": ""
+      },
+      "14": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -39.1284,
+        "band_reduction_db": 33.988,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.4249,
+          "240Hz": -30.4978,
+          "360Hz": -55.2318,
+          "480Hz": -47.4549
+        },
+        "tone_shift_db": {
+          "120Hz": -0.193,
+          "240Hz": -0.3096,
+          "360Hz": -10.817,
+          "480Hz": -8.4029
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 10.817,
+        "tone_shift_max_wanted_db": 8.4029,
+        "snr_in_db": 7.4482,
+        "snr_out_db": -0.6379,
+        "snr_improvement_db": -8.0861,
+        "gain_var_db2": 0.936,
+        "gain_std_db": 0.9675,
+        "gain_band_var_db2": 0.0219,
+        "gain_range_db": 2.0732,
+        "gain_mean_db": -13.6821,
+        "notes": ""
+      },
+      "16": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -41.1032,
+        "band_reduction_db": 35.9628,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.456,
+          "240Hz": -30.5463,
+          "360Hz": -56.098,
+          "480Hz": -48.218
+        },
+        "tone_shift_db": {
+          "120Hz": -0.2241,
+          "240Hz": -0.3581,
+          "360Hz": -11.6832,
+          "480Hz": -9.166
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 11.6832,
+        "tone_shift_max_wanted_db": 9.166,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 0.2182,
+        "snr_improvement_db": -7.23,
+        "gain_var_db2": 1.495,
+        "gain_std_db": 1.2227,
+        "gain_band_var_db2": 0.0387,
+        "gain_range_db": 2.8749,
+        "gain_mean_db": -15.5193,
+        "notes": ""
+      },
+      "18": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -43.05,
+        "band_reduction_db": 37.9096,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.487,
+          "240Hz": -30.5934,
+          "360Hz": -57.0317,
+          "480Hz": -48.9808
+        },
+        "tone_shift_db": {
+          "120Hz": -0.2551,
+          "240Hz": -0.4052,
+          "360Hz": -12.6169,
+          "480Hz": -9.9288
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 12.6169,
+        "tone_shift_max_wanted_db": 9.9288,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 1.0495,
+        "snr_improvement_db": -6.3987,
+        "gain_var_db2": 2.278,
+        "gain_std_db": 1.5093,
+        "gain_band_var_db2": 0.0643,
+        "gain_range_db": 3.6749,
+        "gain_mean_db": -17.2777,
+        "notes": ""
+      },
+      "20": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -44.9363,
+        "band_reduction_db": 39.7959,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.5179,
+          "240Hz": -30.6399,
+          "360Hz": -57.8966,
+          "480Hz": -49.7548
+        },
+        "tone_shift_db": {
+          "120Hz": -0.286,
+          "240Hz": -0.4517,
+          "360Hz": -13.4818,
+          "480Hz": -10.7028
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 13.4818,
+        "tone_shift_max_wanted_db": 10.7028,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 1.8506,
+        "snr_improvement_db": -5.5976,
+        "gain_var_db2": 3.293,
+        "gain_std_db": 1.8147,
+        "gain_band_var_db2": 0.0992,
+        "gain_range_db": 4.4263,
+        "gain_mean_db": -18.9295,
+        "notes": ""
+      },
+      "24": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -48.3054,
+        "band_reduction_db": 43.165,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.5382,
+          "240Hz": -30.7002,
+          "360Hz": -59.4877,
+          "480Hz": -51.4083
+        },
+        "tone_shift_db": {
+          "120Hz": -0.3062,
+          "240Hz": -0.512,
+          "360Hz": -15.0729,
+          "480Hz": -12.3563
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 15.0729,
+        "tone_shift_max_wanted_db": 12.3563,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 3.3394,
+        "snr_improvement_db": -4.1088,
+        "gain_var_db2": 5.6085,
+        "gain_std_db": 2.3682,
+        "gain_band_var_db2": 0.1841,
+        "gain_range_db": 5.5377,
+        "gain_mean_db": -21.8024,
+        "notes": ""
+      }
+    },
+    "music_mixture": {
+      "12": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -22.9655,
+        "band_reduction_db": 9.9203,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.2895,
+          "277Hz": -20.7699,
+          "330Hz": -19.4624,
+          "440Hz": -22.4601,
+          "660Hz": -43.4991
+        },
+        "tone_shift_db": {
+          "220Hz": -0.3288,
+          "277Hz": -0.3246,
+          "330Hz": -0.34,
+          "440Hz": -0.4521,
+          "660Hz": -6.3159
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 6.3159,
+        "tone_shift_max_wanted_db": 6.3159,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 17.2073,
+        "snr_improvement_db": -4.8578,
+        "gain_var_db2": 1.3878,
+        "gain_std_db": 1.178,
+        "gain_band_var_db2": 0.0308,
+        "gain_range_db": 0.9318,
+        "gain_mean_db": -11.4901,
+        "notes": ""
+      },
+      "14": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -24.8606,
+        "band_reduction_db": 11.8154,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.3163,
+          "277Hz": -20.8182,
+          "330Hz": -19.4724,
+          "440Hz": -22.5041,
+          "660Hz": -44.3771
+        },
+        "tone_shift_db": {
+          "220Hz": -0.3556,
+          "277Hz": -0.3729,
+          "330Hz": -0.35,
+          "440Hz": -0.4961,
+          "660Hz": -7.1939
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 7.1939,
+        "tone_shift_max_wanted_db": 7.1939,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 16.3717,
+        "snr_improvement_db": -5.6934,
+        "gain_var_db2": 2.1607,
+        "gain_std_db": 1.4699,
+        "gain_band_var_db2": 0.0507,
+        "gain_range_db": 1.2398,
+        "gain_mean_db": -13.2241,
+        "notes": ""
+      },
+      "16": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -26.6419,
+        "band_reduction_db": 13.5967,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.3664,
+          "277Hz": -20.8223,
+          "330Hz": -19.547,
+          "440Hz": -22.5652,
+          "660Hz": -45.2385
+        },
+        "tone_shift_db": {
+          "220Hz": -0.4058,
+          "277Hz": -0.377,
+          "330Hz": -0.4246,
+          "440Hz": -0.5572,
+          "660Hz": -8.0553
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 8.0553,
+        "tone_shift_max_wanted_db": 8.0553,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 15.6516,
+        "snr_improvement_db": -6.4135,
+        "gain_var_db2": 3.1206,
+        "gain_std_db": 1.7665,
+        "gain_band_var_db2": 0.0781,
+        "gain_range_db": 1.5866,
+        "gain_mean_db": -14.8498,
+        "notes": ""
+      },
+      "18": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -28.2599,
+        "band_reduction_db": 15.2147,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.393,
+          "277Hz": -20.8264,
+          "330Hz": -19.5839,
+          "440Hz": -22.6064,
+          "660Hz": -46.0764
+        },
+        "tone_shift_db": {
+          "220Hz": -0.4324,
+          "277Hz": -0.3811,
+          "330Hz": -0.4616,
+          "440Hz": -0.5984,
+          "660Hz": -8.8932
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 8.8932,
+        "tone_shift_max_wanted_db": 8.8932,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 15.0283,
+        "snr_improvement_db": -7.0368,
+        "gain_var_db2": 4.168,
+        "gain_std_db": 2.0416,
+        "gain_band_var_db2": 0.1102,
+        "gain_range_db": 1.9502,
+        "gain_mean_db": -16.346,
+        "notes": ""
+      },
+      "20": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -29.6912,
+        "band_reduction_db": 16.646,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.449,
+          "277Hz": -20.9248,
+          "330Hz": -19.5996,
+          "440Hz": -22.6457,
+          "660Hz": -46.8911
+        },
+        "tone_shift_db": {
+          "220Hz": -0.4883,
+          "277Hz": -0.4795,
+          "330Hz": -0.4773,
+          "440Hz": -0.6376,
+          "660Hz": -9.7079
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 9.7079,
+        "tone_shift_max_wanted_db": 9.7079,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 14.485,
+        "snr_improvement_db": -7.5801,
+        "gain_var_db2": 5.1383,
+        "gain_std_db": 2.2668,
+        "gain_band_var_db2": 0.1421,
+        "gain_range_db": 2.2111,
+        "gain_mean_db": -17.7014,
+        "notes": ""
+      },
+      "24": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -32.0866,
+        "band_reduction_db": 19.0415,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.514,
+          "277Hz": -20.949,
+          "330Hz": -19.6721,
+          "440Hz": -22.7629,
+          "660Hz": -48.4112
+        },
+        "tone_shift_db": {
+          "220Hz": -0.5534,
+          "277Hz": -0.5037,
+          "330Hz": -0.5498,
+          "440Hz": -0.7549,
+          "660Hz": -11.228
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 11.228,
+        "tone_shift_max_wanted_db": 11.228,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 13.5838,
+        "snr_improvement_db": -8.4813,
+        "gain_var_db2": 6.4658,
+        "gain_std_db": 2.5428,
+        "gain_band_var_db2": 0.1916,
+        "gain_range_db": 2.5281,
+        "gain_mean_db": -20.0624,
+        "notes": ""
+      }
+    },
+    "bed_only": {
+      "12": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -14.0882,
+        "band_reduction_db": 11.1597,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 1.1199,
+        "gain_std_db": 1.0583,
+        "gain_band_var_db2": 0.0104,
+        "gain_range_db": 1.6562,
+        "gain_mean_db": -11.584,
+        "notes": ""
+      },
+      "14": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -16.0147,
+        "band_reduction_db": 13.0863,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 1.7292,
+        "gain_std_db": 1.315,
+        "gain_band_var_db2": 0.017,
+        "gain_range_db": 2.1206,
+        "gain_mean_db": -13.3713,
+        "notes": ""
+      },
+      "16": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -17.8683,
+        "band_reduction_db": 14.9399,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 2.4715,
+        "gain_std_db": 1.5721,
+        "gain_band_var_db2": 0.0254,
+        "gain_range_db": 2.5734,
+        "gain_mean_db": -15.074,
+        "notes": ""
+      },
+      "18": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -19.6088,
+        "band_reduction_db": 16.6803,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 3.2677,
+        "gain_std_db": 1.8077,
+        "gain_band_var_db2": 0.0347,
+        "gain_range_db": 2.9517,
+        "gain_mean_db": -16.6765,
+        "notes": ""
+      },
+      "20": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -21.2026,
+        "band_reduction_db": 18.2741,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 4.0076,
+        "gain_std_db": 2.0019,
+        "gain_band_var_db2": 0.0437,
+        "gain_range_db": 3.2533,
+        "gain_mean_db": -18.1738,
+        "notes": ""
+      },
+      "24": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -23.9475,
+        "band_reduction_db": 21.0191,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 5.1688,
+        "gain_std_db": 2.2735,
+        "gain_band_var_db2": 0.0603,
+        "gain_range_db": 3.7896,
+        "gain_mean_db": -20.896,
+        "notes": ""
+      }
+    }
+  },
+  "recommended": {
+    "tone_noise": {
+      "12": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -19.6056,
+        "band_reduction_db": 11.01,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9945
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0156
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0156,
+        "tone_shift_max_wanted_db": 0.0156,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 15.858,
+        "snr_improvement_db": -1.1115,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -12.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "14": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -21.6056,
+        "band_reduction_db": 13.01,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9949
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.016
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.016,
+        "tone_shift_max_wanted_db": 0.016,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 15.1599,
+        "snr_improvement_db": -1.8095,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -14.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "16": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -23.6056,
+        "band_reduction_db": 15.01,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9957
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0168
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0168,
+        "tone_shift_max_wanted_db": 0.0168,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 14.5459,
+        "snr_improvement_db": -2.4235,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -16.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "18": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -25.6056,
+        "band_reduction_db": 17.01,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9962
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0172
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0172,
+        "tone_shift_max_wanted_db": 0.0172,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 14.0108,
+        "snr_improvement_db": -2.9587,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -18.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "20": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -27.6056,
+        "band_reduction_db": 19.01,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9963
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.0173
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.0173,
+        "tone_shift_max_wanted_db": 0.0173,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 13.5443,
+        "snr_improvement_db": -3.4252,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -20.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "24": {
+        "name": "tone_noise",
+        "band_before_db": -8.5956,
+        "band_after_db": -31.6056,
+        "band_reduction_db": 23.01,
+        "tone_before_db": {
+          "1000Hz": -13.9789
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9969
+        },
+        "tone_shift_db": {
+          "1000Hz": -0.018
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "tone_shift_max_db": 0.018,
+        "tone_shift_max_wanted_db": 0.018,
+        "snr_in_db": 16.9695,
+        "snr_out_db": 12.7767,
+        "snr_improvement_db": -4.1928,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -24.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      }
+    },
+    "tone_hum": {
+      "12": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -24.0546,
+        "band_reduction_db": 9.397,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9244
+        },
+        "tone_shift_db": {
+          "1000Hz": 0.055
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.055,
+        "tone_shift_max_wanted_db": 0.055,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 9.7655,
+        "snr_improvement_db": 0.6701,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -12.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "14": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -26.0546,
+        "band_reduction_db": 11.397,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9244
+        },
+        "tone_shift_db": {
+          "1000Hz": 0.055
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.055,
+        "tone_shift_max_wanted_db": 0.055,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 9.7175,
+        "snr_improvement_db": 0.6221,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -14.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "16": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -28.0546,
+        "band_reduction_db": 13.397,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9243
+        },
+        "tone_shift_db": {
+          "1000Hz": 0.055
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.055,
+        "tone_shift_max_wanted_db": 0.055,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 9.6492,
+        "snr_improvement_db": 0.5538,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -16.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "18": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -30.0546,
+        "band_reduction_db": 15.397,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9243
+        },
+        "tone_shift_db": {
+          "1000Hz": 0.055
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.055,
+        "tone_shift_max_wanted_db": 0.055,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 9.5683,
+        "snr_improvement_db": 0.4729,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -18.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "20": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -32.0546,
+        "band_reduction_db": 17.397,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9243
+        },
+        "tone_shift_db": {
+          "1000Hz": 0.055
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.055,
+        "tone_shift_max_wanted_db": 0.055,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 9.4801,
+        "snr_improvement_db": 0.3847,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -20.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "24": {
+        "name": "tone_hum",
+        "band_before_db": -14.6576,
+        "band_after_db": -36.0546,
+        "band_reduction_db": 21.3971,
+        "tone_before_db": {
+          "1000Hz": -13.9794
+        },
+        "tone_after_db": {
+          "1000Hz": -13.9245
+        },
+        "tone_shift_db": {
+          "1000Hz": 0.0548
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "tone_shift_max_db": 0.0548,
+        "tone_shift_max_wanted_db": 0.0548,
+        "snr_in_db": 9.0954,
+        "snr_out_db": 9.295,
+        "snr_improvement_db": 0.1996,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -24.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      }
+    },
+    "voice_hiss": {
+      "12": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -37.0039,
+        "band_reduction_db": 31.8634,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.6417,
+          "240Hz": -31.3984,
+          "360Hz": -56.6422,
+          "480Hz": -44.8885
+        },
+        "tone_shift_db": {
+          "120Hz": -0.4098,
+          "240Hz": -1.2102,
+          "360Hz": -12.2274,
+          "480Hz": -5.8365
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 12.2274,
+        "tone_shift_max_wanted_db": 5.8365,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 4.0098,
+        "snr_improvement_db": -3.4384,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -12.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "14": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -39.0039,
+        "band_reduction_db": 33.8634,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.6576,
+          "240Hz": -31.5244,
+          "360Hz": -57.7882,
+          "480Hz": -45.9004
+        },
+        "tone_shift_db": {
+          "120Hz": -0.4257,
+          "240Hz": -1.3362,
+          "360Hz": -13.3734,
+          "480Hz": -6.8484
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 13.3734,
+        "tone_shift_max_wanted_db": 6.8484,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 5.4855,
+        "snr_improvement_db": -1.9627,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -14.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "16": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -41.0039,
+        "band_reduction_db": 35.8634,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.673,
+          "240Hz": -31.6461,
+          "360Hz": -58.7403,
+          "480Hz": -46.7812
+        },
+        "tone_shift_db": {
+          "120Hz": -0.4411,
+          "240Hz": -1.4579,
+          "360Hz": -14.3256,
+          "480Hz": -7.7292
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 14.3256,
+        "tone_shift_max_wanted_db": 7.7292,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 6.7638,
+        "snr_improvement_db": -0.6844,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -16.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "18": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -43.0039,
+        "band_reduction_db": 37.8634,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.688,
+          "240Hz": -31.7639,
+          "360Hz": -59.8576,
+          "480Hz": -47.6621
+        },
+        "tone_shift_db": {
+          "120Hz": -0.4561,
+          "240Hz": -1.5757,
+          "360Hz": -15.4428,
+          "480Hz": -8.6101
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 15.4428,
+        "tone_shift_max_wanted_db": 8.6101,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 7.804,
+        "snr_improvement_db": 0.3558,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -18.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "20": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -45.0039,
+        "band_reduction_db": 39.8634,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.7026,
+          "240Hz": -31.8082,
+          "360Hz": -61.0058,
+          "480Hz": -48.5672
+        },
+        "tone_shift_db": {
+          "120Hz": -0.4707,
+          "240Hz": -1.62,
+          "360Hz": -16.591,
+          "480Hz": -9.5152
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 16.591,
+        "tone_shift_max_wanted_db": 9.5152,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 8.5897,
+        "snr_improvement_db": 1.1415,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -20.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "24": {
+        "name": "voice_hiss",
+        "band_before_db": -5.1404,
+        "band_after_db": -49.0039,
+        "band_reduction_db": 43.8634,
+        "tone_before_db": {
+          "120Hz": -25.2319,
+          "240Hz": -30.1882,
+          "360Hz": -44.4148,
+          "480Hz": -39.052
+        },
+        "tone_after_db": {
+          "120Hz": -25.7728,
+          "240Hz": -32.0191,
+          "360Hz": -62.4392,
+          "480Hz": -50.3513
+        },
+        "tone_shift_db": {
+          "120Hz": -0.5409,
+          "240Hz": -1.8309,
+          "360Hz": -18.0244,
+          "480Hz": -11.2993
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "tone_shift_max_db": 18.0244,
+        "tone_shift_max_wanted_db": 11.2993,
+        "snr_in_db": 7.4482,
+        "snr_out_db": 9.4769,
+        "snr_improvement_db": 2.0287,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -24.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      }
+    },
+    "music_mixture": {
+      "12": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -23.0037,
+        "band_reduction_db": 9.9585,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.3174,
+          "277Hz": -20.818,
+          "330Hz": -19.4746,
+          "440Hz": -22.4356,
+          "660Hz": -39.5023
+        },
+        "tone_shift_db": {
+          "220Hz": -0.3567,
+          "277Hz": -0.3727,
+          "330Hz": -0.3522,
+          "440Hz": -0.4275,
+          "660Hz": -2.3192
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 2.3192,
+        "tone_shift_max_wanted_db": 2.3192,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 16.4478,
+        "snr_improvement_db": -5.6173,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -12.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "14": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -25.0037,
+        "band_reduction_db": 11.9585,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.3685,
+          "277Hz": -20.8227,
+          "330Hz": -19.5623,
+          "440Hz": -22.478,
+          "660Hz": -39.9114
+        },
+        "tone_shift_db": {
+          "220Hz": -0.4079,
+          "277Hz": -0.3774,
+          "330Hz": -0.44,
+          "440Hz": -0.47,
+          "660Hz": -2.7282
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 2.7282,
+        "tone_shift_max_wanted_db": 2.7282,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 15.6856,
+        "snr_improvement_db": -6.3795,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -14.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "16": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -27.0037,
+        "band_reduction_db": 13.9585,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.3954,
+          "277Hz": -20.8274,
+          "330Hz": -19.5875,
+          "440Hz": -22.5199,
+          "660Hz": -40.3167
+        },
+        "tone_shift_db": {
+          "220Hz": -0.4347,
+          "277Hz": -0.3821,
+          "330Hz": -0.4652,
+          "440Hz": -0.5119,
+          "660Hz": -3.1336
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 3.1336,
+        "tone_shift_max_wanted_db": 3.1336,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 15.0233,
+        "snr_improvement_db": -7.0418,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -16.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "18": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -29.0037,
+        "band_reduction_db": 15.9585,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.4851,
+          "277Hz": -20.9423,
+          "330Hz": -19.672,
+          "440Hz": -22.6004,
+          "660Hz": -40.7186
+        },
+        "tone_shift_db": {
+          "220Hz": -0.5244,
+          "277Hz": -0.497,
+          "330Hz": -0.5496,
+          "440Hz": -0.5924,
+          "660Hz": -3.5354
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 3.5354,
+        "tone_shift_max_wanted_db": 3.5354,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 14.4469,
+        "snr_improvement_db": -7.6182,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -18.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "20": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -31.0037,
+        "band_reduction_db": 17.9585,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.5158,
+          "277Hz": -20.947,
+          "330Hz": -19.672,
+          "440Hz": -22.6018,
+          "660Hz": -41.5802
+        },
+        "tone_shift_db": {
+          "220Hz": -0.5552,
+          "277Hz": -0.5017,
+          "330Hz": -0.5497,
+          "440Hz": -0.5938,
+          "660Hz": -4.397
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 4.397,
+        "tone_shift_max_wanted_db": 4.397,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 13.9422,
+        "snr_improvement_db": -8.1229,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -20.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "24": {
+        "name": "music_mixture",
+        "band_before_db": -13.0452,
+        "band_after_db": -35.0037,
+        "band_reduction_db": 21.9585,
+        "tone_before_db": {
+          "220Hz": -17.9607,
+          "277Hz": -20.4453,
+          "330Hz": -19.1223,
+          "440Hz": -22.008,
+          "660Hz": -37.1832
+        },
+        "tone_after_db": {
+          "220Hz": -18.6272,
+          "277Hz": -21.103,
+          "330Hz": -19.7391,
+          "440Hz": -22.6752,
+          "660Hz": -42.7121
+        },
+        "tone_shift_db": {
+          "220Hz": -0.6665,
+          "277Hz": -0.6577,
+          "330Hz": -0.6167,
+          "440Hz": -0.6672,
+          "660Hz": -5.5289
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "tone_shift_max_db": 5.5289,
+        "tone_shift_max_wanted_db": 5.5289,
+        "snr_in_db": 22.0651,
+        "snr_out_db": 13.1015,
+        "snr_improvement_db": -8.9636,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -24.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      }
+    },
+    "bed_only": {
+      "12": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -14.1681,
+        "band_reduction_db": 11.2397,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -12.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "14": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -16.1681,
+        "band_reduction_db": 13.2397,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -14.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "16": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -18.1681,
+        "band_reduction_db": 15.2397,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -16.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "18": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -20.1681,
+        "band_reduction_db": 17.2397,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -18.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "20": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -22.1681,
+        "band_reduction_db": 19.2397,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -20.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      },
+      "24": {
+        "name": "bed_only",
+        "band_before_db": -2.9284,
+        "band_after_db": -26.1681,
+        "band_reduction_db": 23.2397,
+        "tone_before_db": {},
+        "tone_after_db": {},
+        "tone_shift_db": {},
+        "tone_snr_db": {},
+        "tone_shift_max_db": 0.0,
+        "tone_shift_max_wanted_db": 0.0,
+        "snr_in_db": -315.8285,
+        "snr_out_db": 0.0,
+        "snr_improvement_db": 315.8285,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_band_var_db2": 0.0,
+        "gain_range_db": 0.0,
+        "gain_mean_db": -24.0,
+        "notes": "tonal-ref=learned mask-ref=learned temporal mask-guard synth-fix"
+      }
+    }
+  }
+}

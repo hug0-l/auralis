@@ -1,0 +1,66 @@
+﻿# ---- python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+plugins/abi/build*/
+tools/msvc.local.bat
+tools/msvc.local.sh
+dist/
+
+# ---- third party SDK (licensed elsewhere; fetch it, do not commit it) ------
+vendor/
+
+# ---- compiler scratch at the tree root ------------------------------------
+*.obj
+*.o
+*.lib
+*.exp
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ---- virtual environments -------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ---- test / lint / type caches -------------------------------------------
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+
+# ---- runtime scratch (uploads, renders) -----------------------------------
+var/*
+!var/.gitkeep
+
+# ---- node (frontend tooling, if ever added) ------------------------------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# ---- editors / OS ---------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- local secrets / env --------------------------------------------------
+.env
+.env.*
+!.env.example
+

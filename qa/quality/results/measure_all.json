@@ -1,0 +1,2015 @@
+{
+  "modules": {
+    "AUR_AMBIENCEMATCH": {
+      "tone_noise": {
+        "module": "AUR_AMBIENCEMATCH",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -2.9219,
+        "kept_db": 0.003,
+        "gain_var_db2": 1.41709,
+        "gain_std_db": 1.1904,
+        "gain_var_smooth_db2": 1.285478,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -14.0456,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -2.9077,
+        "tone_shift_db": {
+          "1000Hz": 0.003
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "6612a3b109a5ca73068ced98fd14c4e1e9b4914641c883b43ab5c5eb6eca3585",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_AZIMUTH": {
+      "tone_noise": {
+        "module": "AUR_AZIMUTH",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "1756a2c1baa7e60118b7867202d957d5bc06cbe510720037c0df8464acb8b6d2",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_BREATH": {
+      "tone_noise": {
+        "module": "AUR_BREATH",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 3.1644,
+        "kept_db": 3.1008,
+        "gain_var_db2": 0.014594,
+        "gain_std_db": 0.1208,
+        "gain_var_smooth_db2": 0.007927,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -21.6451,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -0.4835,
+        "tone_shift_db": {
+          "1000Hz": -3.1008
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "30af6ba7c06b3d2dddf7aba443ae2e96dbfae049290ed11a05f484a75f35e6ce",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_CENTEREXTRACT": {
+      "tone_noise": {
+        "module": "AUR_CENTEREXTRACT",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "2544dfd4b1484ad504f9ca02c97a7330ee45ba2ccab5c2b28103859d619f27c4",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_CLIPCLASSIFIER": {
+      "tone_noise": {
+        "module": "AUR_CLIPCLASSIFIER",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "8a10647174b6927655f3f09a04e9c31a3222730ea884a80d45a169e5400aee86",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_CONNECT": {
+      "tone_noise": {
+        "module": "AUR_CONNECT",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "2af9d96d778a7be0eba675da7b4bad33c110a3d0f31bff972608dc930e3ca713",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DEBLEED": {
+      "tone_noise": {
+        "module": "AUR_DEBLEED",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 1.3322,
+        "kept_db": 0.0108,
+        "gain_var_db2": 0.002359,
+        "gain_std_db": 0.0486,
+        "gain_var_smooth_db2": 0.000685,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -44.8012,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 1.3215,
+        "tone_shift_db": {
+          "1000Hz": -0.0108
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "31eceba466d2784cc73ca612e947747920d44a40577ca0d94ccb36088980083d",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DECLICK": {
+      "transient": {
+        "module": "AUR_DECLICK",
+        "case": "transient",
+        "band": [
+          2000.0,
+          16000.0
+        ],
+        "removed_db": 1.5309,
+        "kept_db": 0.0027,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.857858,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -34.537,
+        "event_reduction_db": 6.7488,
+        "programme_shift_db": -0.0825,
+        "reference_error_db": null,
+        "snr_improvement_db": 2.8174,
+        "tone_shift_db": {
+          "250Hz": -0.0027,
+          "1000Hz": -0.0002
+        },
+        "tone_snr_db": {
+          "250Hz": 45.749,
+          "1000Hz": 52.1904
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "47c31911389d17522cadb00fde36e8a7d4c57d564fd84bb991d887368137003a",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DECLIP": {
+      "clipped": {
+        "module": "AUR_DECLIP",
+        "case": "clipped",
+        "band": [
+          2500.0,
+          8000.0
+        ],
+        "removed_db": 17.4649,
+        "kept_db": 1.6935,
+        "gain_var_db2": 1.194875,
+        "gain_std_db": 1.0931,
+        "gain_var_smooth_db2": 0.881689,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -16.5888,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": 9.8324,
+        "snr_improvement_db": -322.6465,
+        "tone_shift_db": {
+          "1000Hz": -1.6935,
+          "1500Hz": -1.5727
+        },
+        "tone_snr_db": {
+          "1000Hz": 120.0,
+          "1500Hz": 120.0
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "d8e9104659ac8a5224584b1dcf317ca715ddf23e118feff5aefb0e161729b107",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DECONSTRUCT": {
+      "tone_noise": {
+        "module": "AUR_DECONSTRUCT",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -2.6249,
+        "kept_db": 2.995,
+        "gain_var_db2": 0.299646,
+        "gain_std_db": 0.5474,
+        "gain_var_smooth_db2": 0.024567,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -22.3438,
+        "tone_shift_db": {
+          "1000Hz": -2.995
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "e27106883f50e25925b969b0dc67c7ac1be2c009c5e0b8070f69ac858d9f84ea",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DECRACKLE": {
+      "tone_noise": {
+        "module": "AUR_DECRACKLE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "cc23d6fb57023fd26b338e98b26818182d00098791cd96a69fe37d0bd43de3d4",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DEESS": {
+      "tone_noise": {
+        "module": "AUR_DEESS",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 6.471,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.222762,
+        "gain_std_db": 0.472,
+        "gain_var_smooth_db2": 0.028214,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -21.831,
+        "tone_shift_db": {
+          "1000Hz": -0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "1a347cbc032358300c3126b187497e6acf39b737b5f8599c351af6cf2562aa3d",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DEHUM": {
+      "tone_hum": {
+        "module": "AUR_DEHUM",
+        "case": "tone_hum",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0028,
+        "kept_db": 0.1166,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0001,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -3.7377,
+        "tone_shift_db": {
+          "1000Hz": -0.1166
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "c6c5f551f0924427340a2297a22aa9012dcb081ac989e13ba32907d5be440282",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DEPLOSIVE": {
+      "tone_noise": {
+        "module": "AUR_DEPLOSIVE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -0.0011,
+        "kept_db": 0.0002,
+        "gain_var_db2": 0.04628,
+        "gain_std_db": 0.2151,
+        "gain_var_smooth_db2": 0.002319,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -21.8891,
+        "tone_shift_db": {
+          "1000Hz": -0.0002
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "9335be527277958a2cee55ff2da64026cc44a4a25587124849f2ea2566529578",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DEREVERB": {
+      "tone_noise": {
+        "module": "AUR_DEREVERB",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 2.2913,
+        "kept_db": 2.5627,
+        "gain_var_db2": 3.34352,
+        "gain_std_db": 1.8285,
+        "gain_var_smooth_db2": 1.320569,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -9.2563,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -6.0492,
+        "tone_shift_db": {
+          "1000Hz": -2.5627
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "c1568f637f61b6796de0431898fd09772be1bde6d9471bbe2247ab7c6db40539",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DERUSTLE": {
+      "tone_noise": {
+        "module": "AUR_DERUSTLE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 3.1991,
+        "kept_db": 0.0003,
+        "gain_var_db2": 0.011827,
+        "gain_std_db": 0.1087,
+        "gain_var_smooth_db2": 0.008395,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -34.6219,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 3.1292,
+        "tone_shift_db": {
+          "1000Hz": -0.0003
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "d7362c2fb4ff1f99fe3b83d04e8530ed72aeea465fbaec4153db7a2a93c8a85c",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DEWIND": {},
+    "AUR_DIALOGUEISOLATE": {
+      "tone_noise": {
+        "module": "AUR_DIALOGUEISOLATE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "daf92ea4ab88026e1e512f8d5d3ef9c9fc265593455337f631d66b145e352f88",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_DITHER": {
+      "tone_noise": {
+        "module": "AUR_DITHER",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0002,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -79.7841,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "0f84b3050338b841eaa3612fa043aeb07615895cdbe0d494bb4ded8fc554e4dc",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_EQ": {
+      "tone_noise": {
+        "module": "AUR_EQ",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "f3067a2ed4c2b8a9e4020ae833a7b61e5edbca980fec30853701c30275f0f549",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_EQMATCH": {
+      "tone_noise": {
+        "module": "AUR_EQMATCH",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -4.6832,
+        "kept_db": 5.4445,
+        "gain_var_db2": 0.162481,
+        "gain_std_db": 0.4031,
+        "gain_var_smooth_db2": 0.059749,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -10.9272,
+        "tone_shift_db": {
+          "1000Hz": -5.4445
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "530f9b662f455ef8810f7c070a219d3a4bbc29b6fea78d150efdd0d5531109e7",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_FADE": {
+      "tone_noise": {
+        "module": "AUR_FADE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 11.2052,
+        "kept_db": 28.7197,
+        "gain_var_db2": 245.391074,
+        "gain_std_db": 15.665,
+        "gain_var_smooth_db2": 239.442515,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -0.0173,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -20.9938,
+        "tone_shift_db": {
+          "1000Hz": -28.7197
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "d84980073db0abc146291e742e2cecde485de9b973e53112439e6e2fd69b80fa",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_FINDSIMILAR": {
+      "tone_noise": {
+        "module": "AUR_FINDSIMILAR",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "e61430dc2fbec46113cb8d2a433b9a3870066d6bba5fbfcbf3044c61d7d35d81",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_GAIN": {
+      "tone_noise": {
+        "module": "AUR_GAIN",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "840a8df61cbeaf7e5010cf5c770140918aef69f47da184cc1e39e49d3e6571ef",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_GUITARDENOISE": {
+      "tone_noise": {
+        "module": "AUR_GUITARDENOISE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.2282,
+        "kept_db": 0.004,
+        "gain_var_db2": 0.007199,
+        "gain_std_db": 0.0848,
+        "gain_var_smooth_db2": 0.002127,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -35.8161,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -3.986,
+        "tone_shift_db": {
+          "1000Hz": -0.004
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "f5b9775662f72a010eca6f109a56dc1bfdad1476c6a1676a06057a29bf32217d",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_INTERPOLATE": {
+      "tone_noise": {
+        "module": "AUR_INTERPOLATE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "f4540221c1dab91ee7d0a3e85f66fcdcec0800acebfbac9930bfb5dc4b4bcdfa",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_LEVELER": {
+      "tone_noise": {
+        "module": "AUR_LEVELER",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -2.2434,
+        "kept_db": 1.6396,
+        "gain_var_db2": 29.867318,
+        "gain_std_db": 5.4651,
+        "gain_var_smooth_db2": 29.632011,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -20.5549,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -14.36,
+        "tone_shift_db": {
+          "1000Hz": -1.6396
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "1ec5abb2aba057d930ee9473f4719c4b6416ad3395e02f7069ff482a19bf4008",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_LOUDNESS": {
+      "tone_noise": {
+        "module": "AUR_LOUDNESS",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -8.6983,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "8c6aa512c1b06c237b89ffaf93b9b704efe34c95fd89b1b4f585f22c03f111a1",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_LOUDNESSOPT": {
+      "tone_noise": {
+        "module": "AUR_LOUDNESSOPT",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0004,
+        "kept_db": 0.0,
+        "gain_var_db2": 3e-06,
+        "gain_std_db": 0.0016,
+        "gain_var_smooth_db2": 1e-06,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -61.5306,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0024,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "77d471a606a24c11838034f6fd3311afe2732525362a42ffd230f05415e388d2",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_MIXING": {
+      "tone_noise": {
+        "module": "AUR_MIXING",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "1f4f431bd850ac0af0a7cf3d1324d4cf5ba9edefea7e05a15b4e42e2a9acdcee",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_MONITOR": {
+      "tone_noise": {
+        "module": "AUR_MONITOR",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "6c7cfa65098bd412954cafe4869968644af82215e6ccec26e71e68ac0f7bc006",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_MOUTHDECLICK": {
+      "tone_noise": {
+        "module": "AUR_MOUTHDECLICK",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "e35e43d438bd5dfbc177fa16a5ff782970cb4313b50b0b3f7021225f7b360090",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_MUSICREBALANCE": {
+      "tone_noise": {
+        "module": "AUR_MUSICREBALANCE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "4102128ace9d89926bc98b33326204cbd6f6b43687a6822f43f78e3294dcf93a",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_NORMALIZE": {
+      "tone_noise": {
+        "module": "AUR_NORMALIZE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -9.8614,
+        "kept_db": 9.8614,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -26.0638,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 9.8614
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "1da624c1da9726da622e6005f9924284babc7f6c30a321645794f1340ec6d957",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_PHASE": {
+      "tone_noise": {
+        "module": "AUR_PHASE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "965e1729be64a0291576a2173b73c6e23fb3f2d367bb65fd8c7e9b42af814dbd",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_REPAIRASSISTANT": {
+      "tone_noise": {
+        "module": "AUR_REPAIRASSISTANT",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "d3504e988346e2b0a16dbd1168beffea1c50534432cc6627079554a56c5d5614",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_RESAMPLE": {
+      "tone_noise": {
+        "module": "AUR_RESAMPLE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -0.0094,
+        "kept_db": 0.0116,
+        "gain_var_db2": 0.000431,
+        "gain_std_db": 0.0208,
+        "gain_var_smooth_db2": 2e-05,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -1.2133,
+        "tone_shift_db": {
+          "1000Hz": -0.0116
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "b7b5a946b104c512bb90cb47dd8bb9d2da481ebda01cf6a454948228e387008a",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_SIGNALGEN": {
+      "tone_noise": {
+        "module": "AUR_SIGNALGEN",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -0.0133,
+        "kept_db": 0.0006,
+        "gain_var_db2": 0.000523,
+        "gain_std_db": 0.0229,
+        "gain_var_smooth_db2": 0.000111,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -2.6313,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -13.1539,
+        "tone_shift_db": {
+          "1000Hz": -0.0006
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "53773bb104d0a45887753beecbe58845179ff32db035fd034ecbe7e116c6520b",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_SPECTRALDENOISE": {
+      "music_mixture": {
+        "module": "AUR_SPECTRALDENOISE",
+        "case": "music_mixture",
+        "band": [
+          8000.0,
+          12000.0
+        ],
+        "removed_db": 12.8248,
+        "kept_db": 1.7292,
+        "gain_var_db2": 0.055321,
+        "gain_std_db": 0.2352,
+        "gain_var_smooth_db2": 0.017994,
+        "internal_gain_var_db2": null,
+        "latency_samples": 768,
+        "block_coherence_db": 4.7227,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -32.0603,
+        "tone_shift_db": {
+          "220Hz": -0.4348,
+          "277Hz": -0.4184,
+          "330Hz": -0.4155,
+          "440Hz": -0.4556,
+          "660Hz": -1.7292
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "668dede7d2cd552bb085464810287c8d4babf3cc5ad950d9fea9f1546add7349",
+        "source_changed": false,
+        "notes": ""
+      },
+      "tone_hum": {
+        "module": "AUR_SPECTRALDENOISE",
+        "case": "tone_hum",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 12.2977,
+        "kept_db": 0.0112,
+        "gain_var_db2": 0.146669,
+        "gain_std_db": 0.383,
+        "gain_var_smooth_db2": 0.023199,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -0.7299,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -0.441,
+        "tone_shift_db": {
+          "1000Hz": -0.0112
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "668dede7d2cd552bb085464810287c8d4babf3cc5ad950d9fea9f1546add7349",
+        "source_changed": false,
+        "notes": ""
+      },
+      "tone_noise": {
+        "module": "AUR_SPECTRALDENOISE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 14.3493,
+        "kept_db": 0.0164,
+        "gain_var_db2": 0.124673,
+        "gain_std_db": 0.3531,
+        "gain_var_smooth_db2": 0.012058,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -0.6052,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -3.2849,
+        "tone_shift_db": {
+          "1000Hz": -0.0164
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "668dede7d2cd552bb085464810287c8d4babf3cc5ad950d9fea9f1546add7349",
+        "source_changed": false,
+        "notes": ""
+      },
+      "voice_hiss": {
+        "module": "AUR_SPECTRALDENOISE",
+        "case": "voice_hiss",
+        "band": [
+          6000.0,
+          10000.0
+        ],
+        "removed_db": 42.5396,
+        "kept_db": 9.1698,
+        "gain_var_db2": 0.040574,
+        "gain_std_db": 0.2014,
+        "gain_var_smooth_db2": 0.017983,
+        "internal_gain_var_db2": null,
+        "latency_samples": 640,
+        "block_coherence_db": 3.488,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -30.1497,
+        "tone_shift_db": {
+          "120Hz": -0.4836,
+          "240Hz": -1.71,
+          "360Hz": -21.6678,
+          "480Hz": -9.1698
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "668dede7d2cd552bb085464810287c8d4babf3cc5ad950d9fea9f1546add7349",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_SPECTRALEDITOR": {
+      "tone_noise": {
+        "module": "AUR_SPECTRALEDITOR",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "8e8373cae94753c146049cb8411cc496fa65d97f8320d3b5eb702e9094ad1ef0",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_SPECTRALRECOVERY": {
+      "tone_noise": {
+        "module": "AUR_SPECTRALRECOVERY",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -43.2816,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0287,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "78ad5e3eab2cd2c8d791bbc5f8918004fbafa0e20b36bcfa7ac4bad157717d71",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_SPECTRALREPAIR": {
+      "tone_noise": {
+        "module": "AUR_SPECTRALREPAIR",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "fad89ef5afb427724b63cf1eb0b2bb0f28d040a52ffe2a40a77b04ae32fb71e0",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_STREAMPREVIEW": {
+      "tone_noise": {
+        "module": "AUR_STREAMPREVIEW",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -0.0185,
+        "kept_db": 0.0185,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -43.8796,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0185
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "7f8f6a3820faadc30c7af2a49e4d254954ad1998e913c0a77cc1d8ba1037232e",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_TIMEPITCH": {
+      "tone_noise": {
+        "module": "AUR_TIMEPITCH",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "1dba6531a0ba3a1a454cdce1c3ff301897dd9e3ad81b2945dec179e5ceadbc1e",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_VARIPITCH": {
+      "tone_noise": {
+        "module": "AUR_VARIPITCH",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "fae9779c13686e7d5183bf2915546b7a76ac8fd2d11bd7f9804d2582691b7cf0",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_VARTIME": {
+      "tone_noise": {
+        "module": "AUR_VARTIME",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 0.0,
+        "kept_db": 0.0,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.0,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": 0.0022,
+        "tone_shift_db": {
+          "1000Hz": 0.0
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "92dc444333ad4a4762f01e240ee64bf535cbdf47f8fbf91675ed8c9a0eee950a",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_VOICEDENOISE": {
+      "voice_hiss": {
+        "module": "AUR_VOICEDENOISE",
+        "case": "voice_hiss",
+        "band": [
+          6000.0,
+          10000.0
+        ],
+        "removed_db": 17.9674,
+        "kept_db": 4.8835,
+        "gain_var_db2": 0.107887,
+        "gain_std_db": 0.3285,
+        "gain_var_smooth_db2": 0.009474,
+        "internal_gain_var_db2": null,
+        "latency_samples": 1152,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -26.2428,
+        "tone_shift_db": {
+          "120Hz": -1.7488,
+          "240Hz": -3.3687,
+          "360Hz": -6.6097,
+          "480Hz": -4.8835
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "892397bad8b657f2e112d3912305026d85a67b50b64b4650685ef950823a9401",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    "AUR_WOWFLUTTER": {
+      "tone_noise": {
+        "module": "AUR_WOWFLUTTER",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": -0.0006,
+        "kept_db": 0.0998,
+        "gain_var_db2": 0.000655,
+        "gain_std_db": 0.0256,
+        "gain_var_smooth_db2": 0.000177,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": 2.9587,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -55.6554,
+        "tone_shift_db": {
+          "1000Hz": -0.0998
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "cd28bf09866fb760dc7bf2e9e5caa8e83c1207e0257260a3480552851c881f08",
+        "source_changed": false,
+        "notes": ""
+      }
+    }
+  },
+  "rules": [
+    {
+      "rule": "aur_spectraldenoise_tone_noise",
+      "code": "AUR_SPECTRALDENOISE",
+      "case": "tone_noise",
+      "holds": false,
+      "failures": [
+        "the gain curve could not be measured"
+      ],
+      "measurement": {
+        "module": "AUR_SPECTRALDENOISE",
+        "case": "tone_noise",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 14.3493,
+        "kept_db": 0.0164,
+        "gain_var_db2": 0.124673,
+        "gain_std_db": 0.3531,
+        "gain_var_smooth_db2": 0.012058,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -0.6052,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -3.2849,
+        "tone_shift_db": {
+          "1000Hz": -0.0164
+        },
+        "tone_snr_db": {
+          "1000Hz": 43.8024
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "668dede7d2cd552bb085464810287c8d4babf3cc5ad950d9fea9f1546add7349",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    {
+      "rule": "aur_spectraldenoise_tone_hum",
+      "code": "AUR_SPECTRALDENOISE",
+      "case": "tone_hum",
+      "holds": false,
+      "failures": [
+        "the gain curve could not be measured"
+      ],
+      "measurement": {
+        "module": "AUR_SPECTRALDENOISE",
+        "case": "tone_hum",
+        "band": [
+          4000.0,
+          8000.0
+        ],
+        "removed_db": 12.2977,
+        "kept_db": 0.0112,
+        "gain_var_db2": 0.146669,
+        "gain_std_db": 0.383,
+        "gain_var_smooth_db2": 0.023199,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -0.7299,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -0.441,
+        "tone_shift_db": {
+          "1000Hz": -0.0112
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "668dede7d2cd552bb085464810287c8d4babf3cc5ad950d9fea9f1546add7349",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    {
+      "rule": "aur_spectraldenoise_voice_hiss",
+      "code": "AUR_SPECTRALDENOISE",
+      "case": "voice_hiss",
+      "holds": false,
+      "failures": [
+        "it moved a wanted partial by 9.17 dB, the budget is 1.00 dB"
+      ],
+      "measurement": {
+        "module": "AUR_SPECTRALDENOISE",
+        "case": "voice_hiss",
+        "band": [
+          6000.0,
+          10000.0
+        ],
+        "removed_db": 42.5396,
+        "kept_db": 9.1698,
+        "gain_var_db2": 0.040574,
+        "gain_std_db": 0.2014,
+        "gain_var_smooth_db2": 0.017983,
+        "internal_gain_var_db2": null,
+        "latency_samples": 640,
+        "block_coherence_db": 3.488,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -30.1497,
+        "tone_shift_db": {
+          "120Hz": -0.4836,
+          "240Hz": -1.71,
+          "360Hz": -21.6678,
+          "480Hz": -9.1698
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "668dede7d2cd552bb085464810287c8d4babf3cc5ad950d9fea9f1546add7349",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    {
+      "rule": "aur_spectraldenoise_music_mixture",
+      "code": "AUR_SPECTRALDENOISE",
+      "case": "music_mixture",
+      "holds": false,
+      "failures": [
+        "it moved a wanted partial by 1.73 dB, the budget is 1.00 dB"
+      ],
+      "measurement": {
+        "module": "AUR_SPECTRALDENOISE",
+        "case": "music_mixture",
+        "band": [
+          8000.0,
+          12000.0
+        ],
+        "removed_db": 12.8248,
+        "kept_db": 1.7292,
+        "gain_var_db2": 0.055321,
+        "gain_std_db": 0.2352,
+        "gain_var_smooth_db2": 0.017994,
+        "internal_gain_var_db2": null,
+        "latency_samples": 768,
+        "block_coherence_db": 4.7227,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -32.0603,
+        "tone_shift_db": {
+          "220Hz": -0.4348,
+          "277Hz": -0.4184,
+          "330Hz": -0.4155,
+          "440Hz": -0.4556,
+          "660Hz": -1.7292
+        },
+        "tone_snr_db": {
+          "220Hz": 43.258,
+          "277Hz": 41.1671,
+          "330Hz": 42.6556,
+          "440Hz": 39.7129,
+          "660Hz": 31.252
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "668dede7d2cd552bb085464810287c8d4babf3cc5ad950d9fea9f1546add7349",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    {
+      "rule": "aur_voicedenoise_voice_hiss",
+      "code": "AUR_VOICEDENOISE",
+      "case": "voice_hiss",
+      "holds": false,
+      "failures": [
+        "it moved a wanted partial by 4.88 dB, the budget is 1.50 dB"
+      ],
+      "measurement": {
+        "module": "AUR_VOICEDENOISE",
+        "case": "voice_hiss",
+        "band": [
+          6000.0,
+          10000.0
+        ],
+        "removed_db": 17.9674,
+        "kept_db": 4.8835,
+        "gain_var_db2": 0.107887,
+        "gain_std_db": 0.3285,
+        "gain_var_smooth_db2": 0.009474,
+        "internal_gain_var_db2": null,
+        "latency_samples": 1152,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -26.2428,
+        "tone_shift_db": {
+          "120Hz": -1.7488,
+          "240Hz": -3.3687,
+          "360Hz": -6.6097,
+          "480Hz": -4.8835
+        },
+        "tone_snr_db": {
+          "120Hz": 28.0752,
+          "240Hz": 23.3763,
+          "360Hz": 7.3494,
+          "480Hz": 15.4094
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "892397bad8b657f2e112d3912305026d85a67b50b64b4650685ef950823a9401",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    {
+      "rule": "aur_declick_transient",
+      "code": "AUR_DECLICK",
+      "case": "transient",
+      "holds": false,
+      "failures": [
+        "it left 6.75 dB of the impulsive artefact, the rule asks for 20.00 dB"
+      ],
+      "measurement": {
+        "module": "AUR_DECLICK",
+        "case": "transient",
+        "band": [
+          2000.0,
+          16000.0
+        ],
+        "removed_db": 1.5309,
+        "kept_db": 0.0027,
+        "gain_var_db2": 0.0,
+        "gain_std_db": 0.0,
+        "gain_var_smooth_db2": 0.857858,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -34.537,
+        "event_reduction_db": 6.7488,
+        "programme_shift_db": -0.0825,
+        "reference_error_db": null,
+        "snr_improvement_db": 2.8174,
+        "tone_shift_db": {
+          "250Hz": -0.0027,
+          "1000Hz": -0.0002
+        },
+        "tone_snr_db": {
+          "250Hz": 45.749,
+          "1000Hz": 52.1904
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "47c31911389d17522cadb00fde36e8a7d4c57d564fd84bb991d887368137003a",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    {
+      "rule": "aur_declip_clipped",
+      "code": "AUR_DECLIP",
+      "case": "clipped",
+      "holds": true,
+      "failures": [],
+      "measurement": {
+        "module": "AUR_DECLIP",
+        "case": "clipped",
+        "band": [
+          2500.0,
+          8000.0
+        ],
+        "removed_db": 17.4649,
+        "kept_db": 1.6935,
+        "gain_var_db2": 1.194875,
+        "gain_std_db": 1.0931,
+        "gain_var_smooth_db2": 0.881689,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -16.5888,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": 9.8324,
+        "snr_improvement_db": -322.6465,
+        "tone_shift_db": {
+          "1000Hz": -1.6935,
+          "1500Hz": -1.5727
+        },
+        "tone_snr_db": {
+          "1000Hz": 120.0,
+          "1500Hz": 120.0
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "d8e9104659ac8a5224584b1dcf317ca715ddf23e118feff5aefb0e161729b107",
+        "source_changed": false,
+        "notes": ""
+      }
+    },
+    {
+      "rule": "aur_dehum_tone_hum",
+      "code": "AUR_DEHUM",
+      "case": "tone_hum",
+      "holds": true,
+      "failures": [],
+      "measurement": {
+        "module": "AUR_DEHUM",
+        "case": "tone_hum",
+        "band": [
+          40.0,
+          90.0
+        ],
+        "removed_db": 47.8595,
+        "kept_db": 0.1166,
+        "gain_var_db2": 12.303931,
+        "gain_std_db": 3.5077,
+        "gain_var_smooth_db2": 4.453756,
+        "internal_gain_var_db2": null,
+        "latency_samples": 0,
+        "block_coherence_db": -200.0,
+        "event_reduction_db": null,
+        "programme_shift_db": null,
+        "reference_error_db": null,
+        "snr_improvement_db": -3.7377,
+        "tone_shift_db": {
+          "1000Hz": -0.1166
+        },
+        "tone_snr_db": {
+          "1000Hz": 49.0277
+        },
+        "output_length": 96000,
+        "output_finite": true,
+        "source_sha": "c6c5f551f0924427340a2297a22aa9012dcb081ac989e13ba32907d5be440282",
+        "source_changed": false,
+        "notes": ""
+      }
+    }
+  ]
+}

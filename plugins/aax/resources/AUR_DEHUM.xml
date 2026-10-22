@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='DEHU' plugID='MONO'>
+			<Desc>De-Hum</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='DEHU' plugID='M2ST'>
+			<Desc>De-Hum</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='DEHU' plugID='STER'>
+			<Desc>De-Hum</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+				<Page num='6'>
+					<ID>260</ID>
+				</Page>
+				<Page num='7'>
+					<ID>261</ID>
+				</Page>
+				<Page num='8'>
+					<ID>262</ID>
+				</Page>
+				<Page num='9'>
+					<ID>263</ID>
+				</Page>
+				<Page num='10'>
+					<ID>264</ID>
+				</Page>
+				<Page num='11'>
+					<ID>265</ID>
+				</Page>
+				<Page num='12'>
+					<ID>266</ID>
+				</Page>
+				<Page num='13'>
+					<ID>267</ID>
+				</Page>
+				<Page num='14'>
+					<ID>268</ID>
+				</Page>
+				<Page num='15'>
+					<ID>269</ID>
+				</Page>
+				<Page num='16'>
+					<ID>270</ID>
+				</Page>
+				<Page num='17'>
+					<ID>271</ID>
+				</Page>
+				<Page num='18'>
+					<ID>272</ID>
+				</Page>
+				<Page num='19'>
+					<ID>274</ID>
+				</Page>
+				<Page num='20'>
+					<ID>273</ID>
+				</Page>
+				<Page num='21'>
+					<ID>275</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>259</ID>
+				</Page>
+				<Page num='3'>
+					<ID>260</ID>
+					<ID>261</ID>
+					<ID>262</ID>
+					<ID>263</ID>
+				</Page>
+				<Page num='4'>
+					<ID>264</ID>
+					<ID>265</ID>
+					<ID>266</ID>
+					<ID>267</ID>
+				</Page>
+				<Page num='5'>
+					<ID>268</ID>
+					<ID>269</ID>
+					<ID>270</ID>
+					<ID>271</ID>
+				</Page>
+				<Page num='6'>
+					<ID>272</ID>
+					<ID>274</ID>
+					<ID>273</ID>
+					<ID>275</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Mod</name>
+			<name typ='PgTL' sz='4'>Mode</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Bas</name>
+			<name typ='PgTL' sz='4'>Base</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Fil</name>
+			<name typ='PgTL' sz='4'>Filt</name>
+			<name typ='PgTL' sz='5'>Filte</name>
+			<name typ='PgTL' sz='6'>Filter</name>
+			<name typ='PgTL' sz='7'>Filter </name>
+			<name typ='PgTL' sz='8'>Filter Q</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Num</name>
+			<name typ='PgTL' sz='4'>Numb</name>
+			<name typ='PgTL' sz='5'>Numbe</name>
+			<name typ='PgTL' sz='6'>Number</name>
+			<name typ='PgTL' sz='7'>Number </name>
+			<name typ='PgTL' sz='8'>Number o</name>
+			<name typ='PgTL' sz='9'>Number of</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Lin</name>
+			<name typ='PgTL' sz='4'>Link</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Har</name>
+			<name typ='PgTL' sz='4'>Harm</name>
+			<name typ='PgTL' sz='5'>Harmo</name>
+			<name typ='PgTL' sz='6'>Harmon</name>
+			<name typ='PgTL' sz='7'>Harmoni</name>
+			<name typ='PgTL' sz='8'>Harmonic</name>
+		</Ctrl>
+		<Ctrl ID='262'>
+			<name typ='PgTL' sz='3'>Ena</name>
+			<name typ='PgTL' sz='4'>Enab</name>
+			<name typ='PgTL' sz='5'>Enabl</name>
+			<name typ='PgTL' sz='6'>Enable</name>
+		</Ctrl>
+		<Ctrl ID='263'>
+			<name typ='PgTL' sz='3'>Ada</name>
+			<name typ='PgTL' sz='4'>Adap</name>
+			<name typ='PgTL' sz='5'>Adapt</name>
+			<name typ='PgTL' sz='6'>Adapti</name>
+			<name typ='PgTL' sz='7'>Adaptiv</name>
+			<name typ='PgTL' sz='8'>Adaptive</name>
+		</Ctrl>
+		<Ctrl ID='264'>
+			<name typ='PgTL' sz='3'>Ena</name>
+			<name typ='PgTL' sz='4'>Enab</name>
+			<name typ='PgTL' sz='5'>Enabl</name>
+			<name typ='PgTL' sz='6'>Enable</name>
+		</Ctrl>
+		<Ctrl ID='265'>
+			<name typ='PgTL' sz='3'>Hig</name>
+			<name typ='PgTL' sz='4'>High</name>
+			<name typ='PgTL' sz='5'>Highp</name>
+			<name typ='PgTL' sz='6'>Highpa</name>
+			<name typ='PgTL' sz='7'>Highpas</name>
+			<name typ='PgTL' sz='8'>Highpass</name>
+		</Ctrl>
+		<Ctrl ID='266'>
+			<name typ='PgTL' sz='3'>Ena</name>
+			<name typ='PgTL' sz='4'>Enab</name>
+			<name typ='PgTL' sz='5'>Enabl</name>
+			<name typ='PgTL' sz='6'>Enable</name>
+		</Ctrl>
+		<Ctrl ID='267'>
+			<name typ='PgTL' sz='3'>Low</name>
+			<name typ='PgTL' sz='4'>Lowp</name>
+			<name typ='PgTL' sz='5'>Lowpa</name>
+			<name typ='PgTL' sz='6'>Lowpas</name>
+			<name typ='PgTL' sz='7'>Lowpass</name>
+		</Ctrl>
+		<Ctrl ID='268'>
+			<name typ='PgTL' sz='3'>Lin</name>
+			<name typ='PgTL' sz='4'>Line</name>
+			<name typ='PgTL' sz='5'>Linea</name>
+			<name typ='PgTL' sz='6'>Linear</name>
+			<name typ='PgTL' sz='7'>Linear </name>
+			<name typ='PgTL' sz='8'>Linear P</name>
+			<name typ='PgTL' sz='9'>Linear Ph</name>
+			<name typ='PgTL' sz='10'>Linear Pha</name>
+			<name typ='PgTL' sz='11'>Linear Phas</name>
+			<name typ='PgTL' sz='12'>Linear Phase</name>
+		</Ctrl>
+		<Ctrl ID='269'>
+			<name typ='PgTL' sz='3'>Ena</name>
+			<name typ='PgTL' sz='4'>Enab</name>
+			<name typ='PgTL' sz='5'>Enabl</name>
+			<name typ='PgTL' sz='6'>Enable</name>
+			<name typ='PgTL' sz='7'>Enable </name>
+			<name typ='PgTL' sz='8'>Enable D</name>
+			<name typ='PgTL' sz='9'>Enable DC</name>
+		</Ctrl>
+		<Ctrl ID='270'>
+			<name typ='PgTL' sz='3'>Dyn</name>
+			<name typ='PgTL' sz='4'>Dyna</name>
+			<name typ='PgTL' sz='5'>Dynam</name>
+			<name typ='PgTL' sz='6'>Dynami</name>
+			<name typ='PgTL' sz='7'>Dynamic</name>
+		</Ctrl>
+		<Ctrl ID='271'>
+			<name typ='PgTL' sz='3'>Dyn</name>
+			<name typ='PgTL' sz='4'>Dyna</name>
+			<name typ='PgTL' sz='5'>Dynam</name>
+			<name typ='PgTL' sz='6'>Dynami</name>
+			<name typ='PgTL' sz='7'>Dynamic</name>
+		</Ctrl>
+		<Ctrl ID='272'>
+			<name typ='PgTL' sz='3'>Dyn</name>
+			<name typ='PgTL' sz='4'>Dyna</name>
+			<name typ='PgTL' sz='5'>Dynam</name>
+			<name typ='PgTL' sz='6'>Dynami</name>
+			<name typ='PgTL' sz='7'>Dynamic</name>
+			<name typ='PgTL' sz='8'>Dynamic </name>
+			<name typ='PgTL' sz='9'>Dynamic L</name>
+			<name typ='PgTL' sz='10'>Dynamic Lo</name>
+			<name typ='PgTL' sz='11'>Dynamic Low</name>
+		</Ctrl>
+		<Ctrl ID='274'>
+			<name typ='PgTL' sz='3'>Out</name>
+			<name typ='PgTL' sz='4'>Outp</name>
+			<name typ='PgTL' sz='5'>Outpu</name>
+			<name typ='PgTL' sz='6'>Output</name>
+			<name typ='PgTL' sz='7'>Output </name>
+			<name typ='PgTL' sz='8'>Output H</name>
+			<name typ='PgTL' sz='9'>Output Hu</name>
+			<name typ='PgTL' sz='10'>Output Hum</name>
+		</Ctrl>
+		<Ctrl ID='273'>
+			<name typ='PgTL' sz='3'>Dyn</name>
+			<name typ='PgTL' sz='4'>Dyna</name>
+			<name typ='PgTL' sz='5'>Dynam</name>
+			<name typ='PgTL' sz='6'>Dynami</name>
+			<name typ='PgTL' sz='7'>Dynamic</name>
+			<name typ='PgTL' sz='8'>Dynamic </name>
+			<name typ='PgTL' sz='9'>Dynamic H</name>
+			<name typ='PgTL' sz='10'>Dynamic Hi</name>
+			<name typ='PgTL' sz='11'>Dynamic Hig</name>
+			<name typ='PgTL' sz='12'>Dynamic High</name>
+		</Ctrl>
+		<Ctrl ID='275'>
+			<name typ='PgTL' sz='3'>Rem</name>
+			<name typ='PgTL' sz='4'>Remo</name>
+			<name typ='PgTL' sz='5'>Remov</name>
+			<name typ='PgTL' sz='6'>Remove</name>
+			<name typ='PgTL' sz='7'>Removed</name>
+			<name typ='PgTL' sz='8'>Removed </name>
+			<name typ='PgTL' sz='9'>Removed M</name>
+			<name typ='PgTL' sz='10'>Removed Mi</name>
+			<name typ='PgTL' sz='11'>Removed Mix</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

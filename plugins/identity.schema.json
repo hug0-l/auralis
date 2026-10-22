@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://auralis.audio/schema/identity.schema.json",
+  "title": "Auralis plug-in identity record",
+  "description": "The record that is stamped into an adapter binary at build time to declare which Auralis module that binary implements. The same document is written next to the binary as a human readable twin.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "version",
+    "module_code",
+    "display_name",
+    "product_name",
+    "file_description",
+    "original_filename",
+    "internal_name",
+    "category",
+    "vst3_fuid",
+    "aax_effect_ids",
+    "param_id_map"
+  ],
+  "properties": {
+    "format": {
+      "description": "Format discriminator.",
+      "const": "auralis.identity"
+    },
+    "version": {
+      "description": "Schema version of this record.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1
+    },
+    "module_code": {
+      "description": "Canonical module code from the registry, e.g. AUR_DECLICK.",
+      "type": "string",
+      "pattern": "^AUR_[A-Z0-9_]+$"
+    },
+    "display_name": {
+      "description": "Human readable module name, e.g. De-Click.",
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "description": "Product line name shown by the host, e.g. Auralis De-Click.",
+      "type": "string",
+      "minLength": 1
+    },
+    "file_description": {
+      "description": "Long description shown in the plug-in browser.",
+      "type": "string",
+      "minLength": 1
+    },
+    "original_filename": {
+      "description": "File name the plug-in is installed under.",
+      "type": "string",
+      "minLength": 1
+    },
+    "internal_name": {
+      "description": "Stable internal identifier used by host session and preset machinery.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_]+$"
+    },
+    "category": {
+      "description": "Registry category of the module.",
+      "type": "string",
+      "minLength": 1
+    },
+    "vst3_fuid": {
+      "description": "The VST3 class id as a canonical dashed GUID string (32 hexadecimal digits). The string is the identifier and is the same on every platform; the sixteen bytes a binary reports are that string's platform encoding (COM compatible on Windows, big endian elsewhere), so a binary must report the bytes of its own platform for the host to read this string back.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "aax_effect_ids": {
+      "description": "One (manufacturer id, product id, plug id) triple per channel variant: mono, mono-to-stereo and stereo. Each component is exactly four characters.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Z0-9]{4}$"
+        }
+      }
+    },
+    "param_id_map": {
+      "description": "Host parameter id -> canonical core parameter name. The ids come from the generated registry index.",
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9]+$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

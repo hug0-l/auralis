@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='CLIP' plugID='MONO'>
+			<Desc>Clip Classifier</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='CLIP' plugID='M2ST'>
+			<Desc>Clip Classifier</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='CLIP' plugID='STER'>
+			<Desc>Clip Classifier</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+				<Page num='6'>
+					<ID>260</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>259</ID>
+				</Page>
+				<Page num='3'>
+					<ID>260</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Det</name>
+			<name typ='PgTL' sz='4'>Dete</name>
+			<name typ='PgTL' sz='5'>Detec</name>
+			<name typ='PgTL' sz='6'>Detect</name>
+			<name typ='PgTL' sz='7'>Detecte</name>
+			<name typ='PgTL' sz='8'>Detected</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Con</name>
+			<name typ='PgTL' sz='4'>Conf</name>
+			<name typ='PgTL' sz='5'>Confi</name>
+			<name typ='PgTL' sz='6'>Confid</name>
+			<name typ='PgTL' sz='7'>Confide</name>
+			<name typ='PgTL' sz='8'>Confiden</name>
+			<name typ='PgTL' sz='9'>Confidenc</name>
+			<name typ='PgTL' sz='10'>Confidence</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Sim</name>
+			<name typ='PgTL' sz='4'>Simi</name>
+			<name typ='PgTL' sz='5'>Simil</name>
+			<name typ='PgTL' sz='6'>Simila</name>
+			<name typ='PgTL' sz='7'>Similar</name>
+			<name typ='PgTL' sz='8'>Similari</name>
+			<name typ='PgTL' sz='9'>Similarit</name>
+			<name typ='PgTL' sz='10'>Similarity</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Hig</name>
+			<name typ='PgTL' sz='4'>High</name>
+			<name typ='PgTL' sz='5'>Highl</name>
+			<name typ='PgTL' sz='6'>Highli</name>
+			<name typ='PgTL' sz='7'>Highlig</name>
+			<name typ='PgTL' sz='8'>Highligh</name>
+			<name typ='PgTL' sz='9'>Highlight</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Ana</name>
+			<name typ='PgTL' sz='4'>Anal</name>
+			<name typ='PgTL' sz='5'>Analy</name>
+			<name typ='PgTL' sz='6'>Analys</name>
+			<name typ='PgTL' sz='7'>Analysi</name>
+			<name typ='PgTL' sz='8'>Analysis</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

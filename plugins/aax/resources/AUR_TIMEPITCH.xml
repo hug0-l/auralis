@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='TIME' plugID='MONO'>
+			<Desc>Time &amp; Pitch</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='TIME' plugID='M2ST'>
+			<Desc>Time &amp; Pitch</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='TIME' plugID='STER'>
+			<Desc>Time &amp; Pitch</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>262</ID>
+				</Page>
+				<Page num='6'>
+					<ID>259</ID>
+				</Page>
+				<Page num='7'>
+					<ID>260</ID>
+				</Page>
+				<Page num='8'>
+					<ID>261</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>262</ID>
+				</Page>
+				<Page num='3'>
+					<ID>259</ID>
+					<ID>260</ID>
+					<ID>261</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Alg</name>
+			<name typ='PgTL' sz='4'>Algo</name>
+			<name typ='PgTL' sz='5'>Algor</name>
+			<name typ='PgTL' sz='6'>Algori</name>
+			<name typ='PgTL' sz='7'>Algorit</name>
+			<name typ='PgTL' sz='8'>Algorith</name>
+			<name typ='PgTL' sz='9'>Algorithm</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Str</name>
+			<name typ='PgTL' sz='4'>Stre</name>
+			<name typ='PgTL' sz='5'>Stret</name>
+			<name typ='PgTL' sz='6'>Stretc</name>
+			<name typ='PgTL' sz='7'>Stretch</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Pit</name>
+			<name typ='PgTL' sz='4'>Pitc</name>
+			<name typ='PgTL' sz='5'>Pitch</name>
+			<name typ='PgTL' sz='6'>Pitch </name>
+			<name typ='PgTL' sz='7'>Pitch S</name>
+			<name typ='PgTL' sz='8'>Pitch Sh</name>
+			<name typ='PgTL' sz='9'>Pitch Shi</name>
+			<name typ='PgTL' sz='10'>Pitch Shif</name>
+			<name typ='PgTL' sz='11'>Pitch Shift</name>
+		</Ctrl>
+		<Ctrl ID='262'>
+			<name typ='PgTL' sz='3'>Shi</name>
+			<name typ='PgTL' sz='4'>Shif</name>
+			<name typ='PgTL' sz='5'>Shift</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Ada</name>
+			<name typ='PgTL' sz='4'>Adap</name>
+			<name typ='PgTL' sz='5'>Adapt</name>
+			<name typ='PgTL' sz='6'>Adapti</name>
+			<name typ='PgTL' sz='7'>Adaptiv</name>
+			<name typ='PgTL' sz='8'>Adaptive</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Tra</name>
+			<name typ='PgTL' sz='4'>Tran</name>
+			<name typ='PgTL' sz='5'>Trans</name>
+			<name typ='PgTL' sz='6'>Transi</name>
+			<name typ='PgTL' sz='7'>Transie</name>
+			<name typ='PgTL' sz='8'>Transien</name>
+			<name typ='PgTL' sz='9'>Transient</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Pha</name>
+			<name typ='PgTL' sz='4'>Phas</name>
+			<name typ='PgTL' sz='5'>Phase</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='CONN' plugID='MONO'>
+			<Desc>Connect</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='CONN' plugID='M2ST'>
+			<Desc>Connect</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='CONN' plugID='STER'>
+			<Desc>Connect</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Aut</name>
+			<name typ='PgTL' sz='4'>Auto</name>
+			<name typ='PgTL' sz='5'>Auto </name>
+			<name typ='PgTL' sz='6'>Auto S</name>
+			<name typ='PgTL' sz='7'>Auto Se</name>
+			<name typ='PgTL' sz='8'>Auto Sen</name>
+			<name typ='PgTL' sz='9'>Auto Send</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Kee</name>
+			<name typ='PgTL' sz='4'>Keep</name>
+			<name typ='PgTL' sz='5'>Keep </name>
+			<name typ='PgTL' sz='6'>Keep S</name>
+			<name typ='PgTL' sz='7'>Keep So</name>
+			<name typ='PgTL' sz='8'>Keep Sou</name>
+			<name typ='PgTL' sz='9'>Keep Sour</name>
+			<name typ='PgTL' sz='10'>Keep Sourc</name>
+			<name typ='PgTL' sz='11'>Keep Source</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

@@ -1,0 +1,652 @@
+{
+  "environment": {
+    "python": "3.15.0",
+    "numpy": "2.5.4",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "date": "2026-10-21 17:02",
+    "harness_version": "2"
+  },
+  "probes": {
+    "voice_denoise_hiss": {
+      "module": "AUR_VOICEDENOISE",
+      "case": "voice_hiss",
+      "config": {},
+      "chatter_band": [
+        5000.0,
+        14000.0
+      ],
+      "metrics": {
+        "latency_reported": 2047.0,
+        "latency_measured": 2047.0,
+        "output_max_diff": 0.02173175825678611,
+        "output_rms_diff_db": -24.87139462381115,
+        "output_level_db": -0.051832184280714705,
+        "band_voice_in_db": 57.868713715190026,
+        "band_voice_out_db": 57.83833653452116,
+        "band_voice_change_db": -0.030377180668864412,
+        "band_hiss_in_db": 30.09684237328894,
+        "band_hiss_out_db": 15.596948863210574,
+        "band_hiss_change_db": -14.499893510078365,
+        "band_low_in_db": 57.26989856981956,
+        "band_low_out_db": 57.24038237660993,
+        "band_low_change_db": -0.029516193209630615,
+        "chatter_db": 0.15557561429476013,
+        "chatter_gain_std_db": 1.5658895535811683,
+        "chatter_gain_step_db": 1.3014212846591136,
+        "chatter_content_std_db": 14.147397971561182,
+        "chatter_content_span_db": 35.83033171509839,
+        "chatter_frames": 88.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 1.1102230246251565e-16,
+        "block_rms_diff": 8.87653267041559e-18,
+        "block_rms_diff_db": -218.296706570157
+      }
+    },
+    "voice_denoise_pink_hiss": {
+      "module": "AUR_VOICEDENOISE",
+      "case": "voice_pink_hiss",
+      "config": {},
+      "chatter_band": [
+        5000.0,
+        14000.0
+      ],
+      "metrics": {
+        "latency_reported": 2047.0,
+        "latency_measured": 2047.0,
+        "output_max_diff": 0.018886664489057056,
+        "output_rms_diff_db": -25.897318360314475,
+        "output_level_db": -0.10097368360566275,
+        "band_voice_in_db": 57.867494641499675,
+        "band_voice_out_db": 57.80099825922717,
+        "band_voice_change_db": -0.0664963822725042,
+        "band_hiss_in_db": 24.33056771699157,
+        "band_hiss_out_db": 8.048254947430515,
+        "band_hiss_change_db": -16.282312769561056,
+        "band_low_in_db": 57.26760942149916,
+        "band_low_out_db": 57.210171549478844,
+        "band_low_change_db": -0.057437872020315694,
+        "chatter_db": 0.11101126786044507,
+        "chatter_gain_std_db": 0.6245906675072298,
+        "chatter_gain_step_db": 0.9405743564860494,
+        "chatter_content_std_db": 12.676707851676085,
+        "chatter_content_span_db": 32.524548060346206,
+        "chatter_frames": 88.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 1.1102230246251565e-16,
+        "block_rms_diff": 9.153282597772176e-18,
+        "block_rms_diff_db": -218.2448660920063
+      }
+    },
+    "breath_control_breath": {
+      "module": "AUR_BREATH",
+      "case": "voice_breath",
+      "config": {},
+      "chatter_band": [
+        4000.0,
+        8000.0
+      ],
+      "metrics": {
+        "latency_reported": 0.0,
+        "latency_measured": 0.0,
+        "output_max_diff": 0.21088234113701712,
+        "output_rms_diff_db": -8.403009664830508,
+        "output_level_db": -3.789810612284335,
+        "band_voice_in_db": 58.098850277571934,
+        "band_voice_out_db": 54.450278814769774,
+        "band_voice_change_db": -3.6485714628021597,
+        "band_breath_in_db": 51.6108246498565,
+        "band_breath_out_db": 46.8158648180637,
+        "band_breath_change_db": -4.794959831792795,
+        "band_hiss_in_db": 43.65109500758468,
+        "band_hiss_out_db": 37.704688920605356,
+        "band_hiss_change_db": -5.946406086979323,
+        "region_breath_voice_in_db": 50.820282606840685,
+        "region_breath_voice_out_db": 44.82031319149734,
+        "region_breath_voice_change_db": -5.999969415343344,
+        "region_breath_breath_in_db": 48.8374770024827,
+        "region_breath_breath_out_db": 42.837593961440625,
+        "region_breath_breath_change_db": -5.999883041042075,
+        "region_breath_hiss_in_db": 42.53265420924292,
+        "region_breath_hiss_out_db": 36.53280632543807,
+        "region_breath_hiss_change_db": -5.999847883804854,
+        "chatter_db": 0.16622056358045767,
+        "chatter_gain_std_db": 1.4836733486649605,
+        "chatter_gain_step_db": 2.939588761639083,
+        "chatter_content_std_db": 14.710284997308555,
+        "chatter_content_span_db": 40.06217314603974,
+        "chatter_frames": 92.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 0.04073232284932196,
+        "block_rms_diff": 0.004407619162508407,
+        "block_rms_diff_db": -22.23870683358694
+      }
+    },
+    "breath_control_clean": {
+      "module": "AUR_BREATH",
+      "case": "voice_clean",
+      "config": {},
+      "chatter_band": [
+        4000.0,
+        8000.0
+      ],
+      "metrics": {
+        "latency_reported": 0.0,
+        "latency_measured": 0.0,
+        "output_max_diff": 1.1102230246251565e-16,
+        "output_rms_diff_db": -218.32508912706234,
+        "output_level_db": 1.928654933106574e-15,
+        "band_voice_in_db": 57.86238570522688,
+        "band_voice_out_db": 57.86238570522688,
+        "band_voice_change_db": 0.0,
+        "band_hiss_in_db": -0.31915506355988216,
+        "band_hiss_out_db": -0.31915506355990286,
+        "band_hiss_change_db": -2.070565940925917e-14,
+        "band_low_in_db": 57.26685357586672,
+        "band_low_out_db": 57.26685357586672,
+        "band_low_change_db": 0.0,
+        "chatter_db": 9.311276316978258e-15,
+        "chatter_gain_std_db": 4.982346200932705e-14,
+        "chatter_gain_step_db": 3.623767952376511e-13,
+        "chatter_content_std_db": 110.07622682485477,
+        "chatter_content_span_db": 340.03014069777106,
+        "chatter_frames": 92.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 0.09479300678102992,
+        "block_rms_diff": 0.01640759124519264,
+        "block_rms_diff_db": -14.024192564751957
+      }
+    },
+    "voice_denoise_clean": {
+      "module": "AUR_VOICEDENOISE",
+      "case": "voice_clean",
+      "config": {},
+      "chatter_band": [
+        5000.0,
+        14000.0
+      ],
+      "metrics": {
+        "latency_reported": 2047.0,
+        "latency_measured": 2047.0,
+        "output_max_diff": 0.00034469017483668846,
+        "output_rms_diff_db": -70.40920217573805,
+        "output_level_db": -0.0004410827871778706,
+        "band_voice_in_db": 57.862385624396744,
+        "band_voice_out_db": 57.861945415703666,
+        "band_voice_change_db": -0.0004402086930781479,
+        "band_hiss_in_db": -0.3191551052154228,
+        "band_hiss_out_db": -0.31957777482306227,
+        "band_hiss_change_db": -0.0004226696076394809,
+        "band_low_in_db": 57.26685350112584,
+        "band_low_out_db": 57.26641293544557,
+        "band_low_change_db": -0.0004405656802646263,
+        "chatter_db": 1.2151845035935654e-08,
+        "chatter_gain_std_db": 0.019019995367854176,
+        "chatter_gain_step_db": 0.10989003392214158,
+        "chatter_content_std_db": 101.20572632629832,
+        "chatter_content_span_db": 340.03014069777106,
+        "chatter_frames": 88.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 1.3877787807814457e-16,
+        "block_rms_diff": 7.50083164736789e-18,
+        "block_rms_diff_db": -218.3246480442752
+      }
+    },
+    "mouth_de_click_click": {
+      "module": "AUR_MOUTHDECLICK",
+      "case": "voice_click",
+      "config": {},
+      "chatter_band": [
+        4000.0,
+        14000.0
+      ],
+      "metrics": {
+        "latency_reported": 0.0,
+        "latency_measured": 0.0,
+        "output_max_diff": 0.959007897929016,
+        "output_rms_diff_db": -15.74772680778064,
+        "output_level_db": -0.1013057210184256,
+        "band_voice_in_db": 57.889297688099035,
+        "band_voice_out_db": 57.84590254524232,
+        "band_voice_change_db": -0.04339514285671697,
+        "band_click_in_db": 48.66358898375342,
+        "band_click_out_db": 47.85432967559744,
+        "band_click_change_db": -0.8092593081559798,
+        "band_hiss_in_db": 38.38660394253773,
+        "band_hiss_out_db": 27.255755932023572,
+        "band_hiss_change_db": -11.13084801051416,
+        "region_click_a_voice_in_db": 8.391721618237314,
+        "region_click_a_voice_out_db": 7.428004301921027,
+        "region_click_a_voice_change_db": -0.9637173163162869,
+        "region_click_a_click_in_db": 12.727150102535393,
+        "region_click_a_click_out_db": -2.379178865038413,
+        "region_click_a_click_change_db": -15.106328967573805,
+        "region_click_a_hiss_in_db": 11.475558327251019,
+        "region_click_a_hiss_out_db": -45.4669188936179,
+        "region_click_a_hiss_change_db": -56.94247722086892,
+        "region_click_b_voice_in_db": 5.131907677612694,
+        "region_click_b_voice_out_db": -16.37036710509956,
+        "region_click_b_voice_change_db": -21.502274782712256,
+        "region_click_b_click_in_db": 8.693848222933475,
+        "region_click_b_click_out_db": -27.303491270926187,
+        "region_click_b_click_change_db": -35.99733949385966,
+        "region_click_b_hiss_in_db": 6.576926835207971,
+        "region_click_b_hiss_out_db": -29.857390472156272,
+        "region_click_b_hiss_change_db": -36.43431730736424,
+        "chatter_db": 2.7933828950934776e-15,
+        "chatter_gain_std_db": 5.434585573862804,
+        "chatter_gain_step_db": 21.06921260826904,
+        "chatter_content_std_db": 15.069329924137747,
+        "chatter_content_span_db": 39.54621367107378,
+        "chatter_frames": 92.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 0.18480554214688535,
+        "block_rms_diff": 0.006454184279494427,
+        "block_rms_diff_db": -22.11952590166596
+      }
+    },
+    "mouth_de_click_clean": {
+      "module": "AUR_MOUTHDECLICK",
+      "case": "voice_clean",
+      "config": {},
+      "chatter_band": [
+        4000.0,
+        14000.0
+      ],
+      "metrics": {
+        "latency_reported": 0.0,
+        "latency_measured": 0.0,
+        "output_max_diff": 0.0,
+        "output_rms_diff_db": -218.32508912706234,
+        "output_level_db": 0.0,
+        "band_voice_in_db": 57.86238570522688,
+        "band_voice_out_db": 57.86238570522688,
+        "band_voice_change_db": 0.0,
+        "band_hiss_in_db": -0.31915506355988216,
+        "band_hiss_out_db": -0.31915506355988216,
+        "band_hiss_change_db": 0.0,
+        "band_low_in_db": 57.26685357586672,
+        "band_low_out_db": 57.26685357586672,
+        "band_low_change_db": 0.0,
+        "chatter_db": 0.0,
+        "chatter_gain_std_db": 0.0,
+        "chatter_gain_step_db": 0.0,
+        "chatter_content_std_db": 110.07622682485477,
+        "chatter_content_span_db": 340.03014069777106,
+        "chatter_frames": 92.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 1.1102230246251565e-16,
+        "block_rms_diff": 1.3595624126505168e-17,
+        "block_rms_diff_db": -218.32508912706234
+      }
+    },
+    "de_ess_sibilance": {
+      "module": "AUR_DEESS",
+      "case": "voice_sibilance",
+      "config": {},
+      "chatter_band": [
+        6000.0,
+        14000.0
+      ],
+      "metrics": {
+        "latency_reported": 1024.0,
+        "latency_measured": 1024.0,
+        "output_max_diff": 0.3326416426808864,
+        "output_rms_diff_db": -8.401632121344383,
+        "output_level_db": -0.8267942628775073,
+        "band_voice_in_db": 57.86490193955524,
+        "band_voice_out_db": 57.86490193960993,
+        "band_voice_change_db": 5.469047437145491e-11,
+        "band_low_in_db": 57.7966620948135,
+        "band_low_out_db": 57.79666209358964,
+        "band_low_change_db": -1.2238601243552694e-09,
+        "band_sib_in_db": 50.446577331268394,
+        "band_sib_out_db": 28.622410952491812,
+        "band_sib_change_db": -21.82416637877658,
+        "band_hiss_in_db": 50.969774663593235,
+        "band_hiss_out_db": 29.849356479218656,
+        "band_hiss_change_db": -21.12041818437458,
+        "region_sib_voice_in_db": 48.93715866401277,
+        "region_sib_voice_out_db": 48.937158662863986,
+        "region_sib_voice_change_db": -1.1487841788948572e-09,
+        "region_sib_low_in_db": 48.871751467306346,
+        "region_sib_low_out_db": 48.87175146908078,
+        "region_sib_low_change_db": 1.7744312685863406e-09,
+        "region_sib_sib_in_db": 49.13369349474387,
+        "region_sib_sib_out_db": 26.74977787098641,
+        "region_sib_sib_change_db": -22.383915623757463,
+        "region_sib_hiss_in_db": 49.647852478735224,
+        "region_sib_hiss_out_db": 27.85911913737868,
+        "region_sib_hiss_change_db": -21.788733341356544,
+        "chatter_db": 0.5670763241336753,
+        "chatter_gain_std_db": 8.893726463453177,
+        "chatter_gain_step_db": 12.056792799734438,
+        "chatter_content_std_db": 15.426804457340893,
+        "chatter_content_span_db": 39.093754516767476,
+        "chatter_frames": 90.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 0.0,
+        "block_rms_diff": 0.0,
+        "block_rms_diff_db": -218.34222240136205
+      }
+    },
+    "dialogue_isolate_noise_gain": {
+      "module": "AUR_DIALOGUEISOLATE",
+      "case": "voice_hiss",
+      "config": {
+        "Noise Gain": -12.0
+      },
+      "chatter_band": [
+        5000.0,
+        14000.0
+      ],
+      "metrics": {
+        "latency_reported": 0.0,
+        "latency_measured": 0.0,
+        "output_max_diff": 0.043410469057951526,
+        "output_rms_diff_db": -20.938512030418114,
+        "output_level_db": -0.2667098332297997,
+        "band_voice_in_db": 57.86880102064515,
+        "band_voice_out_db": 57.617639975736815,
+        "band_voice_change_db": -0.25116104490833635,
+        "band_hiss_in_db": 30.25407979878302,
+        "band_hiss_out_db": 21.972849255668162,
+        "band_hiss_change_db": -8.281230543114859,
+        "band_low_in_db": 57.26991182218462,
+        "band_low_out_db": 57.01623267568028,
+        "band_low_change_db": -0.2536791465043393,
+        "chatter_db": 0.37273675037615145,
+        "chatter_gain_std_db": 1.246416351118699,
+        "chatter_gain_step_db": 1.1630442231959037,
+        "chatter_content_std_db": 14.62303672091764,
+        "chatter_content_span_db": 35.83033171509839,
+        "chatter_frames": 92.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 0.05143117524068376,
+        "block_rms_diff": 0.006384958317148658,
+        "block_rms_diff_db": -21.979343927459997
+      }
+    },
+    "dialogue_isolate_transparent": {
+      "module": "AUR_DIALOGUEISOLATE",
+      "case": "voice_hiss",
+      "config": {
+        "Voice Gain": 0.0,
+        "Reverb Gain": 0.0,
+        "Noise Gain": 0.0
+      },
+      "chatter_band": [
+        5000.0,
+        14000.0
+      ],
+      "metrics": {
+        "latency_reported": 0.0,
+        "latency_measured": 0.0,
+        "output_max_diff": 2.7755575615628914e-17,
+        "output_rms_diff_db": -218.34921508886825,
+        "output_level_db": 0.0,
+        "band_voice_in_db": 57.86880102064515,
+        "band_voice_out_db": 57.86880102064515,
+        "band_voice_change_db": 0.0,
+        "band_hiss_in_db": 30.25407979878302,
+        "band_hiss_out_db": 30.25407979878302,
+        "band_hiss_change_db": 0.0,
+        "band_low_in_db": 57.26991182218462,
+        "band_low_out_db": 57.26991182218462,
+        "band_low_change_db": 0.0,
+        "chatter_db": 1.862255263395652e-15,
+        "chatter_gain_std_db": 1.7501392325514024e-15,
+        "chatter_gain_step_db": 7.105427357601002e-15,
+        "chatter_content_std_db": 14.62303672091764,
+        "chatter_content_span_db": 35.83033171509839,
+        "chatter_frames": 92.0
+      },
+      "block": {
+        "block_size": 4096.0,
+        "block_max_diff": 5.551115123125783e-17,
+        "block_rms_diff": 2.683548308126452e-18,
+        "block_rms_diff_db": -218.34921508886825
+      }
+    }
+  },
+  "calibration": [
+    {
+      "name": "the identity",
+      "chatter_db": 0.0,
+      "gain_std_db": 0.0,
+      "content_span_db": 35.83033171509839
+    },
+    {
+      "name": "SteadyGain",
+      "chatter_db": 3.724510526791304e-15,
+      "gain_std_db": 3.4173924602383137e-15,
+      "content_span_db": 35.83033171509839
+    },
+    {
+      "name": "FrameGain",
+      "chatter_db": 0.6151229715408653,
+      "gain_std_db": 1.0407958233517742,
+      "content_span_db": 35.83033171509839
+    },
+    {
+      "name": "ContentFollower",
+      "chatter_db": 0.134285399144909,
+      "gain_std_db": 5.404546861765929,
+      "content_span_db": 35.83033171509839
+    }
+  ],
+  "voice": {
+    "measured": {
+      "level_dbfs": -18.49512713347989,
+      "pause_count": 6,
+      "pause_total_s": 0.37866666666666665,
+      "pause_fraction": 0.30293333333333333,
+      "f0_mean_hz": 110.0526436355858,
+      "f0_std_pct": 0.7392362017228077,
+      "f0_min_hz": 108.65633537332829,
+      "f0_max_hz": 111.63157066236248,
+      "voiced_frames": 77,
+      "voiced_fraction": 0.6754385964912281,
+      "period_jitter_pct": 0.2615889324718665,
+      "ltas_frames": 97,
+      "hf_leak_db": -58.230010132879954,
+      "harmonic_spacing_hz": 109.52407175209497,
+      "harmonic_spacing_comb_peak": 0.6351231432940493,
+      "harmonic_spacing_error_pct": 0.4802900375942551,
+      "harmonic_count": 16,
+      "harmonic_spacing_peaks_hz": 111.328125,
+      "formants_hz": [
+        526.25,
+        1495.0,
+        2482.5,
+        3450.0
+      ],
+      "formant_levels_db": [
+        0.0,
+        -4.736622873503578,
+        -10.674423203235136,
+        -16.515042487666435
+      ],
+      "tilt_db_per_octave": -4.816479930623688,
+      "fit_error_db": -21.04249875746433,
+      "envelope_peaks_hz": [
+        451.4277781154939,
+        1152.571387426265,
+        1796.780358586878
+      ],
+      "envelope_slope_below_400hz_db_per_octave": 0.9571849018019085
+    },
+    "table": [
+      [
+        "f0_mean_hz",
+        "110.05 Hz",
+        "85 .. 255 Hz (an adult speaker spans roughly 85-255 Hz; one synthetic voice can only sit inside that band)",
+        "inside"
+      ],
+      [
+        "period_jitter_pct",
+        "0.26 %",
+        "0 .. 1 % (the cycle-to-cycle period perturbation of a sustained vowel stays below 1 %)",
+        "inside"
+      ],
+      [
+        "harmonic_spacing_hz",
+        "109.52 Hz",
+        "85 .. 255 Hz (the spacing of the partials is the fundamental)",
+        "inside"
+      ],
+      [
+        "formant_f1_hz",
+        "526.25 Hz",
+        "250 .. 900 Hz (the first formant of a vowel)",
+        "inside"
+      ],
+      [
+        "formant_f2_hz",
+        "1495.00 Hz",
+        "800 .. 2800 Hz (the second formant of a vowel)",
+        "inside"
+      ],
+      [
+        "formant_f3_hz",
+        "2482.50 Hz",
+        "2200 .. 3200 Hz (the third formant of a vowel)",
+        "inside"
+      ],
+      [
+        "formant_f4_hz",
+        "3450.00 Hz",
+        "2800 .. 4200 Hz (the fourth formant of a vowel)",
+        "inside"
+      ],
+      [
+        "tilt_db_per_octave",
+        "-4.82 dB/octave",
+        "-12 .. -4 dB/octave (the long term average spectrum of speech falls by 4 to 12 dB per octave above the first formant)",
+        "inside"
+      ],
+      [
+        "pause_fraction",
+        "0.30 -",
+        "0.05 .. 0.6 - (speech is not continuous: a fifth to three fifths of it is a pause)",
+        "inside"
+      ],
+      [
+        "hf_leak_db",
+        "-58.23 dB",
+        "-200 .. -40 dB (the energy of a voice above 5 kHz sits at least 40 dB below its total energy)",
+        "inside"
+      ]
+    ]
+  },
+  "voice_denoise_parts": [
+    {
+      "lo_hz": 120.0,
+      "hi_hz": 400.0,
+      "before_db": 45.30151772561411,
+      "after_db": 44.970883975013,
+      "change_db": -0.330633750601109
+    },
+    {
+      "lo_hz": 400.0,
+      "hi_hz": 700.0,
+      "before_db": 57.124635416143036,
+      "after_db": 57.11460887895032,
+      "change_db": -0.010026537192715068
+    },
+    {
+      "lo_hz": 700.0,
+      "hi_hz": 1200.0,
+      "before_db": 36.11818738407644,
+      "after_db": 36.065342338544404,
+      "change_db": -0.05284504553203817
+    },
+    {
+      "lo_hz": 1200.0,
+      "hi_hz": 1800.0,
+      "before_db": 46.869561462222464,
+      "after_db": 46.847385363269964,
+      "change_db": -0.0221760989524995
+    },
+    {
+      "lo_hz": 1800.0,
+      "hi_hz": 2400.0,
+      "before_db": 33.67850566896619,
+      "after_db": 33.53061180820488,
+      "change_db": -0.1478938607613074
+    },
+    {
+      "lo_hz": 2400.0,
+      "hi_hz": 3000.0,
+      "before_db": 38.712556733902325,
+      "after_db": 38.58362536044032,
+      "change_db": -0.12893137346200234
+    },
+    {
+      "lo_hz": 3000.0,
+      "hi_hz": 4000.0,
+      "before_db": 33.61450751643563,
+      "after_db": 32.643081183865505,
+      "change_db": -0.9714263325701253
+    },
+    {
+      "lo_hz": 4000.0,
+      "hi_hz": 5000.0,
+      "before_db": 21.774647253456596,
+      "after_db": 11.23744327822704,
+      "change_db": -10.537203975229556
+    },
+    {
+      "lo_hz": 5000.0,
+      "hi_hz": 8000.0,
+      "before_db": 25.267828564399117,
+      "after_db": 10.574480088204696,
+      "change_db": -14.693348476194421
+    },
+    {
+      "lo_hz": 8000.0,
+      "hi_hz": 14000.0,
+      "before_db": 28.3645444661399,
+      "after_db": 13.956415548688192,
+      "change_db": -14.408128917451709
+    }
+  ],
+  "rules": {
+    "R1_wanted_content_db": 1.5,
+    "R2_target_db": {
+      "voice_denoise_hiss": 10.0,
+      "voice_denoise_pink_hiss": 10.0,
+      "breath_control_breath": 6.0,
+      "breath_control_clean": 0.0,
+      "voice_denoise_clean": 0.0,
+      "mouth_de_click_click": 10.0,
+      "mouth_de_click_clean": 0.0,
+      "de_ess_sibilance": 6.0,
+      "dialogue_isolate_noise_gain": 6.0,
+      "dialogue_isolate_transparent": 0.0
+    },
+    "R3_chatter_db": 1.0,
+    "R4_latency_samples": 1,
+    "R5_block_coherence_db": -60.0,
+    "R6_transparency": 1e-09,
+    "R7_level_db": 12.0,
+    "R8_clean_db": 0.5
+  }
+}

@@ -1,0 +1,761 @@
+{
+  "pitch": [
+    {
+      "label": "resample 220 Hz x1.25",
+      "source_hz": 220.0,
+      "factor": 1.25,
+      "expected_hz": 275.0,
+      "measured_hz": 274.9997849473561,
+      "cents": -0.0013538422001167034,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 220 Hz x1.5",
+      "source_hz": 220.0,
+      "factor": 1.5,
+      "expected_hz": 330.0,
+      "measured_hz": 330.0002597303287,
+      "cents": 0.0013625873080734619,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 220 Hz x2",
+      "source_hz": 220.0,
+      "factor": 2.0,
+      "expected_hz": 440.0,
+      "measured_hz": 439.99956522354006,
+      "cents": -0.0017106822342558997,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 220 Hz x0.5",
+      "source_hz": 220.0,
+      "factor": 0.5,
+      "expected_hz": 110.0,
+      "measured_hz": 110.00056756795766,
+      "cents": 0.008932640350324378,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 440 Hz x1.25",
+      "source_hz": 440.0,
+      "factor": 1.25,
+      "expected_hz": 550.0,
+      "measured_hz": 549.9996098615446,
+      "cents": -0.0012280385770665695,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 440 Hz x1.5",
+      "source_hz": 440.0,
+      "factor": 1.5,
+      "expected_hz": 660.0,
+      "measured_hz": 660.0004389296502,
+      "cents": 0.0011513480345417917,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 440 Hz x2",
+      "source_hz": 440.0,
+      "factor": 2.0,
+      "expected_hz": 880.0,
+      "measured_hz": 880.0000799638123,
+      "cents": 0.00015731371385992393,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 440 Hz x0.5",
+      "source_hz": 440.0,
+      "factor": 0.5,
+      "expected_hz": 220.0,
+      "measured_hz": 219.99943854425098,
+      "cents": -0.004418238864044009,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 1000 Hz x1.25",
+      "source_hz": 1000.0,
+      "factor": 1.25,
+      "expected_hz": 1250.0,
+      "measured_hz": 1250.000463876396,
+      "cents": 0.0006424627697118963,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 1000 Hz x1.5",
+      "source_hz": 1000.0,
+      "factor": 1.5,
+      "expected_hz": 1500.0,
+      "measured_hz": 1500.0000000125474,
+      "cents": 1.4481537990145301e-08,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 1000 Hz x2",
+      "source_hz": 1000.0,
+      "factor": 2.0,
+      "expected_hz": 2000.0,
+      "measured_hz": 2000.0003333816346,
+      "cents": 0.00028858079464828297,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 1000 Hz x0.5",
+      "source_hz": 1000.0,
+      "factor": 0.5,
+      "expected_hz": 500.0,
+      "measured_hz": 500.0005956566801,
+      "cents": 0.0020624410237497738,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 4000 Hz x1.25",
+      "source_hz": 4000.0,
+      "factor": 1.25,
+      "expected_hz": 5000.0,
+      "measured_hz": 5000.000464120552,
+      "cents": 0.00016070025303713912,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 4000 Hz x1.5",
+      "source_hz": 4000.0,
+      "factor": 1.5,
+      "expected_hz": 6000.0,
+      "measured_hz": 6000.0000003018895,
+      "cents": 8.710680466718295e-08,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 4000 Hz x2",
+      "source_hz": 4000.0,
+      "factor": 2.0,
+      "expected_hz": 8000.0,
+      "measured_hz": 8000.000333224683,
+      "cents": 7.211123823505614e-05,
+      "length_out": 48000
+    },
+    {
+      "label": "resample 4000 Hz x0.5",
+      "source_hz": 4000.0,
+      "factor": 0.5,
+      "expected_hz": 2000.0,
+      "measured_hz": 2000.0005957619303,
+      "cents": 0.0005157015927621347,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 220 Hz x1.25",
+      "source_hz": 220.0,
+      "factor": 1.25,
+      "expected_hz": 275.0,
+      "measured_hz": 228.1248979975833,
+      "cents": -323.52924580230916,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 220 Hz x1.5",
+      "source_hz": 220.0,
+      "factor": 1.5,
+      "expected_hz": 330.0,
+      "measured_hz": 330.00043468982216,
+      "cents": 0.002280452500814032,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 220 Hz x2",
+      "source_hz": 220.0,
+      "factor": 2.0,
+      "expected_hz": 440.0,
+      "measured_hz": 439.9999249021155,
+      "cents": -0.00029548187684495336,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 220 Hz x0.5",
+      "source_hz": 220.0,
+      "factor": 0.5,
+      "expected_hz": 110.0,
+      "measured_hz": 110.00055517647225,
+      "cents": 0.008737618059473028,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 440 Hz x1.25",
+      "source_hz": 440.0,
+      "factor": 1.25,
+      "expected_hz": 550.0,
+      "measured_hz": 526.5618976778015,
+      "cents": -75.39418526471259,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 440 Hz x1.5",
+      "source_hz": 440.0,
+      "factor": 1.5,
+      "expected_hz": 660.0,
+      "measured_hz": 706.8755396374017,
+      "cents": 118.78823520331677,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 440 Hz x2",
+      "source_hz": 440.0,
+      "factor": 2.0,
+      "expected_hz": 880.0,
+      "measured_hz": 880.0001227174054,
+      "cents": 0.00024142333597998217,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 440 Hz x0.5",
+      "source_hz": 440.0,
+      "factor": 0.5,
+      "expected_hz": 220.0,
+      "measured_hz": 266.8741426636476,
+      "cents": 334.3872075788245,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 1000 Hz x1.25",
+      "source_hz": 1000.0,
+      "factor": 1.25,
+      "expected_hz": 1250.0,
+      "measured_hz": 1273.4379737968877,
+      "cents": 32.160715337632496,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 1000 Hz x1.5",
+      "source_hz": 1000.0,
+      "factor": 1.5,
+      "expected_hz": 1500.0,
+      "measured_hz": 1546.875083381923,
+      "cents": 53.27303654965627,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 1000 Hz x2",
+      "source_hz": 1000.0,
+      "factor": 2.0,
+      "expected_hz": 2000.0,
+      "measured_hz": 2000.000948297992,
+      "cents": 0.0008208626917143249,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 1000 Hz x0.5",
+      "source_hz": 1000.0,
+      "factor": 0.5,
+      "expected_hz": 500.0,
+      "measured_hz": 546.875124623667,
+      "cents": 155.14001485320296,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 4000 Hz x1.25",
+      "source_hz": 4000.0,
+      "factor": 1.25,
+      "expected_hz": 5000.0,
+      "measured_hz": 5023.437974007938,
+      "cents": 8.096362286689708,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 4000 Hz x1.5",
+      "source_hz": 4000.0,
+      "factor": 1.5,
+      "expected_hz": 6000.0,
+      "measured_hz": 6046.875083148231,
+      "cents": 13.472730313432193,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 4000 Hz x2",
+      "source_hz": 4000.0,
+      "factor": 2.0,
+      "expected_hz": 8000.0,
+      "measured_hz": 8000.0009498333875,
+      "cents": 0.00020554797537374397,
+      "length_out": 48000
+    },
+    {
+      "label": "spectral 4000 Hz x0.5",
+      "source_hz": 4000.0,
+      "factor": 0.5,
+      "expected_hz": 2000.0,
+      "measured_hz": 2046.8751267200123,
+      "cents": 40.107709023929345,
+      "length_out": 48000
+    }
+  ],
+  "pitch_sweep": {
+    "x0.5": [
+      1067.1404873562424,
+      -0.021847966616275125,
+      -414.82554924731386,
+      175.22412456609698,
+      -170.36897184136285,
+      79.28353753991892,
+      -41.04631594015955,
+      20.163881881347816,
+      3.844111804577897e-12
+    ],
+    "x1.25": [
+      -323.52890698451404,
+      -323.49991008185,
+      -75.37801311017927,
+      -37.29087414778779,
+      32.155714808345316,
+      -16.304582223662425,
+      8.095095111891238,
+      -4.061772465476351,
+      -4.397683661365134e-05
+    ],
+    "x1.5": [
+      432.8965474287217,
+      0.02999857064850325,
+      118.77509668403043,
+      -62.59271236975387,
+      53.27241369252579,
+      -27.26396311882036,
+      13.472572576170027,
+      -6.775843458729307,
+      -0.0002418061544370298
+    ],
+    "x2": [
+      0.003369317732025592,
+      -0.034688982588896446,
+      -0.0005450233933701707,
+      0.006958772606441427,
+      -0.0006770088210841331,
+      0.0003326909813699636,
+      -0.00016674856405524157,
+      8.363925696149646e-05,
+      NaN
+    ]
+  },
+  "pitch_fallback": [
+    {
+      "label": "numpy resampler 220 Hz x1.25",
+      "source_hz": 220.0,
+      "factor": 1.25,
+      "expected_hz": 275.0,
+      "measured_hz": 375.4660851823338,
+      "cents": 539.1011763799816,
+      "rms_db": -7.709781612229959
+    },
+    {
+      "label": "numpy resampler 220 Hz x1.5",
+      "source_hz": 220.0,
+      "factor": 1.5,
+      "expected_hz": 330.0,
+      "measured_hz": 450.5501252853099,
+      "cents": 539.065914470072,
+      "rms_db": -7.717563045715146
+    },
+    {
+      "label": "numpy resampler 220 Hz x2",
+      "source_hz": 220.0,
+      "factor": 2.0,
+      "expected_hz": 440.0,
+      "measured_hz": 600.7753039698719,
+      "cents": 539.1863826634155,
+      "rms_db": -7.734443640054006
+    },
+    {
+      "label": "numpy resampler 220 Hz x0.5",
+      "source_hz": 220.0,
+      "factor": 0.5,
+      "expected_hz": 110.0,
+      "measured_hz": 300.36206402928894,
+      "cents": 1739.038904474386,
+      "rms_db": -4.685729989665964
+    },
+    {
+      "label": "numpy resampler 440 Hz x1.25",
+      "source_hz": 440.0,
+      "factor": 1.25,
+      "expected_hz": 550.0,
+      "measured_hz": 750.9316496053505,
+      "cents": 539.099975796747,
+      "rms_db": -7.709680633143259
+    },
+    {
+      "label": "numpy resampler 440 Hz x1.5",
+      "source_hz": 440.0,
+      "factor": 1.5,
+      "expected_hz": 660.0,
+      "measured_hz": 901.1016306737944,
+      "cents": 539.0685659839028,
+      "rms_db": -7.719216021056468
+    },
+    {
+      "label": "numpy resampler 440 Hz x2",
+      "source_hz": 440.0,
+      "factor": 2.0,
+      "expected_hz": 880.0,
+      "measured_hz": 1201.5149577796888,
+      "cents": 539.1350159659547,
+      "rms_db": -7.800895323149168
+    },
+    {
+      "label": "numpy resampler 440 Hz x0.5",
+      "source_hz": 440.0,
+      "factor": 0.5,
+      "expected_hz": 220.0,
+      "measured_hz": 600.7236140614826,
+      "cents": 1739.0374231793764,
+      "rms_db": -4.686143613123959
+    },
+    {
+      "label": "numpy resampler 1000 Hz x1.25",
+      "source_hz": 1000.0,
+      "factor": 1.25,
+      "expected_hz": 1250.0,
+      "measured_hz": 1706.6709427848045,
+      "cents": 539.1081952073214,
+      "rms_db": -7.709860625016361
+    },
+    {
+      "label": "numpy resampler 1000 Hz x1.5",
+      "source_hz": 1000.0,
+      "factor": 1.5,
+      "expected_hz": 1500.0,
+      "measured_hz": 2047.9851494640968,
+      "cents": 539.091303904065,
+      "rms_db": -7.718138048716435
+    },
+    {
+      "label": "numpy resampler 1000 Hz x2",
+      "source_hz": 1000.0,
+      "factor": 2.0,
+      "expected_hz": 2000.0,
+      "measured_hz": 2730.637442627585,
+      "cents": 539.085329492412,
+      "rms_db": -7.850661789056657
+    },
+    {
+      "label": "numpy resampler 1000 Hz x0.5",
+      "source_hz": 1000.0,
+      "factor": 0.5,
+      "expected_hz": 500.0,
+      "measured_hz": 1365.3502992758006,
+      "cents": 1739.1253701144126,
+      "rms_db": -4.684922877202491
+    }
+  ],
+  "stretch": [
+    {
+      "factor": 0.5,
+      "expected_period_ms": 50.0,
+      "measured_period_ms": 50.666666666666664,
+      "spacing_error_percent": 1.3333333333333286,
+      "mean_period_ms": 56.952380952380956,
+      "mean_error_percent": 13.904761904761912,
+      "position_error_ms": 6.666666666666629,
+      "clicks_out": 8,
+      "clicks_in": 10,
+      "length_out": 26400
+    },
+    {
+      "factor": 0.75,
+      "expected_period_ms": 75.0,
+      "measured_period_ms": 76.0,
+      "spacing_error_percent": 1.3333333333333333,
+      "mean_period_ms": 99.55555555555556,
+      "mean_error_percent": 32.74074074074074,
+      "position_error_ms": 4.999999999999972,
+      "clicks_out": 7,
+      "clicks_in": 10,
+      "length_out": 39600
+    },
+    {
+      "factor": 1.5,
+      "expected_period_ms": 150.0,
+      "measured_period_ms": 150.0,
+      "spacing_error_percent": 0.0,
+      "mean_period_ms": 200.0,
+      "mean_error_percent": 33.333333333333336,
+      "position_error_ms": 2.0,
+      "clicks_out": 7,
+      "clicks_in": 10,
+      "length_out": 79200
+    },
+    {
+      "factor": 2.0,
+      "expected_period_ms": 200.0,
+      "measured_period_ms": 200.0,
+      "spacing_error_percent": 0.0,
+      "mean_period_ms": 200.0,
+      "mean_error_percent": 0.0,
+      "position_error_ms": 10.666666666666515,
+      "clicks_out": 9,
+      "clicks_in": 10,
+      "length_out": 105600
+    },
+    {
+      "factor": 3.0,
+      "expected_period_ms": 300.0,
+      "measured_period_ms": 268.0,
+      "spacing_error_percent": -10.666666666666666,
+      "mean_period_ms": 221.44444444444446,
+      "mean_error_percent": -26.185185185185183,
+      "position_error_ms": 85.33333333333303,
+      "clicks_out": 13,
+      "clicks_in": 10,
+      "length_out": 158400
+    }
+  ],
+  "transient": [
+    {
+      "factor": 0.5,
+      "width_ms_in": 0.041666666666666664,
+      "width_ms_out": 0.041666666666666664,
+      "width_ratio": 2.0,
+      "spread_ms": 10.666666666666666,
+      "pre_echo_db": 93.80280797324184,
+      "post_echo_db": 93.80280797324184,
+      "peak_loss_db": -9.542425094393247,
+      "energy_1ms_percent": 7.467720322952866e-31
+    },
+    {
+      "factor": 1.5,
+      "width_ms_in": 0.041666666666666664,
+      "width_ms_out": 0.08333333333333333,
+      "width_ratio": 1.3333333333333333,
+      "spread_ms": 12.10777250925432,
+      "pre_echo_db": -28.59351085658195,
+      "post_echo_db": -27.21007575113446,
+      "peak_loss_db": -2.8746866909226823,
+      "energy_1ms_percent": 10.182590183702432
+    },
+    {
+      "factor": 2.0,
+      "width_ms_in": 0.041666666666666664,
+      "width_ms_out": 0.08333333333333333,
+      "width_ratio": 1.0,
+      "spread_ms": 16.642122074720533,
+      "pre_echo_db": -28.591810325810275,
+      "post_echo_db": -27.208842404561466,
+      "peak_loss_db": -4.385686119801998,
+      "energy_1ms_percent": 9.556336421573553
+    }
+  ],
+  "spectrum": [
+    {
+      "label": "noise, resample x1.5",
+      "top_band_db_in": 18.398121014036334,
+      "top_band_db_out": 14.802746343996091,
+      "top_band_loss_db": 3.5953746700402434,
+      "worst_band_low_hz": 50.39684199579493,
+      "worst_band_loss_db": 9.71760969920066
+    },
+    {
+      "label": "noise, resample x0.5",
+      "top_band_db_in": 18.398121014036334,
+      "top_band_db_out": -49.3356253735967,
+      "top_band_loss_db": 67.73374638763303,
+      "worst_band_low_hz": 20480.0,
+      "worst_band_loss_db": 69.58528160880654
+    },
+    {
+      "label": "noise, spectral x1.5",
+      "top_band_db_in": 18.398121014036334,
+      "top_band_db_out": 9.22132480135882,
+      "top_band_loss_db": 9.176796212677514,
+      "worst_band_low_hz": 100.79368399158986,
+      "worst_band_loss_db": 18.093307178214708
+    },
+    {
+      "label": "noise, spectral x0.5",
+      "top_band_db_in": 18.398121014036334,
+      "top_band_db_out": -33.71189117763564,
+      "top_band_loss_db": 52.11001219167198,
+      "worst_band_low_hz": 12901.591550923502,
+      "worst_band_loss_db": 103.30101041350683
+    }
+  ],
+  "level": [
+    {
+      "material": "white noise x1",
+      "db_in": -20.036397838746257,
+      "db_out": -20.036397838746257
+    },
+    {
+      "material": "white noise x1.5",
+      "db_in": -20.036397838746257,
+      "db_out": -21.926348816040154
+    },
+    {
+      "material": "white noise x2",
+      "db_in": -20.036397838746257,
+      "db_out": -21.68601569481217
+    },
+    {
+      "material": "440 Hz tone x1",
+      "db_in": -9.030899869919436,
+      "db_out": -9.030899869919436
+    },
+    {
+      "material": "440 Hz tone x1.5",
+      "db_in": -9.030899869919436,
+      "db_out": -9.110975665215133
+    },
+    {
+      "material": "440 Hz tone x2",
+      "db_in": -9.030899869919436,
+      "db_out": -9.10785140826275
+    }
+  ],
+  "cost": [
+    {
+      "block": 64,
+      "budget_us": 1333.3333333333333,
+      "total_us": 1055.7399975368753,
+      "budget_percent": 79.18049981526565,
+      "analyze_us": 91.92500147037208,
+      "transients_us": 0.4050001734867692,
+      "median_us": 0.0,
+      "median_percent": 0.0,
+      "loop_us": 923.2499985955656,
+      "lock_us": 170.16000347211957,
+      "overlap_us": 132.08499876782298,
+      "frames": 2
+    },
+    {
+      "block": 128,
+      "budget_us": 2666.6666666666665,
+      "total_us": 1310.4750018101186,
+      "budget_percent": 49.142812567879446,
+      "analyze_us": 120.85000053048134,
+      "transients_us": 0.45499764382839203,
+      "median_us": 0.0,
+      "median_percent": 0.0,
+      "loop_us": 1221.1300054332241,
+      "lock_us": 357.1300068870187,
+      "overlap_us": 88.88999873306602,
+      "frames": 2
+    },
+    {
+      "block": 256,
+      "budget_us": 5333.333333333333,
+      "total_us": 2423.84500161279,
+      "budget_percent": 45.44709378023981,
+      "analyze_us": 70.59999916236848,
+      "transients_us": 0.4249974153935909,
+      "median_us": 0.0,
+      "median_percent": 0.0,
+      "loop_us": 2306.0500039719045,
+      "lock_us": 541.9999943114817,
+      "overlap_us": 117.37000022549182,
+      "frames": 2
+    },
+    {
+      "block": 512,
+      "budget_us": 10666.666666666666,
+      "total_us": 2841.550001176074,
+      "budget_percent": 26.639531261025695,
+      "analyze_us": 67.4000009894371,
+      "transients_us": 0.4999979864805937,
+      "median_us": 0.0,
+      "median_percent": 0.0,
+      "loop_us": 2698.6250042682514,
+      "lock_us": 1237.0400014333427,
+      "overlap_us": 142.4249989213422,
+      "frames": 2
+    }
+  ],
+  "cost_one_second": [
+    {
+      "block": 64,
+      "total_us": 338081.07000077143,
+      "analyze_us": 3376.3150015147403,
+      "transients_us": 197.18999974429607,
+      "median_us": 44.925001566298306,
+      "median_percent": 0.013288233371420587,
+      "loop_us": 331560.31500257086,
+      "lock_us": 2225.130625447491,
+      "overlap_us": 6323.564998456277,
+      "frames": 95
+    },
+    {
+      "block": 128,
+      "total_us": 345971.68000182137,
+      "analyze_us": 3920.9000009577717,
+      "transients_us": 159.0350002516061,
+      "median_us": 48.37500164285302,
+      "median_percent": 0.01398235879959838,
+      "loop_us": 340120.1150001725,
+      "lock_us": 2069.2743761173915,
+      "overlap_us": 5692.530001397245,
+      "frames": 95
+    },
+    {
+      "block": 256,
+      "total_us": 331624.01499866974,
+      "analyze_us": 3409.3349997419864,
+      "transients_us": 190.54999866057187,
+      "median_us": 46.88499902840704,
+      "median_percent": 0.014137998729855288,
+      "loop_us": 325258.2249988336,
+      "lock_us": 2315.1562501880107,
+      "overlap_us": 6175.240001175553,
+      "frames": 95
+    },
+    {
+      "block": 512,
+      "total_us": 320184.2750015203,
+      "analyze_us": 3663.829999277368,
+      "transients_us": 159.03999737929553,
+      "median_us": 28.120001661591232,
+      "median_percent": 0.008782443067029983,
+      "loop_us": 314983.6700031301,
+      "lock_us": 1348.0743760737823,
+      "overlap_us": 5041.565001010895,
+      "frames": 95
+    }
+  ],
+  "edge": [
+    {
+      "name": "silence",
+      "ok": true,
+      "finite": true,
+      "length_ok": true,
+      "peak": 0.0,
+      "message": ""
+    },
+    {
+      "name": "constant",
+      "ok": true,
+      "finite": true,
+      "length_ok": true,
+      "peak": 0.5608289136030907,
+      "message": ""
+    },
+    {
+      "name": "square",
+      "ok": true,
+      "finite": true,
+      "length_ok": true,
+      "peak": 1.7173525358407913,
+      "message": ""
+    },
+    {
+      "name": "impulse",
+      "ok": true,
+      "finite": true,
+      "length_ok": true,
+      "peak": 0.7182335127930841,
+      "message": ""
+    },
+    {
+      "name": "tone",
+      "ok": true,
+      "finite": true,
+      "length_ok": true,
+      "peak": 0.546784482283131,
+      "message": ""
+    }
+  ]
+}

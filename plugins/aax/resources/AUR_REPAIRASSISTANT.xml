@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='REPA' plugID='MONO'>
+			<Desc>Repair Assistant</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='REPA' plugID='M2ST'>
+			<Desc>Repair Assistant</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='REPA' plugID='STER'>
+			<Desc>Repair Assistant</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+				<Page num='6'>
+					<ID>260</ID>
+				</Page>
+				<Page num='7'>
+					<ID>261</ID>
+				</Page>
+				<Page num='8'>
+					<ID>262</ID>
+				</Page>
+				<Page num='9'>
+					<ID>263</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>259</ID>
+				</Page>
+				<Page num='3'>
+					<ID>260</ID>
+					<ID>261</ID>
+					<ID>262</ID>
+					<ID>263</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Pro</name>
+			<name typ='PgTL' sz='4'>Proc</name>
+			<name typ='PgTL' sz='5'>Proce</name>
+			<name typ='PgTL' sz='6'>Proces</name>
+			<name typ='PgTL' sz='7'>Process</name>
+			<name typ='PgTL' sz='8'>Processi</name>
+			<name typ='PgTL' sz='9'>Processin</name>
+			<name typ='PgTL' sz='10'>Processing</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Mod</name>
+			<name typ='PgTL' sz='4'>Mode</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Noi</name>
+			<name typ='PgTL' sz='4'>Nois</name>
+			<name typ='PgTL' sz='5'>Noise</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Rev</name>
+			<name typ='PgTL' sz='4'>Reve</name>
+			<name typ='PgTL' sz='5'>Rever</name>
+			<name typ='PgTL' sz='6'>Reverb</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Hum</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Cli</name>
+			<name typ='PgTL' sz='4'>Clic</name>
+			<name typ='PgTL' sz='5'>Click</name>
+		</Ctrl>
+		<Ctrl ID='262'>
+			<name typ='PgTL' sz='3'>De-</name>
+			<name typ='PgTL' sz='4'>De-E</name>
+			<name typ='PgTL' sz='5'>De-Es</name>
+			<name typ='PgTL' sz='6'>De-Ess</name>
+		</Ctrl>
+		<Ctrl ID='263'>
+			<name typ='PgTL' sz='3'>De-</name>
+			<name typ='PgTL' sz='4'>De-C</name>
+			<name typ='PgTL' sz='5'>De-Cl</name>
+			<name typ='PgTL' sz='6'>De-Cli</name>
+			<name typ='PgTL' sz='7'>De-Clip</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

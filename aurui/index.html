@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-contrast="normal">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Auralis — Audio Restoration Workbench</title>
+<link rel="stylesheet" href="/css/tokens.css" />
+<link rel="stylesheet" href="/css/components.css" />
+<link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <header id="topbar">
+    <div class="brand"><span class="brand-mark"></span><span class="brand-name" data-i18n="app.name">Auralis</span></div>
+
+    <div class="file-strip">
+      <button id="btn-open" class="tbtn" title="Open an audio file" data-i18n="topbar.open" data-i18n-title="topbar.open.title">Open</button>
+      <input id="file-input" type="file" accept="audio/*" hidden />
+      <span id="file-name" class="file-name" data-i18n="topbar.noFile">No file loaded</span>
+      <span id="file-meta" class="file-meta"></span>
+    </div>
+
+    <!-- The glyph is the picture, the name is the `aria-label`: a button that
+         carries only a symbol would be announced as "triangle", so every
+         icon-only button names its action and the name follows the locale. -->
+    <div class="transport">
+      <button id="btn-play" class="tbtn tbtn-icon" title="Preview (Space)" data-i18n-title="transport.preview.title" data-i18n-aria="transport.preview">&#9654;</button>
+      <button id="btn-stop" class="tbtn tbtn-icon" title="Stop" data-i18n-title="transport.stop.title" data-i18n-aria="transport.stop">&#9632;</button>
+      <button id="btn-loop" class="tbtn tbtn-icon" title="Loop preview" data-i18n-title="transport.loop" data-i18n-aria="transport.loop">&#8635;</button>
+    </div>
+
+    <div class="topbar-right">
+      <div class="segmented" id="view-mode">
+        <button data-mode="composite" class="on" data-i18n="topbar.viewMode.composite">Composite</button>
+        <button data-mode="waveform" data-i18n="topbar.viewMode.waveform">Waveform</button>
+        <button data-mode="spectrogram" data-i18n="topbar.viewMode.spectrogram">Spectrogram</button>
+      </div>
+      <!-- The locale switch.  The shell fills it with the shipped locales
+           (availableLocales()) and calls setLocale(); the name of the control
+           itself comes from the catalogue, so it follows the locale. -->
+      <select id="locale-select" class="locale-select" title="Language" data-i18n-title="topbar.language" data-i18n-aria="topbar.language"></select>
+      <!-- The high-contrast switch.  `data-contrast` on <html> is the state the
+           stylesheet reads ("high" switches the variant on); the shell flips the
+           attribute and keeps `aria-pressed` in step with it. -->
+      <button id="btn-contrast" class="tbtn tbtn-icon" title="High contrast" aria-label="High contrast" data-i18n-aria="topbar.contrast" data-i18n-title="topbar.contrast.title" aria-pressed="false">&#9686;</button>
+      <button id="btn-compare" class="tbtn" title="Compare two chains" data-i18n="topbar.compare" data-i18n-title="topbar.compare.title">Compare</button>
+      <!-- The learned stage of a render: a model of the library that runs over
+           the finished file.  It is an offline capability, so the choice is
+           here and not on a module: it refines what the chain produced.
+           The shell fills it from /api/models and reads the value when it
+           renders. -->
+      <select id="learned-select" class="locale-select" title="Learned stage" data-i18n-title="topbar.learned.title" data-i18n-aria="topbar.learned"></select>
+      <button id="btn-render" class="tbtn tbtn-primary" title="Render and export" data-i18n="topbar.render" data-i18n-title="topbar.render.title">Render</button>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main">
+
+    <!-- LEFT: module browser -->
+    <aside id="rail">
+      <div class="rail-head">
+        <input id="module-search" class="search" type="search" placeholder="Search modules" data-i18n-placeholder="browser.search" data-i18n-title="browser.search.title" data-i18n-aria="browser.search" />
+      </div>
+      <div id="module-tree" class="rail-body"></div>
+    </aside>
+
+    <!-- CENTRE: composite view -->
+    <section id="stage">
+      <div id="view-toolbar">
+        <div class="tool-group">
+          <button id="btn-zoom-out" class="tbtn tbtn-sm" title="Zoom out" data-i18n-title="control.zoomOut" data-i18n-aria="control.zoomOut">&minus;</button>
+          <span id="zoom-label" class="mono-label">1.0&times;</span>
+          <button id="btn-zoom-in" class="tbtn tbtn-sm" title="Zoom in" data-i18n-title="control.zoomIn" data-i18n-aria="control.zoomIn">+</button>
+          <button id="btn-zoom-fit" class="tbtn tbtn-sm" title="Fit" data-i18n="control.fit">Fit</button>
+        </div>
+        <div class="tool-group">
+          <span class="mono-label" data-i18n="control.frequency">freq</span>
+          <input id="freq-lo" class="num-input" type="number" value="0" min="0" step="10" title="Low frequency cut" data-i18n-title="control.freqLo" />
+          <span class="mono-label">&ndash;</span>
+          <input id="freq-hi" class="num-input" type="number" value="22050" min="0" step="10" title="High frequency cut" data-i18n-title="control.freqHi" />
+          <span class="mono-label" data-i18n="control.hertz">Hz</span>
+        </div>
+        <div class="tool-group">
+          <label class="chk"><input type="checkbox" id="chk-sel-freq" /> <span data-i18n="control.frequencySelection">frequency selection</span></label>
+          <label class="chk"><input type="checkbox" id="chk-sel-time" /> <span data-i18n="control.timeSelection">time selection</span></label>
+        </div>
+        <div class="tool-group">
+          <button id="btn-spectral" class="tbtn tbtn-sm" title="Spectral editor" data-i18n-title="control.spectralEditor" aria-pressed="false">Spectral</button>
+        </div>
+        <div class="tool-spacer"></div>
+        <div class="tool-group">
+          <span id="db-range" class="mono-label">0 .. &minus;120 dB</span>
+          <label class="chk"><input type="checkbox" id="chk-log" checked /> <span data-i18n="control.logScale">log</span></label>
+        </div>
+      </div>
+
+      <!-- The pixel content of a canvas cannot be read, so each canvas names
+           itself and carries a textual summary of the signal: the duration,
+           the sample rate, the channel count and the peak level.  The runtime
+           has to keep the summary in step with the loaded file (and must not
+           overwrite it: see var/patches/e2_keymap.md). -->
+      <div id="canvas-wrap">
+        <canvas id="spec-canvas" role="img" aria-label="Spectrogram, 0.00 s, 0 Hz, 0 ch, peak -inf dBFS"></canvas>
+        <canvas id="wave-canvas" role="img" aria-label="Waveform, 0.00 s, 0 Hz, 0 ch, peak -inf dBFS"></canvas>
+        <div id="hover-readout" class="mono-label readout"></div>
+      </div>
+    </section>
+
+    <!-- RIGHT: inspector -->
+    <aside id="inspector">
+      <div id="inspector-tabs" class="insp-tabs">
+        <button data-tab="panel" class="on" data-i18n="inspector.tab.module">Module</button>
+        <button data-tab="chain" data-i18n="inspector.tab.chain">Chain</button>
+        <button data-tab="analysis" data-i18n="inspector.tab.analysis">Analysis</button>
+        <button data-tab="batch" data-i18n="inspector.tab.batch">Batch</button>
+      </div>
+      <div id="inspector-body" class="insp-body"></div>
+    </aside>
+  </main>
+
+  <!-- ===================== STATUS BAR ===================== -->
+  <footer id="statusbar">
+    <span id="st-cursor" class="mono-label" title="Cursor" data-i18n-title="status.cursor">--:--.--</span>
+    <span id="st-sel" class="mono-label" data-i18n="status.noSelection">no selection</span>
+    <span class="spacer"></span>
+    <!-- The path of the preview.  The chip says which path is playing, so a
+         user who moves a knob is never misled about what they hear; the
+         disclosure that follows it says what the path changed.  The words come
+         from the server: it is the side that knows the path. -->
+    <button id="st-path" class="path-chip" type="button" aria-expanded="false"
+            aria-haspopup="dialog" aria-controls="path-panel"
+            title="The path the next preview will use"
+            data-i18n-title="status.path.titleIdle"
+            aria-label="The path of the preview" data-i18n-aria="status.path.label">
+      <span class="path-dot" aria-hidden="true"></span>
+      <span id="st-path-label" class="path-label" aria-live="polite"
+            aria-atomic="true">preview: fast path</span>
+    </button>
+    <span id="st-latency" class="mono-label" data-i18n="status.latency.unknown">lat &mdash; smp</span>
+    <span id="st-level" class="mono-label" data-i18n="status.level">-inf dBFS</span>
+    <span id="st-engine" class="mono-label" data-i18n="status.engine.idle">idle</span>
+  </footer>
+
+  <!-- The disclosure of the path: the report of the server — which path
+       plays, what it changed, and the way to ask for the other one.  The
+       shell fills it (js/path_report.js). -->
+  <div id="path-panel" class="path-panel hidden" role="dialog"
+       aria-label="The path of the preview" data-i18n-aria="status.path.label"></div>
+
+  <!-- ===================== MODAL ===================== -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <div class="modal-head"><span id="modal-title">Dialog</span><button id="modal-close" class="tbtn tbtn-sm" title="Close dialog" data-i18n-title="control.closeDialog" data-i18n-aria="control.closeDialog">&times;</button></div>
+      <div id="modal-body" class="modal-body"></div>
+      <div id="modal-foot" class="modal-foot"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+</div>
+
+<script type="module" src="/js/keymap.js"></script>
+<script type="module" src="/js/i18n.js"></script>
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

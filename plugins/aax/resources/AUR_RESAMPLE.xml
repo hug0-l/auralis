@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='RESA' plugID='MONO'>
+			<Desc>Resample</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='RESA' plugID='M2ST'>
+			<Desc>Resample</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='RESA' plugID='STER'>
+			<Desc>Resample</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>259</ID>
+				</Page>
+				<Page num='4'>
+					<ID>257</ID>
+				</Page>
+				<Page num='5'>
+					<ID>258</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>259</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Sam</name>
+			<name typ='PgTL' sz='4'>Samp</name>
+			<name typ='PgTL' sz='5'>Sampl</name>
+			<name typ='PgTL' sz='6'>Sample</name>
+			<name typ='PgTL' sz='7'>Sample </name>
+			<name typ='PgTL' sz='8'>Sample R</name>
+			<name typ='PgTL' sz='9'>Sample Ra</name>
+			<name typ='PgTL' sz='10'>Sample Rat</name>
+			<name typ='PgTL' sz='11'>Sample Rate</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Pos</name>
+			<name typ='PgTL' sz='4'>Post</name>
+			<name typ='PgTL' sz='5'>Post </name>
+			<name typ='PgTL' sz='6'>Post L</name>
+			<name typ='PgTL' sz='7'>Post Li</name>
+			<name typ='PgTL' sz='8'>Post Lim</name>
+			<name typ='PgTL' sz='9'>Post Limi</name>
+			<name typ='PgTL' sz='10'>Post Limit</name>
+			<name typ='PgTL' sz='11'>Post Limite</name>
+			<name typ='PgTL' sz='12'>Post Limiter</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Fil</name>
+			<name typ='PgTL' sz='4'>Filt</name>
+			<name typ='PgTL' sz='5'>Filte</name>
+			<name typ='PgTL' sz='6'>Filter</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Pre</name>
+			<name typ='PgTL' sz='4'>Pre </name>
+			<name typ='PgTL' sz='5'>Pre R</name>
+			<name typ='PgTL' sz='6'>Pre Ri</name>
+			<name typ='PgTL' sz='7'>Pre Rin</name>
+			<name typ='PgTL' sz='8'>Pre Ring</name>
+			<name typ='PgTL' sz='9'>Pre Ringi</name>
+			<name typ='PgTL' sz='10'>Pre Ringin</name>
+			<name typ='PgTL' sz='11'>Pre Ringing</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

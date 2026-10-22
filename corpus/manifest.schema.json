@@ -1,0 +1,386 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://auralis.local/schema/corpus-manifest-entry.schema.json",
+  "title": "Auralis corpus manifest entry",
+  "description": "One entry of corpus/manifest.json: one audio clip of the golden corpus, its licence and its annotations. The manifest itself is a JSON array of entries, each validated against this schema.",
+  "type": "object",
+  "required": [
+    "id",
+    "file",
+    "licence",
+    "source_url",
+    "sample_rate",
+    "channels",
+    "duration_s",
+    "annotations"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier of the clip; lowercase, no spaces.",
+      "pattern": "^[a-z0-9][a-z0-9_.-]*$",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "file": {
+      "type": "string",
+      "description": "Path of the audio file relative to the corpus directory, forward slashes only.",
+      "pattern": "^[A-Za-z0-9_./-]+\\.(wav|flac|aif|aiff)$",
+      "minLength": 1
+    },
+    "licence": {
+      "type": "string",
+      "description": "SPDX identifier of the licence of the clip. CC0-1.0 and the MIT/BSD/Apache family are permissive. The CC-BY-NC and CC-BY-NC-SA families are research only and must never be redistributed with a product.",
+      "enum": [
+        "CC0-1.0",
+        "CC-BY-3.0",
+        "CC-BY-4.0",
+        "CC-BY-SA-4.0",
+        "CC-BY-NC-3.0",
+        "CC-BY-NC-4.0",
+        "CC-BY-NC-SA-4.0",
+        "MIT",
+        "BSD-3-Clause",
+        "Apache-2.0",
+        "Unlicense",
+        "ITU-T-P.501"
+      ]
+    },
+    "source_url": {
+      "type": "string",
+      "description": "URL the clip was downloaded from, or the literal string \"synthesised\" for the clips that corpus/build_corpus.py generates in the repository.",
+      "pattern": "^(https?://.+|synthesised)$",
+      "minLength": 8
+    },
+    "source_credit": {
+      "type": "string",
+      "description": "Name to print in the attribution file.",
+      "maxLength": 256
+    },
+    "sample_rate": {
+      "type": "integer",
+      "description": "Sample rate of the file in Hz.",
+      "minimum": 8000,
+      "maximum": 384000
+    },
+    "channels": {
+      "type": "integer",
+      "description": "Number of channels of the file.",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "duration_s": {
+      "type": "number",
+      "description": "Duration of the clip in seconds.",
+      "exclusiveMinimum": 0,
+      "maximum": 3600
+    },
+    "sha256": {
+      "type": "string",
+      "description": "Checksum of the audio file, so the corpus can be verified.",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "split": {
+      "type": "string",
+      "description": "Split the clip belongs to.",
+      "enum": ["train", "dev", "test"]
+    },
+    "tags": {
+      "type": "array",
+      "description": "Free-form labels for searching the corpus.",
+      "items": { "type": "string", "minLength": 1, "maxLength": 64 },
+      "uniqueItems": true
+    },
+    "annotations": {
+      "type": "object",
+      "description": "What is in the clip.",
+      "required": ["events"],
+      "additionalProperties": false,
+      "properties": {
+        "events": {
+          "type": "array",
+          "description": "The events of the clip. Intervals are half open: [start_s, end_s). Events may overlap.",
+          "items": { "$ref": "#/$defs/event" }
+        },
+        "levels": {
+          "type": "object",
+          "description": "The ground truth of the clip: the measured levels in dBFS (or the named unit of the key) of everything the clip contains. Keys that do not apply to the clip are omitted.",
+          "additionalProperties": { "type": "number" },
+          "properties": {
+            "peak_dbfs": { "type": "number", "description": "Largest absolute sample of the clip, in dBFS." },
+            "rms_dbfs": { "type": "number", "description": "RMS of the mono mix, in dBFS." },
+            "total_rms_dbfs": { "type": "number", "description": "RMS of the whole multi channel signal, in dBFS." },
+            "rt60_s": { "type": "number", "description": "Reverberation time of the clip, in seconds." },
+            "bit_depth": { "type": "number", "description": "Bit depth of the stored file." }
+          }
+        },
+        "positions": {
+          "type": "array",
+          "description": "Extra ground truth positions, each a [start_s, end_s) pair - for example the sample runs that sit at full scale.",
+          "items": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "regions": {
+          "type": "object",
+          "description": "Named measurement regions of the clip, each a [start_s, end_s] pair in seconds - for example the window a reverberation time is measured in.",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "mix": {
+          "type": "string",
+          "description": "The signal a measurement of the clip is taken on: the mono mix, the mid, the side or one channel.",
+          "enum": ["mono", "mid", "side", "left", "right"]
+        },
+        "bands": {
+          "type": "array",
+          "description": "The ground truth of the frequency bands of the clip: the level a band measurement returns, with the band edges, the window and the signal the measurement is taken on.",
+          "items": {
+            "type": "object",
+            "required": ["name", "band_hz", "level_dbfs"],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the band.",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "band_hz": {
+                "type": "array",
+                "description": "Edges of the band, as a [low_hz, high_hz] pair.",
+                "items": { "type": "number" },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "region_s": {
+                "type": "array",
+                "description": "Window the band is measured in, as a [start_s, end_s] pair.",
+                "items": { "type": "number" },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "mix": {
+                "type": "string",
+                "description": "The signal the band is measured on.",
+                "enum": ["mono", "mid", "side", "left", "right"]
+              },
+              "level_dbfs": {
+                "type": "number",
+                "description": "Level of the band, in dBFS."
+              },
+              "min_excess_db": {
+                "type": "number",
+                "description": "How much louder the band has to be inside its window than outside it. The check is a lower bound: the band inside the window minus the band outside it has to be at least this large."
+              }
+            }
+          }
+        },
+        "frequencies": {
+          "type": "array",
+          "description": "The ground truth of the frequencies of the clip: the frequency of the strongest partial of the clip inside the search band, measured over the window on the named signal. A null frequency means that the clip holds no partial at all.",
+          "items": {
+            "type": "object",
+            "required": ["name", "hz"],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the frequency.",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "hz": {
+                "type": ["number", "null"],
+                "description": "The frequency of the partial, in hertz; null when the clip holds no partial."
+              },
+              "method": {
+                "type": "string",
+                "description": "How the frequency is measured: peak (the strongest partial of the search band) or centroid (the centre of mass of the power spectrum of the search band).",
+                "enum": ["peak", "centroid"]
+              },
+              "region_s": {
+                "type": "array",
+                "description": "Window the frequency is measured in, as a [start_s, end_s] pair.",
+                "items": { "type": "number" },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "mix": {
+                "type": "string",
+                "description": "The signal the frequency is measured on.",
+                "enum": ["mono", "mid", "side", "left", "right"]
+              },
+              "search_hz": {
+                "type": "array",
+                "description": "The band the partial is looked for in, as a [low_hz, high_hz] pair.",
+                "items": { "type": "number" },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "tolerance_hz": {
+                "type": "number",
+                "description": "How far the measured frequency may be from the declared one, in hertz."
+              }
+            }
+          }
+        },
+        "phase": {
+          "type": "object",
+          "description": "The ground truth of the relation between the two channels: the phase of the right channel relative to the left one and the correlation of the two.",
+          "required": ["degrees"],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the phase relation.",
+              "minLength": 1,
+              "maxLength": 64
+            },
+            "degrees": {
+              "type": "number",
+              "description": "The phase of the right channel relative to the left one, in degrees, in (-180, 180]."
+            },
+            "correlation": {
+              "type": "number",
+              "description": "The correlation of the two channels: +1 identical, -1 opposite, 0 uncorrelated."
+            },
+            "region_s": {
+              "type": "array",
+              "description": "Window the phase is measured in, as a [start_s, end_s] pair.",
+              "items": { "type": "number" },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "tolerance_deg": {
+              "type": "number",
+              "description": "How far the measured phase may be from the declared one, in degrees."
+            },
+            "tolerance_correlation": {
+              "type": "number",
+              "description": "How far the measured correlation may be from the declared one."
+            }
+          }
+        },
+        "derived": {
+          "type": "array",
+          "description": "The ground truth of a figure that is the difference of two measured ones: the signal-to-noise ratio of a voice over a hiss, the distance between two band levels.",
+          "items": {
+            "type": "object",
+            "required": ["name", "value", "terms"],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the derived figure.",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "value": {
+                "type": "number",
+                "description": "The derived figure, in decibels."
+              },
+              "tolerance": {
+                "type": "number",
+                "description": "How far the measured figure may be from the declared one, in decibels."
+              },
+              "terms": {
+                "type": "array",
+                "description": "The measured figures the derived one is the sum of. A term names either a level of annotations.levels or a band of annotations.bands, and carries the sign it is added with.",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "key": {
+                      "type": "string",
+                      "description": "The level of annotations.levels the term is."
+                    },
+                    "band": {
+                      "type": "string",
+                      "description": "The band of annotations.bands the term is."
+                    },
+                    "sign": {
+                      "type": "number",
+                      "description": "The sign the term is added with; 1 by default."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "description": "One annotated event inside a clip.",
+      "required": ["type", "start_s", "end_s", "label"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Controlled vocabulary of the event kinds.",
+          "enum": [
+            "click",
+            "crackle",
+            "hum",
+            "hiss",
+            "noise",
+            "wind",
+            "rain",
+            "sibilance",
+            "plosive",
+            "bleed",
+            "reverb",
+            "clipping",
+            "speech",
+            "music",
+            "silence"
+          ]
+        },
+        "start_s": {
+          "type": "number",
+          "description": "Start of the event in seconds, relative to the first sample of the file.",
+          "minimum": 0
+        },
+        "end_s": {
+          "type": "number",
+          "description": "End of the event in seconds (exclusive).",
+          "exclusiveMinimum": 0
+        },
+        "label": {
+          "type": "string",
+          "description": "Short human readable description of the event. Not a key, never parsed by the tests.",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "amplitude_dbfs": {
+          "type": "number",
+          "description": "Level of the event itself, in dBFS. Ground truth for a synthesised event."
+        },
+        "center_hz": {
+          "type": "number",
+          "description": "Centre frequency of the event, in Hz. Ground truth for a synthesised event."
+        },
+        "band_hz": {
+          "type": "array",
+          "description": "Frequency band of the event, as a [low_hz, high_hz] pair.",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    }
+  }
+}

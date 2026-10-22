@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='SPEY' plugID='MONO'>
+			<Desc>Spectral Repair</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='SPEY' plugID='M2ST'>
+			<Desc>Spectral Repair</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='SPEY' plugID='STER'>
+			<Desc>Spectral Repair</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+				<Page num='6'>
+					<ID>260</ID>
+				</Page>
+				<Page num='7'>
+					<ID>261</ID>
+				</Page>
+				<Page num='8'>
+					<ID>262</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>259</ID>
+				</Page>
+				<Page num='3'>
+					<ID>260</ID>
+					<ID>261</ID>
+					<ID>262</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Mod</name>
+			<name typ='PgTL' sz='4'>Mode</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Red</name>
+			<name typ='PgTL' sz='4'>Redu</name>
+			<name typ='PgTL' sz='5'>Reduc</name>
+			<name typ='PgTL' sz='6'>Reduct</name>
+			<name typ='PgTL' sz='7'>Reducti</name>
+			<name typ='PgTL' sz='8'>Reductio</name>
+			<name typ='PgTL' sz='9'>Reduction</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Reg</name>
+			<name typ='PgTL' sz='4'>Regi</name>
+			<name typ='PgTL' sz='5'>Regio</name>
+			<name typ='PgTL' sz='6'>Region</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Dir</name>
+			<name typ='PgTL' sz='4'>Dire</name>
+			<name typ='PgTL' sz='5'>Direc</name>
+			<name typ='PgTL' sz='6'>Direct</name>
+			<name typ='PgTL' sz='7'>Directi</name>
+			<name typ='PgTL' sz='8'>Directio</name>
+			<name typ='PgTL' sz='9'>Direction</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Mul</name>
+			<name typ='PgTL' sz='4'>Mult</name>
+			<name typ='PgTL' sz='5'>Multi</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Bef</name>
+			<name typ='PgTL' sz='4'>Befo</name>
+			<name typ='PgTL' sz='5'>Befor</name>
+			<name typ='PgTL' sz='6'>Before</name>
+		</Ctrl>
+		<Ctrl ID='262'>
+			<name typ='PgTL' sz='3'>Aft</name>
+			<name typ='PgTL' sz='4'>Afte</name>
+			<name typ='PgTL' sz='5'>After</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

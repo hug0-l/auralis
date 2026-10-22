@@ -1,0 +1,1840 @@
+[
+  {
+    "id": "clicks",
+    "file": "audio/test/clicks.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 3.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "click",
+      "impulse",
+      "transient",
+      "declick"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "click",
+          "start_s": 0.25,
+          "end_s": 0.25002083333333336,
+          "label": "single-sample impulse, +0 dBFS",
+          "amplitude_dbfs": 0.0
+        },
+        {
+          "type": "click",
+          "start_s": 0.75,
+          "end_s": 0.7500208333333334,
+          "label": "single-sample impulse, -4 dBFS",
+          "amplitude_dbfs": -4.0
+        },
+        {
+          "type": "click",
+          "start_s": 1.25,
+          "end_s": 1.2500208333333334,
+          "label": "single-sample impulse, -8 dBFS",
+          "amplitude_dbfs": -8.0
+        },
+        {
+          "type": "click",
+          "start_s": 1.75,
+          "end_s": 1.7500208333333334,
+          "label": "single-sample impulse, -12 dBFS",
+          "amplitude_dbfs": -12.0
+        },
+        {
+          "type": "click",
+          "start_s": 2.25,
+          "end_s": 2.250020833333333,
+          "label": "single-sample impulse, -16 dBFS",
+          "amplitude_dbfs": -16.0
+        },
+        {
+          "type": "click",
+          "start_s": 2.75,
+          "end_s": 2.750020833333333,
+          "label": "single-sample impulse, -20 dBFS",
+          "amplitude_dbfs": -20.0
+        }
+      ],
+      "mix": "mono",
+      "positions": [
+        [
+          0.25,
+          0.25002083333333336
+        ],
+        [
+          0.75,
+          0.7500208333333334
+        ],
+        [
+          1.25,
+          1.2500208333333334
+        ],
+        [
+          1.75,
+          1.7500208333333334
+        ],
+        [
+          2.25,
+          2.250020833333333
+        ],
+        [
+          2.75,
+          2.750020833333333
+        ]
+      ],
+      "regions": {
+        "clicks": [
+          0.0,
+          3.0
+        ],
+        "bed": [
+          0.05,
+          0.2
+        ]
+      },
+      "bands": [
+        {
+          "name": "bed",
+          "band_hz": [
+            450.0,
+            510.0
+          ],
+          "region_s": [
+            0.05,
+            0.2
+          ],
+          "mix": "mono",
+          "level_dbfs": -43.0103
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "bed",
+          "hz": 480.0,
+          "region_s": [
+            0.05,
+            0.2
+          ],
+          "mix": "mono",
+          "search_hz": [
+            450.0,
+            510.0
+          ],
+          "tolerance_hz": 2.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": 0.0,
+        "rms_dbfs": -42.111832,
+        "total_rms_dbfs": -39.101532,
+        "bed_dbfs": -40.0,
+        "bed_hz": 480.0,
+        "click_count": 6.0,
+        "click_interval_s": 0.5,
+        "full_scale_click_dbfs": 0.0,
+        "normalisation_gain": 1.0,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "666a654d1811ff70d7fd3145237de51bcf960efd5d09aebcedce38cc31235026"
+  },
+  {
+    "id": "hum50",
+    "file": "audio/test/hum50.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "hum",
+      "mains",
+      "harmonic",
+      "dehum"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "hum",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "50 Hz mains hum with 100 Hz harmonic"
+        },
+        {
+          "type": "music",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "1 kHz reference tone"
+        }
+      ],
+      "mix": "mono",
+      "bands": [
+        {
+          "name": "tone",
+          "band_hz": [
+            950.0,
+            1050.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -10.6366
+        },
+        {
+          "name": "hum",
+          "band_hz": [
+            45.0,
+            55.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -26.6366
+        },
+        {
+          "name": "hum_harmonic",
+          "band_hz": [
+            95.0,
+            105.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -32.6366
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "tone",
+          "hz": 1000.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            950.0,
+            1050.0
+          ],
+          "tolerance_hz": 5.0
+        },
+        {
+          "name": "hum",
+          "hz": 50.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            45.0,
+            55.0
+          ],
+          "tolerance_hz": 1.0
+        },
+        {
+          "name": "hum_harmonic",
+          "hz": 100.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            95.0,
+            105.0
+          ],
+          "tolerance_hz": 1.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -10.502203,
+        "total_rms_dbfs": -7.491903,
+        "tone_hz": 1000.0,
+        "tone_dbfs": -7.626294,
+        "hum_hz": 50.0,
+        "hum_dbfs": -23.626294,
+        "hum_harmonic_hz": 100.0,
+        "hum_harmonic_dbfs": -29.626294,
+        "hum_below_tone_db": 16.0,
+        "normalisation_gain": 1.171346,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "f4a6c3326d5b5d00b52980cc4168fe867510da965a4b71145d77bd1fc5c88303"
+  },
+  {
+    "id": "hiss",
+    "file": "audio/test/hiss.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "hiss",
+      "noise",
+      "white",
+      "denoise"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "hiss",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "white noise, steady"
+        }
+      ],
+      "mix": "mono",
+      "bands": [
+        {
+          "name": "broadband",
+          "band_hz": [
+            20.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -63.8322
+        },
+        {
+          "name": "low",
+          "band_hz": [
+            20.0,
+            250.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -83.2246
+        },
+        {
+          "name": "high",
+          "band_hz": [
+            5000.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -65.0988
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "centroid",
+          "hz": 10010.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            9809.8,
+            10210.2
+          ],
+          "tolerance_hz": 300.0,
+          "method": "centroid"
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -46.782504,
+        "rms_dbfs": -63.041382,
+        "total_rms_dbfs": -56.9897,
+        "noise_floor_dbfs": -60.0,
+        "noise_type": 0.0,
+        "gain_ch0": 0.000997,
+        "gain_ch1": 0.001002,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "eb1b5b5c5d8a620cfef35e28df6fa31b29f3cd14bc48ab03d83b6f08c0852e90"
+  },
+  {
+    "id": "pink_hiss",
+    "file": "audio/test/pink_hiss.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "hiss",
+      "noise",
+      "pink",
+      "denoise"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "hiss",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "pink noise, steady"
+        }
+      ],
+      "mix": "mono",
+      "bands": [
+        {
+          "name": "broadband",
+          "band_hz": [
+            20.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -65.1813
+        },
+        {
+          "name": "low",
+          "band_hz": [
+            20.0,
+            250.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -69.7153
+        },
+        {
+          "name": "high",
+          "band_hz": [
+            5000.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -72.1135
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "centroid",
+          "hz": 2892.401249475657,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            2834.553224486144,
+            2950.2492744651704
+          ],
+          "tolerance_hz": 120.0,
+          "method": "centroid"
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -47.467095,
+        "rms_dbfs": -63.49406,
+        "total_rms_dbfs": -56.9897,
+        "noise_floor_dbfs": -60.0,
+        "noise_type": 1.0,
+        "gain_ch0": 0.046068,
+        "gain_ch1": 0.045464,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "7ddca3a4e4033a6314ffa3d17819e769223393cd4989fa57cbec5ffb386c8079"
+  },
+  {
+    "id": "sibilance",
+    "file": "audio/test/sibilance.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "sibilance",
+      "deess",
+      "high-frequency"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "sibilance",
+          "start_s": 0.6,
+          "end_s": 0.9,
+          "label": "6 kHz sibilance burst",
+          "center_hz": 6000.0,
+          "band_hz": [
+            5000.0,
+            7000.0
+          ]
+        },
+        {
+          "type": "music",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "1 kHz reference tone"
+        }
+      ],
+      "mix": "mono",
+      "regions": {
+        "sibilance": [
+          0.6,
+          0.9
+        ]
+      },
+      "bands": [
+        {
+          "name": "tone",
+          "band_hz": [
+            950.0,
+            1050.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -18.1314
+        },
+        {
+          "name": "sibilance",
+          "band_hz": [
+            5000.0,
+            7000.0
+          ],
+          "region_s": [
+            0.6,
+            0.9
+          ],
+          "mix": "mono",
+          "level_dbfs": -22.0646,
+          "min_excess_db": 6.0
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "tone",
+          "hz": 1000.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            950.0,
+            1050.0
+          ],
+          "tolerance_hz": 5.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -17.797051,
+        "total_rms_dbfs": -14.786751,
+        "tone_hz": 1000.0,
+        "tone_dbfs": -14.964328,
+        "sibilance_center_hz": 6000.0,
+        "sibilance_band_low_hz": 5000.0,
+        "sibilance_band_high_hz": 7000.0,
+        "sibilance_peak_dbfs": -6.964328,
+        "sibilance_burst_rms_dbfs": -31.769509,
+        "normalisation_gain": 0.894919,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "38ab42c9507410d376cb54d1d4010affdbc0ac045e9052414cdc50a8cce4f243"
+  },
+  {
+    "id": "plosive",
+    "file": "audio/test/plosive.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "plosive",
+      "deplosive",
+      "transient",
+      "low-frequency"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "plosive",
+          "start_s": 0.5,
+          "end_s": 0.54,
+          "label": "low-frequency plosive burst",
+          "center_hz": 80.0,
+          "band_hz": [
+            0.0,
+            300.0
+          ]
+        },
+        {
+          "type": "speech",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "vowel-like tone, 120 Hz fundamental"
+        }
+      ],
+      "mix": "mono",
+      "regions": {
+        "plosive": [
+          0.5,
+          0.54
+        ]
+      },
+      "bands": [
+        {
+          "name": "vowel",
+          "band_hz": [
+            60.0,
+            3000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -25.8273
+        },
+        {
+          "name": "burst",
+          "band_hz": [
+            40.0,
+            100.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -35.8577
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "f0",
+          "hz": 120.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            100.0,
+            140.0
+          ],
+          "tolerance_hz": 2.0
+        },
+        {
+          "name": "burst",
+          "hz": 80.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            60.0,
+            100.0
+          ],
+          "tolerance_hz": 6.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -25.630905,
+        "total_rms_dbfs": -22.620605,
+        "f0_hz": 120.0,
+        "tone_dbfs": -16.088894,
+        "burst_hz": 80.0,
+        "burst_peak_dbfs": -6.088894,
+        "normalisation_gain": 0.78624,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "4f7c3d44b39a7101de0300370efebb97e949d28e50c41a827cd7e6c550d9718e"
+  },
+  {
+    "id": "reverb",
+    "file": "audio/test/reverb.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "reverb",
+      "room",
+      "dereverb",
+      "tail"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "reverb",
+          "start_s": 0.20500000000000002,
+          "end_s": 2.0,
+          "label": "reverberant tail, RT60 1.2 s"
+        },
+        {
+          "type": "music",
+          "start_s": 0.2,
+          "end_s": 2.0,
+          "label": "440 Hz tone in a reverberant room"
+        }
+      ],
+      "mix": "mono",
+      "regions": {
+        "rt60": [
+          0.35,
+          1.75
+        ],
+        "tail": [
+          0.21,
+          2.0
+        ]
+      },
+      "bands": [
+        {
+          "name": "tone",
+          "band_hz": [
+            410.0,
+            470.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -40.0313
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "tone",
+          "hz": 440.0,
+          "region_s": [
+            0.21,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            300.0,
+            700.0
+          ],
+          "tolerance_hz": 8.0,
+          "method": "centroid"
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -33.929454,
+        "total_rms_dbfs": -30.919154,
+        "tone_hz": 440.0,
+        "rt60_s": 1.2,
+        "ir_decay_tau_s": 0.173718,
+        "ir_length_s": 1.5,
+        "starter_start_s": 0.2,
+        "starter_length_s": 0.005,
+        "normalisation_gain": 0.481627,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "3beed3bfac3b2cea3f6b86858af25c31d7406a5e0c23e7a873879a9e07ef5369"
+  },
+  {
+    "id": "clipped",
+    "file": "audio/test/clipped.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "clipping",
+      "distortion",
+      "declip",
+      "full-scale"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "clipping",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "hard-clipped 1 kHz tone"
+        }
+      ],
+      "mix": "mono",
+      "positions": [
+        [
+          8.333333333333333e-05,
+          0.0004375
+        ],
+        [
+          0.0005833333333333334,
+          0.0009375
+        ],
+        [
+          0.0010833333333333333,
+          0.0014375
+        ],
+        [
+          0.0015833333333333333,
+          0.0019375
+        ],
+        [
+          0.0020833333333333333,
+          0.0024375
+        ],
+        [
+          0.0025833333333333333,
+          0.0029375
+        ],
+        [
+          0.0030833333333333333,
+          0.0034375
+        ],
+        [
+          0.0035833333333333333,
+          0.0039375
+        ],
+        [
+          0.004083333333333333,
+          0.0044375
+        ],
+        [
+          0.004583333333333333,
+          0.0049375
+        ],
+        [
+          0.005083333333333333,
+          0.0054375
+        ],
+        [
+          0.005583333333333333,
+          0.0059375
+        ],
+        [
+          0.006083333333333333,
+          0.0064375
+        ],
+        [
+          0.006583333333333333,
+          0.0069375
+        ],
+        [
+          0.007083333333333333,
+          0.0074375
+        ],
+        [
+          0.007583333333333333,
+          0.0079375
+        ]
+      ],
+      "regions": {
+        "clipped": [
+          0.0,
+          2.0
+        ]
+      },
+      "bands": [
+        {
+          "name": "tone",
+          "band_hz": [
+            950.0,
+            1050.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -1.2861
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "tone",
+          "hz": 1000.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            950.0,
+            1050.0
+          ],
+          "tolerance_hz": 5.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": 0.0,
+        "rms_dbfs": -1.050435,
+        "total_rms_dbfs": 1.959865,
+        "tone_hz": 1000.0,
+        "drive": 2.0,
+        "clip_threshold": 0.999,
+        "clipped_sample_count": 68000.0,
+        "clip_run_count": 4000.0,
+        "clipped_fraction": 0.708333,
+        "normalisation_gain": 1.0,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "b73609c2e953c9202a43fbff1d966c313f29e4020cc33f455f8ab1aa76bbe532"
+  },
+  {
+    "id": "silence",
+    "file": "audio/test/silence.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "silence",
+      "quiet"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "silence",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "digital silence"
+        }
+      ],
+      "mix": "mono",
+      "regions": {
+        "silence": [
+          0.0,
+          2.0
+        ]
+      },
+      "frequencies": [
+        {
+          "name": "none",
+          "hz": null,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            20.0,
+            20000.0
+          ],
+          "tolerance_hz": 0.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -120.0,
+        "rms_dbfs": -120.0,
+        "total_rms_dbfs": -120.0,
+        "mid_peak_dbfs": -120.0,
+        "side_peak_dbfs": -120.0,
+        "mid_rms_dbfs": -120.0,
+        "side_rms_dbfs": -120.0,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "af49089ff49f4ebe4e67e7ab4bfa3461454e312b948a91f153c48b3c5da2f4d8"
+  },
+  {
+    "id": "stereo_mid",
+    "file": "audio/test/stereo_mid.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "stereo",
+      "mid",
+      "center",
+      "ms"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "music",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "440 Hz tone, mid only"
+        }
+      ],
+      "mix": "mono",
+      "bands": [
+        {
+          "name": "mid",
+          "band_hz": [
+            410.0,
+            470.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mid",
+          "level_dbfs": -9.0103
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "mid",
+          "hz": 440.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mid",
+          "search_hz": [
+            410.0,
+            470.0
+          ],
+          "tolerance_hz": 3.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -9.0103,
+        "total_rms_dbfs": -6.0,
+        "tone_hz": 440.0,
+        "mid_dbfs": -6.0,
+        "side_dbfs": -120.0,
+        "normalisation_gain": 2.511886,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "bc28e6e35a8a8e009031cf98bf8d6e26547bfdd7a8bafdb36af73b96aa084345"
+  },
+  {
+    "id": "stereo_side",
+    "file": "audio/test/stereo_side.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "stereo",
+      "side",
+      "azimuth",
+      "ms"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "music",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "220 Hz tone, side only"
+        }
+      ],
+      "mix": "side",
+      "bands": [
+        {
+          "name": "side",
+          "band_hz": [
+            200.0,
+            240.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "side",
+          "level_dbfs": -9.0103
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "side",
+          "hz": 220.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "side",
+          "search_hz": [
+            200.0,
+            240.0
+          ],
+          "tolerance_hz": 3.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -120.0,
+        "total_rms_dbfs": -6.0,
+        "tone_hz": 220.0,
+        "mid_dbfs": -120.0,
+        "side_dbfs": -6.0,
+        "normalisation_gain": 5.011872,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "8348e92089b1f8aaa9936515678393c5905a8c03c82a37cd8ce25e1311200832"
+  },
+  {
+    "id": "voice_hiss",
+    "file": "audio/test/voice_hiss.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "speech",
+      "voice",
+      "hiss",
+      "denoise",
+      "snr"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "speech",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "vowel-like tone, 130 Hz fundamental"
+        },
+        {
+          "type": "hiss",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "steady hiss, independent in the two channels"
+        }
+      ],
+      "mix": "mono",
+      "bands": [
+        {
+          "name": "voice",
+          "band_hz": [
+            100.0,
+            4000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mid",
+          "level_dbfs": -17.8737
+        },
+        {
+          "name": "hiss",
+          "band_hz": [
+            5000.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "side",
+          "level_dbfs": -36.6446
+        },
+        {
+          "name": "broadband",
+          "band_hz": [
+            20.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -17.8125
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "f0",
+          "hz": 130.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mid",
+          "search_hz": [
+            110.0,
+            150.0
+          ],
+          "tolerance_hz": 3.0
+        }
+      ],
+      "derived": [
+        {
+          "name": "snr",
+          "value": 16.713052,
+          "tolerance": 0.3,
+          "terms": [
+            {
+              "key": "mid_rms_dbfs",
+              "sign": 1.0
+            },
+            {
+              "key": "side_rms_dbfs",
+              "sign": -1.0
+            }
+          ]
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -17.797363,
+        "total_rms_dbfs": -14.697603,
+        "f0_hz": 130.0,
+        "voice_rms_dbfs": -17.889175,
+        "hiss_rms_dbfs": -34.602227,
+        "hiss_channel_rms_dbfs": -31.591927,
+        "snr_db": 16.713052,
+        "mid_rms_dbfs": -17.889175,
+        "side_rms_dbfs": -34.602227,
+        "normalisation_gain": 2.632714,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "f84914d60994d03a8bb26656e9ef1c737357e31662cd540f9db18e0fbee34527"
+  },
+  {
+    "id": "music_mix",
+    "file": "audio/test/music_mix.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "music",
+      "mixture",
+      "bass",
+      "drum",
+      "rebalance"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "music",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "bass line, triad and kick drum"
+        },
+        {
+          "type": "click",
+          "start_s": 0.3,
+          "end_s": 0.44999999999999996,
+          "label": "kick drum hit, 70 Hz burst",
+          "center_hz": 70.0,
+          "band_hz": [
+            40.0,
+            100.0
+          ],
+          "amplitude_dbfs": -7.889439422523651
+        },
+        {
+          "type": "click",
+          "start_s": 1.1,
+          "end_s": 1.25,
+          "label": "kick drum hit, 70 Hz burst",
+          "center_hz": 70.0,
+          "band_hz": [
+            40.0,
+            100.0
+          ],
+          "amplitude_dbfs": -7.889439422523651
+        }
+      ],
+      "mix": "mono",
+      "regions": {
+        "drum": [
+          0.3,
+          0.45
+        ],
+        "chord": [
+          0.1,
+          1.9
+        ]
+      },
+      "bands": [
+        {
+          "name": "drum",
+          "band_hz": [
+            55.0,
+            85.0
+          ],
+          "region_s": [
+            0.3,
+            0.45
+          ],
+          "mix": "mono",
+          "level_dbfs": -26.6792,
+          "min_excess_db": 6.0
+        },
+        {
+          "name": "bass",
+          "band_hz": [
+            100.0,
+            120.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -32.2683
+        },
+        {
+          "name": "chord",
+          "band_hz": [
+            200.0,
+            500.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -26.3102
+        },
+        {
+          "name": "broadband",
+          "band_hz": [
+            20.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -23.8841
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "bass",
+          "hz": 110.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            100.0,
+            120.0
+          ],
+          "tolerance_hz": 2.0
+        },
+        {
+          "name": "chord_low",
+          "hz": 220.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            210.0,
+            230.0
+          ],
+          "tolerance_hz": 2.0
+        },
+        {
+          "name": "chord_mid",
+          "hz": 330.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            320.0,
+            340.0
+          ],
+          "tolerance_hz": 2.0
+        },
+        {
+          "name": "chord_high",
+          "hz": 440.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            430.0,
+            450.0
+          ],
+          "tolerance_hz": 2.0
+        },
+        {
+          "name": "kick",
+          "hz": 70.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            55.0,
+            85.0
+          ],
+          "tolerance_hz": 3.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -23.882246,
+        "total_rms_dbfs": -20.871946,
+        "bass_hz": 110.0,
+        "bass_dbfs": -29.889439,
+        "chord_hz_0": 220.0,
+        "chord_hz_1": 330.0,
+        "chord_hz_2": 440.0,
+        "chord_dbfs": -27.889439,
+        "kick_hz": 70.0,
+        "kick_dbfs": -7.889439,
+        "kick_count": 2.0,
+        "normalisation_gain": 0.804504,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "e54cf2a2032711541d4bf79a733125e38b9115702a7f4d4c0868c962366069b4"
+  },
+  {
+    "id": "stereo_phase",
+    "file": "audio/test/stereo_phase.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "stereo",
+      "phase",
+      "quarter-period",
+      "ms"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "music",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "440 Hz tone, right channel a quarter period later"
+        }
+      ],
+      "mix": "mid",
+      "bands": [
+        {
+          "name": "mid",
+          "band_hz": [
+            410.0,
+            470.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mid",
+          "level_dbfs": -12.0206
+        },
+        {
+          "name": "side",
+          "band_hz": [
+            410.0,
+            470.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "side",
+          "level_dbfs": -12.0206
+        },
+        {
+          "name": "broadband",
+          "band_hz": [
+            20.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -12.0206
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "tone",
+          "hz": 440.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mid",
+          "search_hz": [
+            410.0,
+            470.0
+          ],
+          "tolerance_hz": 3.0
+        }
+      ],
+      "phase": {
+        "name": "inter-channel",
+        "degrees": 90.0,
+        "correlation": 0.0,
+        "region_s": [
+          0.0,
+          2.0
+        ],
+        "tolerance_deg": 2.0,
+        "tolerance_correlation": 0.01
+      },
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -12.0206,
+        "total_rms_dbfs": -6.0,
+        "tone_hz": 440.0,
+        "tone_dbfs": -6.0,
+        "phase_deg": 90.0,
+        "correlation": 0.0,
+        "mid_peak_dbfs": -9.0103,
+        "side_peak_dbfs": -9.0103,
+        "normalisation_gain": 1.0,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "0b6e01f88d7a2d6e94d1d380cd8c64790010d7619d9f7cd6097ce97aebb95f8d"
+  },
+  {
+    "id": "rumble",
+    "file": "audio/test/rumble.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "rumble",
+      "noise",
+      "low-frequency",
+      "high-pass"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "noise",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "low level rumble, 40 Hz with 20-80 Hz noise"
+        },
+        {
+          "type": "music",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "1 kHz programme tone"
+        }
+      ],
+      "mix": "mono",
+      "regions": {
+        "rumble": [
+          0.0,
+          2.0
+        ]
+      },
+      "bands": [
+        {
+          "name": "rumble",
+          "band_hz": [
+            20.0,
+            80.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -30.3638
+        },
+        {
+          "name": "programme",
+          "band_hz": [
+            950.0,
+            1050.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -10.5579
+        },
+        {
+          "name": "broadband",
+          "band_hz": [
+            20.0,
+            20000.0
+          ],
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -10.512
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "rumble",
+          "hz": 40.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            30.0,
+            50.0
+          ],
+          "tolerance_hz": 2.0
+        },
+        {
+          "name": "programme",
+          "hz": 1000.0,
+          "region_s": [
+            0.0,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            950.0,
+            1050.0
+          ],
+          "tolerance_hz": 5.0
+        }
+      ],
+      "derived": [
+        {
+          "name": "rumble_below_programme",
+          "value": 19.8059,
+          "tolerance": 0.3,
+          "terms": [
+            {
+              "band": "programme",
+              "sign": 1.0
+            },
+            {
+              "band": "rumble",
+              "sign": -1.0
+            }
+          ]
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -10.511046,
+        "total_rms_dbfs": -7.500747,
+        "programme_hz": 1000.0,
+        "programme_dbfs": -7.545683,
+        "rumble_hz": 40.0,
+        "rumble_tone_dbfs": -29.545683,
+        "rumble_noise_dbfs": -35.545683,
+        "normalisation_gain": 1.669998,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "b905b9c3a1b7ae9834c84b7806607a6c7b2464d24ef75e8d3c391015e53c02d7"
+  },
+  {
+    "id": "pitch_drift",
+    "file": "audio/test/pitch_drift.wav",
+    "licence": "CC0-1.0",
+    "source_url": "synthesised",
+    "source_credit": "synthesised by corpus/build_corpus.py",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 2.0,
+    "split": "test",
+    "tags": [
+      "synthetic",
+      "pitch",
+      "drift",
+      "glide",
+      "wow"
+    ],
+    "annotations": {
+      "events": [
+        {
+          "type": "music",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "label": "tone with a drifting pitch, 440 Hz to 480 Hz"
+        }
+      ],
+      "mix": "mono",
+      "regions": {
+        "start": [
+          0.0,
+          0.4
+        ],
+        "glide": [
+          0.4,
+          1.6
+        ],
+        "end": [
+          1.6,
+          2.0
+        ]
+      },
+      "bands": [
+        {
+          "name": "start",
+          "band_hz": [
+            410.0,
+            470.0
+          ],
+          "region_s": [
+            0.0,
+            0.4
+          ],
+          "mix": "mono",
+          "level_dbfs": -9.0103
+        },
+        {
+          "name": "end",
+          "band_hz": [
+            460.0,
+            500.0
+          ],
+          "region_s": [
+            1.6,
+            2.0
+          ],
+          "mix": "mono",
+          "level_dbfs": -9.0103
+        }
+      ],
+      "frequencies": [
+        {
+          "name": "start",
+          "hz": 440.0,
+          "region_s": [
+            0.0,
+            0.4
+          ],
+          "mix": "mono",
+          "search_hz": [
+            410.0,
+            470.0
+          ],
+          "tolerance_hz": 3.0
+        },
+        {
+          "name": "end",
+          "hz": 480.0,
+          "region_s": [
+            1.6,
+            2.0
+          ],
+          "mix": "mono",
+          "search_hz": [
+            460.0,
+            500.0
+          ],
+          "tolerance_hz": 3.0
+        }
+      ],
+      "levels": {
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -9.010298,
+        "total_rms_dbfs": -5.999998,
+        "start_hz": 440.0,
+        "end_hz": 480.0,
+        "drift_hz": 40.0,
+        "drift_hz_per_s": 33.333333,
+        "drift_start_s": 0.4,
+        "drift_end_s": 1.6,
+        "tone_dbfs": -6.0,
+        "normalisation_gain": 1.0,
+        "bit_depth": 24.0
+      }
+    },
+    "sha256": "f8b682ea56391db6e69fcb594ce46528a73d25f5168c654a712e8dd199623caa"
+  }
+]

@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auralis"
+version = "0.1.0a0"
+description = "Auralis — an offline audio restoration workbench: DSP core, HTTP/WS server, web UI."
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["audio", "dsp", "restoration", "denoise", "spectrogram", "offline"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Multimedia :: Sound/Audio :: Editors",
+]
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.14",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "soundfile>=0.12",
+    "websockets>=13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "black>=24.8",
+]
+
+[project.scripts]
+auralis-server = "aurserver.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["aurcore*", "aurserver*", "aurmcp*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+aurcore = ["schema/*.tsv", "schema/*.json"]
+
+[tool.setuptools.data-files]
+"share/auralis/models" = ["models/*.aurm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# The capture is done at the Python level, not at the file descriptor level.
+# Loading numpy 2.5 replaces the standard handles of the process on some
+# machines, and the file descriptor capture then cannot start a child
+# process: every test that runs a program fails with "WinError 6: the
+# handle is invalid".
+addopts = "-q --capture=sys"
+filterwarnings = ["error::RuntimeWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["var", "build", "dist", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"aurcore/schema/__init__.py" = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+skip-string-normalization = true

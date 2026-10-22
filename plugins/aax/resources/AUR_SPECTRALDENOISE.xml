@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='SPEC' plugID='MONO'>
+			<Desc>Spectral De-Noise</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='SPEC' plugID='M2ST'>
+			<Desc>Spectral De-Noise</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='SPEC' plugID='STER'>
+			<Desc>Spectral De-Noise</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+				<Page num='6'>
+					<ID>260</ID>
+				</Page>
+				<Page num='7'>
+					<ID>261</ID>
+				</Page>
+				<Page num='8'>
+					<ID>262</ID>
+				</Page>
+				<Page num='9'>
+					<ID>263</ID>
+				</Page>
+				<Page num='10'>
+					<ID>264</ID>
+				</Page>
+				<Page num='11'>
+					<ID>265</ID>
+				</Page>
+				<Page num='12'>
+					<ID>266</ID>
+				</Page>
+				<Page num='13'>
+					<ID>267</ID>
+				</Page>
+				<Page num='14'>
+					<ID>268</ID>
+				</Page>
+				<Page num='15'>
+					<ID>269</ID>
+				</Page>
+				<Page num='16'>
+					<ID>270</ID>
+				</Page>
+				<Page num='17'>
+					<ID>271</ID>
+				</Page>
+				<Page num='18'>
+					<ID>275</ID>
+				</Page>
+				<Page num='19'>
+					<ID>272</ID>
+				</Page>
+				<Page num='20'>
+					<ID>273</ID>
+				</Page>
+				<Page num='21'>
+					<ID>274</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>259</ID>
+				</Page>
+				<Page num='3'>
+					<ID>260</ID>
+					<ID>261</ID>
+					<ID>262</ID>
+					<ID>263</ID>
+				</Page>
+				<Page num='4'>
+					<ID>264</ID>
+					<ID>265</ID>
+					<ID>266</ID>
+					<ID>267</ID>
+				</Page>
+				<Page num='5'>
+					<ID>268</ID>
+					<ID>269</ID>
+					<ID>270</ID>
+					<ID>271</ID>
+				</Page>
+				<Page num='6'>
+					<ID>275</ID>
+					<ID>272</ID>
+					<ID>273</ID>
+					<ID>274</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Pro</name>
+			<name typ='PgTL' sz='4'>Proc</name>
+			<name typ='PgTL' sz='5'>Proce</name>
+			<name typ='PgTL' sz='6'>Proces</name>
+			<name typ='PgTL' sz='7'>Process</name>
+			<name typ='PgTL' sz='8'>Processi</name>
+			<name typ='PgTL' sz='9'>Processin</name>
+			<name typ='PgTL' sz='10'>Processing</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Alg</name>
+			<name typ='PgTL' sz='4'>Algo</name>
+			<name typ='PgTL' sz='5'>Algor</name>
+			<name typ='PgTL' sz='6'>Algori</name>
+			<name typ='PgTL' sz='7'>Algorit</name>
+			<name typ='PgTL' sz='8'>Algorith</name>
+			<name typ='PgTL' sz='9'>Algorithm</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Qua</name>
+			<name typ='PgTL' sz='4'>Qual</name>
+			<name typ='PgTL' sz='5'>Quali</name>
+			<name typ='PgTL' sz='6'>Qualit</name>
+			<name typ='PgTL' sz='7'>Quality</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>FFT</name>
+			<name typ='PgTL' sz='4'>FFT </name>
+			<name typ='PgTL' sz='5'>FFT S</name>
+			<name typ='PgTL' sz='6'>FFT Si</name>
+			<name typ='PgTL' sz='7'>FFT Siz</name>
+			<name typ='PgTL' sz='8'>FFT Size</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Mul</name>
+			<name typ='PgTL' sz='4'>Mult</name>
+			<name typ='PgTL' sz='5'>Multi</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Lea</name>
+			<name typ='PgTL' sz='4'>Lear</name>
+			<name typ='PgTL' sz='5'>Learn</name>
+			<name typ='PgTL' sz='6'>Learni</name>
+			<name typ='PgTL' sz='7'>Learnin</name>
+			<name typ='PgTL' sz='8'>Learning</name>
+		</Ctrl>
+		<Ctrl ID='262'>
+			<name typ='PgTL' sz='3'>Ada</name>
+			<name typ='PgTL' sz='4'>Adap</name>
+			<name typ='PgTL' sz='5'>Adapt</name>
+			<name typ='PgTL' sz='6'>Adapti</name>
+			<name typ='PgTL' sz='7'>Adaptiv</name>
+			<name typ='PgTL' sz='8'>Adaptive</name>
+		</Ctrl>
+		<Ctrl ID='263'>
+			<name typ='PgTL' sz='3'>Noi</name>
+			<name typ='PgTL' sz='4'>Nois</name>
+			<name typ='PgTL' sz='5'>Noise</name>
+		</Ctrl>
+		<Ctrl ID='264'>
+			<name typ='PgTL' sz='3'>Ton</name>
+			<name typ='PgTL' sz='4'>Tona</name>
+			<name typ='PgTL' sz='5'>Tonal</name>
+		</Ctrl>
+		<Ctrl ID='265'>
+			<name typ='PgTL' sz='3'>Noi</name>
+			<name typ='PgTL' sz='4'>Nois</name>
+			<name typ='PgTL' sz='5'>Noise</name>
+		</Ctrl>
+		<Ctrl ID='266'>
+			<name typ='PgTL' sz='3'>Ton</name>
+			<name typ='PgTL' sz='4'>Tona</name>
+			<name typ='PgTL' sz='5'>Tonal</name>
+		</Ctrl>
+		<Ctrl ID='267'>
+			<name typ='PgTL' sz='3'>Art</name>
+			<name typ='PgTL' sz='4'>Arti</name>
+			<name typ='PgTL' sz='5'>Artif</name>
+			<name typ='PgTL' sz='6'>Artifa</name>
+			<name typ='PgTL' sz='7'>Artifac</name>
+			<name typ='PgTL' sz='8'>Artifact</name>
+		</Ctrl>
+		<Ctrl ID='268'>
+			<name typ='PgTL' sz='3'>Smo</name>
+			<name typ='PgTL' sz='4'>Smoo</name>
+			<name typ='PgTL' sz='5'>Smoot</name>
+			<name typ='PgTL' sz='6'>Smooth</name>
+			<name typ='PgTL' sz='7'>Smoothi</name>
+			<name typ='PgTL' sz='8'>Smoothin</name>
+			<name typ='PgTL' sz='9'>Smoothing</name>
+		</Ctrl>
+		<Ctrl ID='269'>
+			<name typ='PgTL' sz='3'>Kne</name>
+			<name typ='PgTL' sz='4'>Knee</name>
+		</Ctrl>
+		<Ctrl ID='270'>
+			<name typ='PgTL' sz='3'>Rel</name>
+			<name typ='PgTL' sz='4'>Rele</name>
+			<name typ='PgTL' sz='5'>Relea</name>
+			<name typ='PgTL' sz='6'>Releas</name>
+			<name typ='PgTL' sz='7'>Release</name>
+		</Ctrl>
+		<Ctrl ID='271'>
+			<name typ='PgTL' sz='3'>Noi</name>
+			<name typ='PgTL' sz='4'>Nois</name>
+			<name typ='PgTL' sz='5'>Noise</name>
+			<name typ='PgTL' sz='6'>Noise </name>
+			<name typ='PgTL' sz='7'>Noise F</name>
+			<name typ='PgTL' sz='8'>Noise Fl</name>
+			<name typ='PgTL' sz='9'>Noise Flo</name>
+			<name typ='PgTL' sz='10'>Noise Floo</name>
+			<name typ='PgTL' sz='11'>Noise Floor</name>
+		</Ctrl>
+		<Ctrl ID='275'>
+			<name typ='PgTL' sz='3'>Out</name>
+			<name typ='PgTL' sz='4'>Outp</name>
+			<name typ='PgTL' sz='5'>Outpu</name>
+			<name typ='PgTL' sz='6'>Output</name>
+			<name typ='PgTL' sz='7'>Output </name>
+			<name typ='PgTL' sz='8'>Output N</name>
+			<name typ='PgTL' sz='9'>Output No</name>
+			<name typ='PgTL' sz='10'>Output Noi</name>
+			<name typ='PgTL' sz='11'>Output Nois</name>
+			<name typ='PgTL' sz='12'>Output Noise</name>
+		</Ctrl>
+		<Ctrl ID='272'>
+			<name typ='PgTL' sz='3'>Mas</name>
+			<name typ='PgTL' sz='4'>Mask</name>
+			<name typ='PgTL' sz='5'>Maski</name>
+			<name typ='PgTL' sz='6'>Maskin</name>
+			<name typ='PgTL' sz='7'>Masking</name>
+		</Ctrl>
+		<Ctrl ID='273'>
+			<name typ='PgTL' sz='3'>Enh</name>
+			<name typ='PgTL' sz='4'>Enha</name>
+			<name typ='PgTL' sz='5'>Enhan</name>
+			<name typ='PgTL' sz='6'>Enhanc</name>
+			<name typ='PgTL' sz='7'>Enhance</name>
+			<name typ='PgTL' sz='8'>Enhancem</name>
+			<name typ='PgTL' sz='9'>Enhanceme</name>
+			<name typ='PgTL' sz='10'>Enhancemen</name>
+			<name typ='PgTL' sz='11'>Enhancement</name>
+		</Ctrl>
+		<Ctrl ID='274'>
+			<name typ='PgTL' sz='3'>Whi</name>
+			<name typ='PgTL' sz='4'>Whit</name>
+			<name typ='PgTL' sz='5'>White</name>
+			<name typ='PgTL' sz='6'>Whiten</name>
+			<name typ='PgTL' sz='7'>Whiteni</name>
+			<name typ='PgTL' sz='8'>Whitenin</name>
+			<name typ='PgTL' sz='9'>Whitening</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

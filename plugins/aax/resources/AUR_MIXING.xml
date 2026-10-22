@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='MIXI' plugID='MONO'>
+			<Desc>Mixing</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='MIXI' plugID='M2ST'>
+			<Desc>Mixing</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='MIXI' plugID='STER'>
+			<Desc>Mixing</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Lef</name>
+			<name typ='PgTL' sz='4'>Left</name>
+			<name typ='PgTL' sz='5'>Left </name>
+			<name typ='PgTL' sz='6'>Left O</name>
+			<name typ='PgTL' sz='7'>Left Ou</name>
+			<name typ='PgTL' sz='8'>Left Out</name>
+			<name typ='PgTL' sz='9'>Left Outp</name>
+			<name typ='PgTL' sz='10'>Left Outpu</name>
+			<name typ='PgTL' sz='11'>Left Output</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Rig</name>
+			<name typ='PgTL' sz='4'>Righ</name>
+			<name typ='PgTL' sz='5'>Right</name>
+			<name typ='PgTL' sz='6'>Right </name>
+			<name typ='PgTL' sz='7'>Right O</name>
+			<name typ='PgTL' sz='8'>Right Ou</name>
+			<name typ='PgTL' sz='9'>Right Out</name>
+			<name typ='PgTL' sz='10'>Right Outp</name>
+			<name typ='PgTL' sz='11'>Right Outpu</name>
+			<name typ='PgTL' sz='12'>Right Output</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

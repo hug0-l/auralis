@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='STRE' plugID='MONO'>
+			<Desc>Streaming Preview</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='STRE' plugID='M2ST'>
+			<Desc>Streaming Preview</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='STRE' plugID='STER'>
+			<Desc>Streaming Preview</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>257</ID>
+				</Page>
+				<Page num='3'>
+					<ID>256</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>257</ID>
+					<ID>256</ID>
+					<ID>258</ID>
+					<ID>259</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Pos</name>
+			<name typ='PgTL' sz='4'>Pos </name>
+			<name typ='PgTL' sz='5'>Pos G</name>
+			<name typ='PgTL' sz='6'>Pos Ga</name>
+			<name typ='PgTL' sz='7'>Pos Gai</name>
+			<name typ='PgTL' sz='8'>Pos Gain</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Pla</name>
+			<name typ='PgTL' sz='4'>Play</name>
+			<name typ='PgTL' sz='5'>Playb</name>
+			<name typ='PgTL' sz='6'>Playba</name>
+			<name typ='PgTL' sz='7'>Playbac</name>
+			<name typ='PgTL' sz='8'>Playback</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Cod</name>
+			<name typ='PgTL' sz='4'>Code</name>
+			<name typ='PgTL' sz='5'>Codec</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Qua</name>
+			<name typ='PgTL' sz='4'>Qual</name>
+			<name typ='PgTL' sz='5'>Quali</name>
+			<name typ='PgTL' sz='6'>Qualit</name>
+			<name typ='PgTL' sz='7'>Quality</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

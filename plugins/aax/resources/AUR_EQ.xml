@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='EQ00' plugID='MONO'>
+			<Desc>EQ</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='EQ00' plugID='M2ST'>
+			<Desc>EQ</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='EQ00' plugID='STER'>
+			<Desc>EQ</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+				<Page num='6'>
+					<ID>260</ID>
+				</Page>
+				<Page num='7'>
+					<ID>261</ID>
+				</Page>
+				<Page num='8'>
+					<ID>262</ID>
+				</Page>
+				<Page num='9'>
+					<ID>263</ID>
+				</Page>
+				<Page num='10'>
+					<ID>264</ID>
+				</Page>
+				<Page num='11'>
+					<ID>265</ID>
+				</Page>
+				<Page num='12'>
+					<ID>266</ID>
+				</Page>
+				<Page num='13'>
+					<ID>267</ID>
+				</Page>
+				<Page num='14'>
+					<ID>268</ID>
+				</Page>
+				<Page num='15'>
+					<ID>269</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>259</ID>
+				</Page>
+				<Page num='3'>
+					<ID>260</ID>
+					<ID>261</ID>
+					<ID>262</ID>
+					<ID>263</ID>
+				</Page>
+				<Page num='4'>
+					<ID>264</ID>
+					<ID>265</ID>
+					<ID>266</ID>
+					<ID>267</ID>
+				</Page>
+				<Page num='5'>
+					<ID>268</ID>
+					<ID>269</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Typ</name>
+			<name typ='PgTL' sz='4'>Type</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 1</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 1</name>
+			<name typ='PgTL' sz='7'>Band 1 </name>
+			<name typ='PgTL' sz='8'>Band 1 G</name>
+			<name typ='PgTL' sz='9'>Band 1 Ga</name>
+			<name typ='PgTL' sz='10'>Band 1 Gai</name>
+			<name typ='PgTL' sz='11'>Band 1 Gain</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 1</name>
+			<name typ='PgTL' sz='7'>Band 1 </name>
+			<name typ='PgTL' sz='8'>Band 1 Q</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 2</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 2</name>
+			<name typ='PgTL' sz='7'>Band 2 </name>
+			<name typ='PgTL' sz='8'>Band 2 G</name>
+			<name typ='PgTL' sz='9'>Band 2 Ga</name>
+			<name typ='PgTL' sz='10'>Band 2 Gai</name>
+			<name typ='PgTL' sz='11'>Band 2 Gain</name>
+		</Ctrl>
+		<Ctrl ID='262'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 2</name>
+			<name typ='PgTL' sz='7'>Band 2 </name>
+			<name typ='PgTL' sz='8'>Band 2 Q</name>
+		</Ctrl>
+		<Ctrl ID='263'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 3</name>
+		</Ctrl>
+		<Ctrl ID='264'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 3</name>
+			<name typ='PgTL' sz='7'>Band 3 </name>
+			<name typ='PgTL' sz='8'>Band 3 G</name>
+			<name typ='PgTL' sz='9'>Band 3 Ga</name>
+			<name typ='PgTL' sz='10'>Band 3 Gai</name>
+			<name typ='PgTL' sz='11'>Band 3 Gain</name>
+		</Ctrl>
+		<Ctrl ID='265'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 3</name>
+			<name typ='PgTL' sz='7'>Band 3 </name>
+			<name typ='PgTL' sz='8'>Band 3 Q</name>
+		</Ctrl>
+		<Ctrl ID='266'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 4</name>
+		</Ctrl>
+		<Ctrl ID='267'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 4</name>
+			<name typ='PgTL' sz='7'>Band 4 </name>
+			<name typ='PgTL' sz='8'>Band 4 G</name>
+			<name typ='PgTL' sz='9'>Band 4 Ga</name>
+			<name typ='PgTL' sz='10'>Band 4 Gai</name>
+			<name typ='PgTL' sz='11'>Band 4 Gain</name>
+		</Ctrl>
+		<Ctrl ID='268'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 4</name>
+			<name typ='PgTL' sz='7'>Band 4 </name>
+			<name typ='PgTL' sz='8'>Band 4 Q</name>
+		</Ctrl>
+		<Ctrl ID='269'>
+			<name typ='PgTL' sz='3'>Out</name>
+			<name typ='PgTL' sz='4'>Outp</name>
+			<name typ='PgTL' sz='5'>Outpu</name>
+			<name typ='PgTL' sz='6'>Output</name>
+			<name typ='PgTL' sz='7'>Output </name>
+			<name typ='PgTL' sz='8'>Output G</name>
+			<name typ='PgTL' sz='9'>Output Ga</name>
+			<name typ='PgTL' sz='10'>Output Gai</name>
+			<name typ='PgTL' sz='11'>Output Gain</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

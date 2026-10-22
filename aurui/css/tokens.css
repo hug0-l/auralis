@@ -1,0 +1,69 @@
+/* Auralis design tokens — the single source of colour, type and spacing.
+   Never hard-code these values in HTML or JS; reference the variables. */
+
+:root {
+  /* surfaces — the dark studio palette: a near-black blue-grey app frame with
+     lighter raised panels, so the spectrogram stays the brightest thing on
+     screen and the chrome recedes. */
+  --bg-0: #161a21;
+  --bg-1: #1b2028;
+  --bg-2: #232a33;
+  --bg-3: #313a42;
+  --bg-4: #3b444d;
+  --line: #39424c;
+  --line-soft: #262d36;
+
+  /* text */
+  --txt-0: #ebebeb;
+  --txt-1: #a5acb2;
+  --txt-2: #7c858f;
+  --txt-3: #566068;
+
+  /* accents */
+  --accent: #2f87ff;
+  --accent-dim: #1c5fb0;
+  --accent-2: #09b9b9;
+  --accent-3: #e0a13a;
+  --danger: #d1544f;
+  --sel: #24405c;
+  --sel-edge: #3d6ea3;
+
+  /* spectrogram ramp */
+  --spec-0: #08090c;
+  --spec-1: #10203a;
+  --spec-2: #1c4a70;
+  --spec-3: #2f8f8f;
+  --spec-4: #8fc44a;
+  --spec-5: #f0d75a;
+  --spec-6: #f07a3c;
+  --spec-7: #e8e8e8;
+
+  /* type */
+  --font-ui: "Source Sans Pro", "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "Roboto Mono", "JetBrains Mono", "SF Mono", "Cascadia Mono", Consolas, monospace;
+  --fs-xs: 10px;
+  --fs-sm: 11px;
+  --fs-md: 12px;
+  --fs-lg: 14px;
+  --fs-xl: 17px;
+
+  /* spacing */
+  --sp-1: 2px;
+  --sp-2: 4px;
+  --sp-3: 8px;
+  --sp-4: 12px;
+  --sp-5: 16px;
+  --sp-6: 24px;
+
+  /* geometry */
+  --rail-w: 232px;
+  --inspector-w: 320px;
+  --topbar-h: 44px;
+  --status-h: 26px;
+  --radius: 4px;
+  --knob-size: 44px;
+
+  /* shadow */
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.45);
+  --shadow-2: 0 6px 22px rgba(0, 0, 0, 0.55);
+}

@@ -1,0 +1,6219 @@
+{
+  "environment": {
+    "python": "3.15.0",
+    "numpy": "2.5.4",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "date": "2026-10-22 01:02",
+    "command": "python qa/survey/survey.py --all",
+    "load_percent": 49.82926642111725
+  },
+  "budget_us": 1333.3333333333333,
+  "modules": [
+    {
+      "code": "AUR_AMBIENCEMATCH",
+      "display_name": "Ambience Match",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "ambience_pair",
+      "wanted_removed_db": 0.005,
+      "unwanted_removed_db": -10.76,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 456.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.3421,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -21.8,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": 0.04,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -13.28,
+          "after_db": -13.28,
+          "change_db": 0.01,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "source noise floor",
+          "role": "target",
+          "before_db": -40.21,
+          "after_db": -50.97,
+          "change_db": -10.76,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "learn() captures the reference ambience; the source's own floor must be gated out"
+      ]
+    },
+    {
+      "code": "AUR_AZIMUTH",
+      "display_name": "Azimuth",
+      "category": "Repair",
+      "policy": "transform",
+      "probe": "stereo_tone",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 70.8,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0531,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -172.75,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "left channel 220 Hz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.3,
+            0.3
+          ],
+          "rule": [
+            -0.3,
+            0.3
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "right channel 440 Hz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.3,
+            0.3
+          ],
+          "rule": [
+            -0.3,
+            0.3
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the shipped defaults are neutral (Delay 0, Level 0), so the module must not change anything"
+      ]
+    },
+    {
+      "code": "AUR_BANDRESTORATION",
+      "display_name": "Band Restoration",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "band_noise",
+      "wanted_removed_db": -0.003,
+      "unwanted_removed_db": -9.578,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 128.5,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0964,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 9,
+      "latency_error": 9,
+      "latency_tolerance": 64,
+      "block_delta_db": -168.0,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -0.34,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "the programme of the second band",
+          "role": "keep",
+          "before_db": -10.24,
+          "after_db": -10.24,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            null
+          ],
+          "rule": [
+            -1.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "the noise of the first band",
+          "role": "target",
+          "before_db": -28.22,
+          "after_db": -37.8,
+          "change_db": -9.58,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the module learns the noise of the recording and takes it out of the band it is in (below 200 Hz), the programme of the other bands has to stay"
+      ]
+    },
+    {
+      "code": "AUR_BREATH",
+      "display_name": "Breath Control",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "breath_burst",
+      "wanted_removed_db": -0.0,
+      "unwanted_removed_db": -7.616,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 39.0,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0293,
+      "over_budget": false,
+      "latency_declared": 1024,
+      "latency_measured": 1024,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -299.28,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -7.47,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            null
+          ],
+          "rule": [
+            -1.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "breath burst",
+          "role": "target",
+          "before_db": -10.24,
+          "after_db": -17.86,
+          "change_db": -7.62,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_CENTEREXTRACT",
+      "display_name": "Center Extract",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "stereo_tone",
+      "wanted_removed_db": -0.339,
+      "unwanted_removed_db": -15.616,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 13.9,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0104,
+      "over_budget": false,
+      "latency_declared": 1024,
+      "latency_measured": 1024,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -170.6,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -2.4,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "centred 440 Hz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.59,
+          "change_db": -0.34,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "panned 220 Hz",
+          "role": "target",
+          "before_db": -7.25,
+          "after_db": -22.87,
+          "change_db": -15.62,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "a centred source must survive, a hard panned source must go"
+      ]
+    },
+    {
+      "code": "AUR_DEBLEED",
+      "display_name": "De-Bleed",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "bleed_pair",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": -54.429,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 373.3,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.28,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -10.78,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": -0.96,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "bleeding 500 Hz source",
+          "role": "target",
+          "before_db": -17.25,
+          "after_db": -71.68,
+          "change_db": -54.43,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "channel 0 is the target, channel 1 carries the bleeding source"
+      ]
+    },
+    {
+      "code": "AUR_DECLICK",
+      "display_name": "De-Click",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "click_tone",
+      "wanted_removed_db": -0.007,
+      "unwanted_removed_db": -38.0,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 23.0,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0173,
+      "over_budget": false,
+      "latency_declared": 1664,
+      "latency_measured": 1664,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -136.8,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -40.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "480 Hz bed",
+          "role": "keep",
+          "before_db": -41.24,
+          "after_db": -41.25,
+          "change_db": -0.01,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            null
+          ],
+          "rule": [
+            -1.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "click at 0.25 s",
+          "role": "target",
+          "before_db": 0.0,
+          "after_db": -40.0,
+          "change_db": -40.0,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -10.0
+          ],
+          "rule": [
+            null,
+            -10.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "click at 0.75 s",
+          "role": "target",
+          "before_db": -4.0,
+          "after_db": -40.0,
+          "change_db": -36.0,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -10.0
+          ],
+          "rule": [
+            null,
+            -10.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the detector no longer fires on steady material: a 1 kHz programme keeps its level at every sensitivity from 0 to 10"
+      ]
+    },
+    {
+      "code": "AUR_DECLIP",
+      "display_name": "De-Clip",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "clipped_tone",
+      "wanted_removed_db": -1.88,
+      "unwanted_removed_db": -25.267,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 222.0,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.1665,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -10.21,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "1 kHz fundamental",
+          "role": "keep",
+          "before_db": 0.47,
+          "after_db": -1.41,
+          "change_db": -1.88,
+          "residual_db": null,
+          "allowed": [
+            -3.5,
+            0.5
+          ],
+          "rule": [
+            -3.5,
+            0.5
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "3rd harmonic",
+          "role": "target",
+          "before_db": -12.34,
+          "after_db": -33.86,
+          "change_db": -21.52,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "5th harmonic",
+          "role": "target",
+          "before_db": -26.17,
+          "after_db": -55.18,
+          "change_db": -29.01,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the clipping distortion of a hard clipped sine is odd harmonic; the rebuild of the flattened peaks takes the odd harmonics away, and the programme is given back the level the clipping chain took away, so the fundamental comes back at the level it had before the chain and not louder"
+      ]
+    },
+    {
+      "code": "AUR_DECRACKLE",
+      "display_name": "De-Crackle",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "crackle_tone",
+      "wanted_removed_db": -0.001,
+      "unwanted_removed_db": -4.89,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 11.5,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0086,
+      "over_budget": false,
+      "latency_declared": 1664,
+      "latency_measured": 1664,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -150.65,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -4.89,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "480 Hz bed",
+          "role": "keep",
+          "before_db": -27.27,
+          "after_db": -27.27,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "crackle impulses",
+          "role": "target",
+          "before_db": -9.16,
+          "after_db": -14.05,
+          "change_db": -4.89,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -4.0
+          ],
+          "rule": [
+            null,
+            -4.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_DEESS",
+      "display_name": "De-Ess",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "sibilance_tone",
+      "wanted_removed_db": -0.0,
+      "unwanted_removed_db": -14.794,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 43.4,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0326,
+      "over_budget": false,
+      "latency_declared": 1024,
+      "latency_measured": 1024,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -161.95,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -6.65,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -16.21,
+          "after_db": -16.21,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "sibilance burst",
+          "role": "target",
+          "before_db": -19.48,
+          "after_db": -34.28,
+          "change_db": -14.79,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_DEHUM",
+      "display_name": "De-Hum",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "hum_tone",
+      "wanted_removed_db": -0.044,
+      "unwanted_removed_db": -36.03,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 112.7,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0846,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -20.8,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -8.88,
+          "after_db": -8.92,
+          "change_db": -0.04,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "50 Hz hum and its 100 Hz harmonic",
+          "role": "target",
+          "before_db": -23.9,
+          "after_db": -59.93,
+          "change_db": -36.03,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -10.0
+          ],
+          "rule": [
+            null,
+            -10.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_DEPLOSIVE",
+      "display_name": "De-Plosive",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "plosive_vowel",
+      "wanted_removed_db": -0.004,
+      "unwanted_removed_db": -22.847,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 174.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.1306,
+      "over_budget": false,
+      "latency_declared": 512,
+      "latency_measured": 512,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -153.4,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -9.72,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "vowel harmonics",
+          "role": "keep",
+          "before_db": -24.83,
+          "after_db": -24.84,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "low frequency burst",
+          "role": "target",
+          "before_db": -21.12,
+          "after_db": -43.97,
+          "change_db": -22.85,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the vowel's 120 Hz fundamental shares the band with the burst and is watched separately"
+      ]
+    },
+    {
+      "code": "AUR_DEREVERB",
+      "display_name": "De-Reverb",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "reverb_tail",
+      "wanted_removed_db": 0.001,
+      "unwanted_removed_db": -6.02,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 36.4,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0273,
+      "over_budget": false,
+      "latency_declared": 2048,
+      "latency_measured": 2048,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -148.49,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "direct starter",
+          "role": "keep",
+          "before_db": -16.24,
+          "after_db": -16.24,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -2.5,
+            null
+          ],
+          "rule": [
+            -2.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "reverberant tail",
+          "role": "target",
+          "before_db": -53.33,
+          "after_db": -59.35,
+          "change_db": -6.02,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_DERUSTLE",
+      "display_name": "De-Rustle",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "rustle_bed",
+      "wanted_removed_db": -0.001,
+      "unwanted_removed_db": -3.699,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 41.5,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0311,
+      "over_budget": false,
+      "latency_declared": 2048,
+      "latency_measured": 2048,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -170.6,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -0.05,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "friction bed",
+          "role": "target",
+          "before_db": -54.06,
+          "after_db": -57.76,
+          "change_db": -3.7,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_DEWIND",
+      "display_name": "De-Wind",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "wind_rumble",
+      "wanted_removed_db": -2.475,
+      "unwanted_removed_db": -3.717,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 53.8,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0404,
+      "over_budget": false,
+      "latency_declared": 1024,
+      "latency_measured": 1024,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -167.23,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -1.22,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -13.25,
+          "after_db": -13.25,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "wanted low note",
+          "role": "keep",
+          "before_db": -13.27,
+          "after_db": -15.74,
+          "change_db": -2.47,
+          "residual_db": null,
+          "allowed": [
+            -4.0,
+            null
+          ],
+          "rule": [
+            -4.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "wind rumble, during the gust",
+          "role": "target",
+          "before_db": -27.56,
+          "after_db": -31.28,
+          "change_db": -3.72,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the fundamental recovery puts half of the attenuation back on the tracked peak, so the low note keeps half of the reduction"
+      ]
+    },
+    {
+      "code": "AUR_DECONSTRUCT",
+      "display_name": "Deconstruct",
+      "category": "Repair",
+      "policy": "transform",
+      "probe": "deconstruct_mix",
+      "wanted_removed_db": -3.023,
+      "unwanted_removed_db": -8.225,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 53.5,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0401,
+      "over_budget": false,
+      "latency_declared": 2048,
+      "latency_measured": 2048,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -156.59,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -8.5,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "tonal part",
+          "role": "keep",
+          "before_db": -18.21,
+          "after_db": -21.24,
+          "change_db": -3.02,
+          "residual_db": null,
+          "allowed": [
+            -4.0,
+            -1.0
+          ],
+          "rule": [
+            -4.0,
+            -1.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "noisy part",
+          "role": "target",
+          "before_db": -39.0,
+          "after_db": -47.23,
+          "change_db": -8.23,
+          "residual_db": null,
+          "allowed": [
+            -18.0,
+            -6.0
+          ],
+          "rule": [
+            -18.0,
+            -6.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the tonal part must survive the separation, the noisy part must be attenuated"
+      ]
+    },
+    {
+      "code": "AUR_DIALOGUEISOLATE",
+      "display_name": "Dialogue Isolate",
+      "category": "Repair",
+      "policy": "transform",
+      "probe": "dialogue_mix",
+      "wanted_removed_db": -0.375,
+      "unwanted_removed_db": -12.043,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 38.7,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.029,
+      "over_budget": false,
+      "latency_declared": 4096,
+      "latency_measured": 4096,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -161.21,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -6.92,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "voice",
+          "role": "keep",
+          "before_db": -18.61,
+          "after_db": -18.98,
+          "change_db": -0.37,
+          "residual_db": null,
+          "allowed": [
+            -3.0,
+            null
+          ],
+          "rule": [
+            -3.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "noise bed",
+          "role": "target",
+          "before_db": -46.0,
+          "after_db": -58.04,
+          "change_db": -12.04,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -6.0
+          ],
+          "rule": [
+            null,
+            -6.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the voice has to stay in the voice stem, otherwise the noise gain removes it"
+      ]
+    },
+    {
+      "code": "AUR_GUITARDENOISE",
+      "display_name": "Guitar De-Noise",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "guitar_squeak",
+      "wanted_removed_db": -0.178,
+      "unwanted_removed_db": -11.767,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 311.3,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.2334,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -10.21,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": 0.91,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "guitar harmonics",
+          "role": "keep",
+          "before_db": -22.72,
+          "after_db": -22.9,
+          "change_db": -0.18,
+          "residual_db": null,
+          "allowed": [
+            -3.0,
+            null
+          ],
+          "rule": [
+            -3.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "guitar fundamental",
+          "role": "keep",
+          "before_db": -20.08,
+          "after_db": -20.16,
+          "change_db": -0.08,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            null
+          ],
+          "rule": [
+            -1.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "string squeak",
+          "role": "target",
+          "before_db": -31.25,
+          "after_db": -43.02,
+          "change_db": -11.77,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the squeak detector must not mistake the held fundamental for a squeak"
+      ]
+    },
+    {
+      "code": "AUR_MOUTHDECLICK",
+      "display_name": "Mouth De-Click",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "click_tone",
+      "wanted_removed_db": -0.007,
+      "unwanted_removed_db": -40.0,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 12.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0091,
+      "over_budget": false,
+      "latency_declared": 1664,
+      "latency_measured": 1664,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -136.78,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -40.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "480 Hz bed",
+          "role": "keep",
+          "before_db": -41.24,
+          "after_db": -41.25,
+          "change_db": -0.01,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "click at 0.25 s",
+          "role": "target",
+          "before_db": 0.0,
+          "after_db": -40.0,
+          "change_db": -40.0,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -6.0
+          ],
+          "rule": [
+            null,
+            -6.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_MUSICREBALANCE",
+      "display_name": "Music Rebalance",
+      "category": "Repair",
+      "policy": "transform",
+      "probe": "music_mix",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": -12.0,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 763.9,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.5729,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -5.34,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": -0.07,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "vocal",
+          "role": "keep",
+          "before_db": -20.34,
+          "after_db": -20.34,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            1.5
+          ],
+          "rule": [
+            -1.5,
+            1.5
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "bass stem",
+          "role": "target",
+          "before_db": -16.24,
+          "after_db": -28.24,
+          "change_db": -12.0,
+          "residual_db": null,
+          "allowed": [
+            -18.0,
+            -6.0
+          ],
+          "rule": [
+            -18.0,
+            -6.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_REPAIRASSISTANT",
+      "display_name": "Repair Assistant",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "repair_mix",
+      "wanted_removed_db": -0.425,
+      "unwanted_removed_db": -9.193,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 416.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.3121,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -8.32,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": -1.3,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "the voice",
+          "role": "keep",
+          "before_db": -19.61,
+          "after_db": -20.04,
+          "change_db": -0.43,
+          "residual_db": null,
+          "allowed": [
+            -2.0,
+            null
+          ],
+          "rule": [
+            -2.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "mains hum",
+          "role": "target",
+          "before_db": -23.17,
+          "after_db": -39.52,
+          "change_db": -16.35,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -2.0
+          ],
+          "rule": [
+            null,
+            -2.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "noise bed",
+          "role": "target",
+          "before_db": -29.3,
+          "after_db": -31.34,
+          "change_db": -2.04,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -2.0
+          ],
+          "rule": [
+            null,
+            -2.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the shipped defaults are all zero, so the module does nothing until it is asked to; the depth of every repair is the parameter multiplied by the detection score"
+      ]
+    },
+    {
+      "code": "AUR_SPATIALSUPPRESSOR",
+      "display_name": "Spatial Suppressor",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "spatial_pair",
+      "wanted_removed_db": -0.005,
+      "unwanted_removed_db": -94.144,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 197.8,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.1484,
+      "over_budget": false,
+      "latency_declared": 512,
+      "latency_measured": 512,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -161.94,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -1.77,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "the voice in the middle",
+          "role": "keep",
+          "before_db": -16.23,
+          "after_db": -16.24,
+          "change_db": -0.01,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            null
+          ],
+          "rule": [
+            -1.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "the hiss on the side",
+          "role": "target",
+          "before_db": -37.29,
+          "after_db": -131.44,
+          "change_db": -94.14,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -20.0
+          ],
+          "rule": [
+            null,
+            -20.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_SPECTRALDENOISE",
+      "display_name": "Spectral De-Noise",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "spectral_voice",
+      "wanted_removed_db": -3.725,
+      "unwanted_removed_db": -41.597,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 83.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0624,
+      "over_budget": false,
+      "latency_declared": 1440,
+      "latency_measured": 1440,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -54.3,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.27,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "480 Hz partial",
+          "role": "keep",
+          "before_db": -34.46,
+          "after_db": -38.19,
+          "change_db": -3.72,
+          "residual_db": null,
+          "allowed": [
+            -4.609999999999999,
+            null
+          ],
+          "rule": [
+            -1.0,
+            null
+          ],
+          "ok": true,
+          "rescued": true,
+          "message": "",
+          "exception": {
+            "code": "AUR_SPECTRALDENOISE",
+            "kind": "keep",
+            "limit": -3.86,
+            "measured": -3.86,
+            "tolerance": 0.75,
+            "reason": "known, in the team brief as defect 1: a wanted partial is crushed by the noise law.  The patch of the study (qa/quality/spectral_de_noise.patch) was applied to an earlier version of the module and is history now: it does not apply to the current file, and the defect is still open \u2014 the 480 Hz partial lost 6.46 dB before the module was rewritten and loses 3.86 dB now.  The module was being rewritten while the survey ran, so the number has to be taken again when the rewrite lands.  The cause is in qa/quality/STUDY.md",
+            "owner": "var/patches/b12/spectral_de_noise.md",
+            "known": true
+          }
+        },
+        {
+          "label": "noise bed",
+          "role": "target",
+          "before_db": -42.86,
+          "after_db": -84.46,
+          "change_db": -41.6,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -6.0
+          ],
+          "rule": [
+            null,
+            -6.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "known defect, in the team brief as defect 1: 6.46 dB of the wanted partial are removed; the fix of the study is history and the defect is still open"
+      ]
+    },
+    {
+      "code": "AUR_SPECTRALEDITOR",
+      "display_name": "Spectral Editor",
+      "category": "Repair",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": -0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 5.0,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0038,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -147.37,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "outside the region",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.2,
+            0.2
+          ],
+          "rule": [
+            -0.2,
+            0.2
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "everything outside the rectangle must be passed through bit for bit"
+      ]
+    },
+    {
+      "code": "AUR_SPECTRALRECOVERY",
+      "display_name": "Spectral Recovery",
+      "category": "Repair",
+      "policy": "transform",
+      "probe": "band_limited",
+      "wanted_removed_db": -0.0,
+      "unwanted_removed_db": 0.0,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 403.5,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.3026,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -23.92,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": 0.44,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "surviving programme",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            1.5
+          ],
+          "rule": [
+            -1.5,
+            1.5
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "missing top end",
+          "role": "target",
+          "before_db": -196.4,
+          "after_db": -195.22,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            0.0,
+            null
+          ],
+          "rule": [
+            0.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the module is non destructive: it adds the missing band, it never removes"
+      ]
+    },
+    {
+      "code": "AUR_SPECTRALREPAIR",
+      "display_name": "Spectral Repair",
+      "category": "Repair",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": -0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 230.9,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.1732,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -173.8,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "outside the region",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": -0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.2,
+            0.2
+          ],
+          "rule": [
+            -0.2,
+            0.2
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "everything outside the rectangle must be passed through bit for bit"
+      ]
+    },
+    {
+      "code": "AUR_VOICEDENOISE",
+      "display_name": "Voice De-Noise",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "voice_hiss",
+      "wanted_removed_db": -0.012,
+      "unwanted_removed_db": -17.99,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 21.4,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0161,
+      "over_budget": false,
+      "latency_declared": 2047,
+      "latency_measured": 2047,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -314.03,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -0.27,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "voice band",
+          "role": "keep",
+          "before_db": -19.84,
+          "after_db": -19.86,
+          "change_db": -0.01,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "hiss band",
+          "role": "target",
+          "before_db": -47.54,
+          "after_db": -65.53,
+          "change_db": -17.99,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -6.0
+          ],
+          "rule": [
+            null,
+            -6.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the module was rewritten: the voice band moves by 0.02 dB and the module is block coherent to -314 dB"
+      ]
+    },
+    {
+      "code": "AUR_VOICEREVERB",
+      "display_name": "Voice Reverb",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "voice_room",
+      "wanted_removed_db": -1.674,
+      "unwanted_removed_db": -11.16,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 21.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0159,
+      "over_budget": false,
+      "latency_declared": 1024,
+      "latency_measured": 1024,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -329.23,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "the voice",
+          "role": "keep",
+          "before_db": -19.1,
+          "after_db": -20.77,
+          "change_db": -1.67,
+          "residual_db": null,
+          "allowed": [
+            -2.0,
+            null
+          ],
+          "rule": [
+            -2.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "the room in the first gap",
+          "role": "target",
+          "before_db": -26.8,
+          "after_db": -37.96,
+          "change_db": -11.16,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -4.0
+          ],
+          "rule": [
+            null,
+            -4.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the module measures the room in the gaps between the words and takes the reverberant field out of the voice; the voice itself has to stay, and what is left in the gap is the room"
+      ]
+    },
+    {
+      "code": "AUR_WOWFLUTTER",
+      "display_name": "Wow & Flutter",
+      "category": "Repair",
+      "policy": "restoration",
+      "probe": "wow_tone",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": -6.515,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 250.4,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.1878,
+      "over_budget": false,
+      "latency_declared": 1024,
+      "latency_measured": 974,
+      "latency_error": -50,
+      "latency_tolerance": 64,
+      "block_delta_db": -239.17,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "440 Hz carrier",
+          "role": "keep",
+          "before_db": -7.27,
+          "after_db": -7.27,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.5,
+            null
+          ],
+          "rule": [
+            -1.5,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "lower sideband",
+          "role": "target",
+          "before_db": -81.38,
+          "after_db": -87.94,
+          "change_db": -6.56,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -2.0
+          ],
+          "rule": [
+            null,
+            -2.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "upper sideband",
+          "role": "target",
+          "before_db": -75.12,
+          "after_db": -81.58,
+          "change_db": -6.47,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -2.0
+          ],
+          "rule": [
+            null,
+            -2.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the correction is not symmetric: the sidebands above and below the carrier do not lose the same amount.  The module warps the time axis, so the delay it applies is not a constant: the delay it declares (1024 samples) is the nominal one, and the cross correlation of the output against the input peaks within a block of it (974 samples measured with 0.64 s of probe, 1024 with 0.25 s), so the delay is held to a block"
+      ]
+    },
+    {
+      "code": "AUR_DITHER",
+      "display_name": "Dither",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": 72.897,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 26.8,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0201,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -86.58,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.1,
+            0.1
+          ],
+          "rule": [
+            -0.1,
+            0.1
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "dither noise floor",
+          "role": "target",
+          "before_db": -232.61,
+          "after_db": -107.1,
+          "change_db": 72.9,
+          "residual_db": null,
+          "allowed": [
+            0.0,
+            null
+          ],
+          "rule": [
+            0.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "16 bit TPDF dither: the tone must not move, the noise floor must rise"
+      ]
+    },
+    {
+      "code": "AUR_EQ",
+      "display_name": "EQ",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "eq_tones",
+      "wanted_removed_db": 0.118,
+      "unwanted_removed_db": 3.0,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 43.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0323,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -174.8,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 1.99,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "5 kHz tone",
+          "role": "keep",
+          "before_db": -11.25,
+          "after_db": -11.13,
+          "change_db": 0.12,
+          "residual_db": null,
+          "allowed": [
+            -0.6,
+            0.6
+          ],
+          "rule": [
+            -0.6,
+            0.6
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "1 kHz tone, +3 dB",
+          "role": "target",
+          "before_db": -7.25,
+          "after_db": -4.25,
+          "change_db": 3.0,
+          "residual_db": null,
+          "allowed": [
+            1.5,
+            4.5
+          ],
+          "rule": [
+            1.5,
+            4.5
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the gain of a band runs from -18 to +3.6 dB, so the boost is a third of the cut"
+      ]
+    },
+    {
+      "code": "AUR_EQMATCH",
+      "display_name": "EQ Match",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "eq_target",
+      "wanted_removed_db": 0.91,
+      "unwanted_removed_db": 11.415,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 17.6,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0132,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -174.04,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 5.77,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "target programme",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -6.34,
+          "change_db": 0.91,
+          "residual_db": null,
+          "allowed": [
+            -2.5,
+            2.5
+          ],
+          "rule": [
+            -2.5,
+            2.5
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "the brightness of the reference",
+          "role": "target",
+          "before_db": -19.25,
+          "after_db": -7.83,
+          "change_db": 11.42,
+          "residual_db": null,
+          "allowed": [
+            6.0,
+            18.0
+          ],
+          "rule": [
+            6.0,
+            18.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the match curve is the difference between the reference and the target spectrum, so a band the reference does not carry is unbounded"
+      ]
+    },
+    {
+      "code": "AUR_FADE",
+      "display_name": "Fade",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": -53.705,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 15.6,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0117,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -170.1,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "steady part",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.3,
+            0.3
+          ],
+          "rule": [
+            -0.3,
+            0.3
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "head of the fade",
+          "role": "target",
+          "before_db": -8.04,
+          "after_db": -61.74,
+          "change_db": -53.7,
+          "residual_db": null,
+          "allowed": [
+            null,
+            -3.0
+          ],
+          "rule": [
+            null,
+            -3.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_GAIN",
+      "display_name": "Gain",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": -6.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 4.8,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0036,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -164.99,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -6.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -13.25,
+          "change_db": -6.0,
+          "residual_db": null,
+          "allowed": [
+            -6.3,
+            -5.7
+          ],
+          "rule": [
+            -6.3,
+            -5.7
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_INTERPOLATE",
+      "display_name": "Interpolate",
+      "category": "Utility",
+      "policy": "restoration",
+      "probe": "dropout_tone",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": 11.445,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 639.3,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.4795,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -22.04,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "intact part",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            1.0
+          ],
+          "rule": [
+            -1.0,
+            1.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "first dropout",
+          "role": "target",
+          "before_db": -21.02,
+          "after_db": -12.13,
+          "change_db": 8.89,
+          "residual_db": null,
+          "allowed": [
+            0.0,
+            null
+          ],
+          "rule": [
+            0.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "second dropout",
+          "role": "target",
+          "before_db": -23.02,
+          "after_db": -9.01,
+          "change_db": 14.0,
+          "residual_db": null,
+          "allowed": [
+            0.0,
+            null
+          ],
+          "rule": [
+            0.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_LEVELER",
+      "display_name": "Leveler",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": -17.071,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 103.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0774,
+      "over_budget": false,
+      "latency_declared": 4848,
+      "latency_measured": 4848,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -153.0,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -17.01,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -24.32,
+          "change_db": -17.07,
+          "residual_db": null,
+          "allowed": [
+            -21.0,
+            -8.0
+          ],
+          "rule": [
+            -21.0,
+            -8.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the leveler rides a slow gain towards -23 LUFS; a -9 dBFS tone has to come down by about 14 dB"
+      ]
+    },
+    {
+      "code": "AUR_LOUDNESS",
+      "display_name": "Loudness Control",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": -17.072,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 99.6,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0747,
+      "over_budget": false,
+      "latency_declared": 4848,
+      "latency_measured": 4848,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -153.0,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -17.01,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -24.32,
+          "change_db": -17.07,
+          "residual_db": null,
+          "allowed": [
+            -21.0,
+            -8.0
+          ],
+          "rule": [
+            -21.0,
+            -8.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the loudness control rides the programme towards -23 LUFS"
+      ]
+    },
+    {
+      "code": "AUR_LOUDNESSOPT",
+      "display_name": "Loudness Optimize",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": -4.5,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 28.6,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0215,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -64.91,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -4.32,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -11.75,
+          "change_db": -4.5,
+          "residual_db": null,
+          "allowed": [
+            -12.0,
+            12.0
+          ],
+          "rule": [
+            -12.0,
+            12.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_MIXING",
+      "display_name": "Mixing",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "stereo_tone",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 14.3,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0107,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -172.75,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "left channel",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.3,
+            0.3
+          ],
+          "rule": [
+            -0.3,
+            0.3
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "right channel",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.3,
+            0.3
+          ],
+          "rule": [
+            -0.3,
+            0.3
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the shipped defaults are 100 % on both faders"
+      ]
+    },
+    {
+      "code": "AUR_NORMALIZE",
+      "display_name": "Normalize",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": 5.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 7.2,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0054,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -175.99,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 5.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "output peak",
+          "role": "keep",
+          "before_db": -6.0,
+          "after_db": -1.0,
+          "change_db": 5.0,
+          "residual_db": null,
+          "allowed": [
+            4.4,
+            5.6
+          ],
+          "rule": [
+            4.4,
+            5.6
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the tone peaks at -6 dBFS and the target is -1 dBFS, so the level must rise by 5 dB"
+      ]
+    },
+    {
+      "code": "AUR_PHASE",
+      "display_name": "Phase",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "stereo_tone",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 4.2,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0032,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -172.75,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "left channel",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.3,
+            0.3
+          ],
+          "rule": [
+            -0.3,
+            0.3
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "right channel",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.3,
+            0.3
+          ],
+          "rule": [
+            -0.3,
+            0.3
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the shipped defaults are neutral (Rotation 0, Adaptive off)"
+      ]
+    },
+    {
+      "code": "AUR_RESAMPLE",
+      "display_name": "Resample",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": -0.011,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 59.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0443,
+      "over_budget": false,
+      "latency_declared": 48,
+      "latency_measured": 48,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -170.97,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.02,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.26,
+          "change_db": -0.01,
+          "residual_db": null,
+          "allowed": [
+            -0.5,
+            0.5
+          ],
+          "rule": [
+            -0.5,
+            0.5
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the default target rate is the rate of the recording, so nothing has to move"
+      ]
+    },
+    {
+      "code": "AUR_SIGNALGEN",
+      "display_name": "Signal Generator",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": 160.751,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 14.9,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0112,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -9.26,
+      "block_lag": 0,
+      "block_coherent": false,
+      "runaway_db": 1.98,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "incoming programme",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.3,
+            0.3
+          ],
+          "rule": [
+            -0.3,
+            0.3
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        },
+        {
+          "label": "generated tone",
+          "role": "target",
+          "before_db": -185.94,
+          "after_db": -19.25,
+          "change_db": 160.75,
+          "residual_db": null,
+          "allowed": [
+            0.0,
+            null
+          ],
+          "rule": [
+            0.0,
+            null
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_STREAMPREVIEW",
+      "display_name": "Streaming Preview",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": -10.069,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 8.6,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0064,
+      "over_budget": false,
+      "latency_declared": 4800,
+      "latency_measured": 4800,
+      "latency_error": 0,
+      "latency_tolerance": 2,
+      "block_delta_db": -160.01,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": -10.01,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -17.32,
+          "change_db": -10.07,
+          "residual_db": null,
+          "allowed": [
+            -12.0,
+            12.0
+          ],
+          "rule": [
+            -12.0,
+            12.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": []
+    },
+    {
+      "code": "AUR_TIMEPITCH",
+      "display_name": "Time & Pitch",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 6.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0046,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -170.99,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            1.0
+          ],
+          "rule": [
+            -1.0,
+            1.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the shipped defaults are neutral (ratio 1, shift 0 st)"
+      ]
+    },
+    {
+      "code": "AUR_VARIPITCH",
+      "display_name": "Variable Pitch",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 4.3,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0033,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -170.99,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            1.0
+          ],
+          "rule": [
+            -1.0,
+            1.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the shipped default contour is 0 st, so the pitch must not move"
+      ]
+    },
+    {
+      "code": "AUR_VARTIME",
+      "display_name": "Variable Time",
+      "category": "Utility",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 3.2,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0024,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -170.99,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -1.0,
+            1.0
+          ],
+          "rule": [
+            -1.0,
+            1.0
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "the shipped default ratio is 1, so the speed must not change"
+      ]
+    },
+    {
+      "code": "AUR_CLIPCLASSIFIER",
+      "display_name": "Clip Classifier",
+      "category": "Measurement",
+      "policy": "passthrough",
+      "probe": "music_like",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 14.1,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0105,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -160.04,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "the whole signal",
+          "role": "keep",
+          "before_db": -18.19,
+          "after_db": -18.19,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.2,
+            0.2
+          ],
+          "rule": [
+            -0.2,
+            0.2
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "a measurement module: the audio passes through untouched"
+      ]
+    },
+    {
+      "code": "AUR_FINDSIMILAR",
+      "display_name": "Find Similar",
+      "category": "Measurement",
+      "policy": "passthrough",
+      "probe": "repeated_phrase",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 2.7,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.002,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -160.0,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "the whole signal",
+          "role": "keep",
+          "before_db": -18.24,
+          "after_db": -18.24,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.2,
+            0.2
+          ],
+          "rule": [
+            -0.2,
+            0.2
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "a measurement module: the audio passes through untouched"
+      ]
+    },
+    {
+      "code": "AUR_CONNECT",
+      "display_name": "Connect",
+      "category": "System",
+      "policy": "passthrough",
+      "probe": "tone_1k",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 4.6,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0035,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -170.99,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "the whole signal",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.2,
+            0.2
+          ],
+          "rule": [
+            -0.2,
+            0.2
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "a system module: the audio passes through untouched"
+      ]
+    },
+    {
+      "code": "AUR_MONITOR",
+      "display_name": "Monitor",
+      "category": "System",
+      "policy": "passthrough",
+      "probe": "tone_1k",
+      "wanted_removed_db": 0.0,
+      "unwanted_removed_db": null,
+      "wanted_before_db": null,
+      "wanted_after_db": null,
+      "unwanted_before_db": null,
+      "unwanted_after_db": null,
+      "cost_us": 105.4,
+      "budget_us": 1333.3,
+      "budget_fraction": 0.0791,
+      "over_budget": false,
+      "latency_declared": 0,
+      "latency_measured": 0,
+      "latency_error": 0,
+      "latency_tolerance": 64,
+      "block_delta_db": -170.99,
+      "block_lag": 0,
+      "block_coherent": true,
+      "runaway_db": 0.0,
+      "finite": true,
+      "same_length": true,
+      "allocator_independent": true,
+      "deterministic": true,
+      "error": null,
+      "checks": [
+        {
+          "label": "the whole signal",
+          "role": "keep",
+          "before_db": -7.25,
+          "after_db": -7.25,
+          "change_db": 0.0,
+          "residual_db": null,
+          "allowed": [
+            -0.2,
+            0.2
+          ],
+          "rule": [
+            -0.2,
+            0.2
+          ],
+          "ok": true,
+          "rescued": false,
+          "message": "",
+          "exception": null
+        }
+      ],
+      "notes": [
+        "a system module: the audio passes through untouched"
+      ]
+    }
+  ],
+  "exceptions": [
+    {
+      "code": "AUR_SPECTRALDENOISE",
+      "kind": "keep",
+      "limit": -3.86,
+      "measured": -3.86,
+      "tolerance": 0.75,
+      "reason": "known, in the team brief as defect 1: a wanted partial is crushed by the noise law.  The patch of the study (qa/quality/spectral_de_noise.patch) was applied to an earlier version of the module and is history now: it does not apply to the current file, and the defect is still open \u2014 the 480 Hz partial lost 6.46 dB before the module was rewritten and loses 3.86 dB now.  The module was being rewritten while the survey ran, so the number has to be taken again when the rewrite lands.  The cause is in qa/quality/STUDY.md",
+      "owner": "var/patches/b12/spectral_de_noise.md",
+      "known": true
+    }
+  ],
+  "specs": {
+    "AUR_AMBIENCEMATCH": {
+      "code": "AUR_AMBIENCEMATCH",
+      "policy": "restoration",
+      "probe": "ambience_pair",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": 0.12,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "source noise floor",
+          "role": "target",
+          "region": {
+            "lo_hz": 6000.0,
+            "hi_hz": 12000.0,
+            "start_s": 0.15,
+            "end_s": 0.25,
+            "metric": "rms",
+            "channel": null,
+            "label": "source noise floor"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "learn() captures the reference ambience; the source's own floor must be gated out",
+      "tags": []
+    },
+    "AUR_AZIMUTH": {
+      "code": "AUR_AZIMUTH",
+      "policy": "transform",
+      "probe": "stereo_tone",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "left channel 220 Hz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 200.0,
+            "hi_hz": 240.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 0,
+            "label": "left channel 220 Hz"
+          },
+          "expect": [
+            -0.3,
+            0.3
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "right channel 440 Hz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 410.0,
+            "hi_hz": 470.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 1,
+            "label": "right channel 440 Hz"
+          },
+          "expect": [
+            -0.3,
+            0.3
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the shipped defaults are neutral (Delay 0, Level 0), so the module must not change anything",
+      "tags": []
+    },
+    "AUR_BANDRESTORATION": {
+      "code": "AUR_BANDRESTORATION",
+      "policy": "restoration",
+      "probe": "band_noise",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "the programme of the second band",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the programme of the second band"
+          },
+          "expect": [
+            -1.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "the noise of the first band",
+          "role": "target",
+          "region": {
+            "lo_hz": 40.0,
+            "hi_hz": 180.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the noise of the first band"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "the module learns the noise of the recording and takes it out of the band it is in (below 200 Hz), the programme of the other bands has to stay",
+      "tags": []
+    },
+    "AUR_BREATH": {
+      "code": "AUR_BREATH",
+      "policy": "restoration",
+      "probe": "breath_burst",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": 0.15,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "breath burst",
+          "role": "target",
+          "region": {
+            "lo_hz": 2000.0,
+            "hi_hz": 8000.0,
+            "start_s": 0.2,
+            "end_s": 0.45,
+            "metric": "rms",
+            "channel": null,
+            "label": "breath burst"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_CENTEREXTRACT": {
+      "code": "AUR_CENTEREXTRACT",
+      "policy": "restoration",
+      "probe": "stereo_tone",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "centred 440 Hz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 410.0,
+            "hi_hz": 470.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "centred 440 Hz"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "panned 220 Hz",
+          "role": "target",
+          "region": {
+            "lo_hz": 200.0,
+            "hi_hz": 240.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 0,
+            "label": "panned 220 Hz"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "a centred source must survive, a hard panned source must go",
+      "tags": []
+    },
+    "AUR_CLIPCLASSIFIER": {
+      "code": "AUR_CLIPCLASSIFIER",
+      "policy": "passthrough",
+      "probe": "music_like",
+      "params": {},
+      "duration_s": 1.0,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "the whole signal",
+          "role": "keep",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the whole signal"
+          },
+          "expect": [
+            -0.2,
+            0.2
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "a measurement module: the audio passes through untouched",
+      "tags": []
+    },
+    "AUR_CONNECT": {
+      "code": "AUR_CONNECT",
+      "policy": "passthrough",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "the whole signal",
+          "role": "keep",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the whole signal"
+          },
+          "expect": [
+            -0.2,
+            0.2
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "a system module: the audio passes through untouched",
+      "tags": []
+    },
+    "AUR_DEBLEED": {
+      "code": "AUR_DEBLEED",
+      "policy": "restoration",
+      "probe": "bleed_pair",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 0,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "bleeding 500 Hz source",
+          "role": "target",
+          "region": {
+            "lo_hz": 400.0,
+            "hi_hz": 600.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 0,
+            "label": "bleeding 500 Hz source"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "channel 0 is the target, channel 1 carries the bleeding source",
+      "tags": []
+    },
+    "AUR_DECLICK": {
+      "code": "AUR_DECLICK",
+      "policy": "restoration",
+      "probe": "click_tone",
+      "params": {},
+      "duration_s": 0.8,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "480 Hz bed",
+          "role": "keep",
+          "region": {
+            "lo_hz": 450.0,
+            "hi_hz": 510.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "480 Hz bed"
+          },
+          "expect": [
+            -1.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "click at 0.25 s",
+          "role": "target",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.249,
+            "end_s": 0.251,
+            "metric": "peak",
+            "channel": null,
+            "label": "click at 0.25 s"
+          },
+          "expect": [
+            null,
+            -10.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 10.0
+        },
+        {
+          "label": "click at 0.75 s",
+          "role": "target",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.749,
+            "end_s": 0.751,
+            "metric": "peak",
+            "channel": null,
+            "label": "click at 0.75 s"
+          },
+          "expect": [
+            null,
+            -10.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 10.0
+        }
+      ],
+      "note": "the detector no longer fires on steady material: a 1 kHz programme keeps its level at every sensitivity from 0 to 10",
+      "tags": []
+    },
+    "AUR_DECLIP": {
+      "code": "AUR_DECLIP",
+      "policy": "restoration",
+      "probe": "clipped_tone",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "1 kHz fundamental",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "1 kHz fundamental"
+          },
+          "expect": [
+            -3.5,
+            0.5
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "3rd harmonic",
+          "role": "target",
+          "region": {
+            "lo_hz": 2900.0,
+            "hi_hz": 3100.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "3rd harmonic"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        },
+        {
+          "label": "5th harmonic",
+          "role": "target",
+          "region": {
+            "lo_hz": 4900.0,
+            "hi_hz": 5100.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "5th harmonic"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "the clipping distortion of a hard clipped sine is odd harmonic; the rebuild of the flattened peaks takes the odd harmonics away, and the programme is given back the level the clipping chain took away, so the fundamental comes back at the level it had before the chain and not louder",
+      "tags": []
+    },
+    "AUR_DECONSTRUCT": {
+      "code": "AUR_DECONSTRUCT",
+      "policy": "transform",
+      "probe": "deconstruct_mix",
+      "params": {
+        "Noisy Gain": -12.0
+      },
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "tonal part",
+          "role": "keep",
+          "region": {
+            "lo_hz": 200.0,
+            "hi_hz": 2000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "tonal part"
+          },
+          "expect": [
+            -4.0,
+            -1.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "noisy part",
+          "role": "target",
+          "region": {
+            "lo_hz": 6000.0,
+            "hi_hz": 12000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "noisy part"
+          },
+          "expect": [
+            -18.0,
+            -6.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the tonal part must survive the separation, the noisy part must be attenuated",
+      "tags": []
+    },
+    "AUR_DECRACKLE": {
+      "code": "AUR_DECRACKLE",
+      "policy": "restoration",
+      "probe": "crackle_tone",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "480 Hz bed",
+          "role": "keep",
+          "region": {
+            "lo_hz": 450.0,
+            "hi_hz": 510.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "480 Hz bed"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "crackle impulses",
+          "role": "target",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "peak",
+            "channel": null,
+            "label": "crackle impulses"
+          },
+          "expect": [
+            null,
+            -4.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 4.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_DEESS": {
+      "code": "AUR_DEESS",
+      "policy": "restoration",
+      "probe": "sibilance_tone",
+      "params": {},
+      "duration_s": 1.0,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "sibilance burst",
+          "role": "target",
+          "region": {
+            "lo_hz": 5000.0,
+            "hi_hz": 7000.0,
+            "start_s": 0.6,
+            "end_s": 0.9,
+            "metric": "rms",
+            "channel": null,
+            "label": "sibilance burst"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_DEHUM": {
+      "code": "AUR_DEHUM",
+      "policy": "restoration",
+      "probe": "hum_tone",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "50 Hz hum and its 100 Hz harmonic",
+          "role": "target",
+          "region": {
+            "lo_hz": 42.0,
+            "hi_hz": 108.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "50 Hz hum and its 100 Hz harmonic"
+          },
+          "expect": [
+            null,
+            -10.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 10.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_DEPLOSIVE": {
+      "code": "AUR_DEPLOSIVE",
+      "policy": "restoration",
+      "probe": "plosive_vowel",
+      "params": {},
+      "duration_s": 0.8,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "vowel harmonics",
+          "role": "keep",
+          "region": {
+            "lo_hz": 300.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "vowel harmonics"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "low frequency burst",
+          "role": "target",
+          "region": {
+            "lo_hz": 40.0,
+            "hi_hz": 100.0,
+            "start_s": 0.48,
+            "end_s": 0.58,
+            "metric": "rms",
+            "channel": null,
+            "label": "low frequency burst"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "the vowel's 120 Hz fundamental shares the band with the burst and is watched separately",
+      "tags": []
+    },
+    "AUR_DEREVERB": {
+      "code": "AUR_DEREVERB",
+      "policy": "restoration",
+      "probe": "reverb_tail",
+      "params": {},
+      "duration_s": 1.0,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "direct starter",
+          "role": "keep",
+          "region": {
+            "lo_hz": 410.0,
+            "hi_hz": 470.0,
+            "start_s": 0.19,
+            "end_s": 0.22,
+            "metric": "rms",
+            "channel": null,
+            "label": "direct starter"
+          },
+          "expect": [
+            -2.5,
+            null
+          ],
+          "budget_db": 2.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "reverberant tail",
+          "role": "target",
+          "region": {
+            "lo_hz": 410.0,
+            "hi_hz": 470.0,
+            "start_s": 0.4,
+            "end_s": 1.0,
+            "metric": "rms",
+            "channel": null,
+            "label": "reverberant tail"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_DERUSTLE": {
+      "code": "AUR_DERUSTLE",
+      "policy": "restoration",
+      "probe": "rustle_bed",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "friction bed",
+          "role": "target",
+          "region": {
+            "lo_hz": 6000.0,
+            "hi_hz": 12000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "friction bed"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_DEWIND": {
+      "code": "AUR_DEWIND",
+      "policy": "restoration",
+      "probe": "wind_rumble",
+      "params": {},
+      "duration_s": 1.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "wanted low note",
+          "role": "keep",
+          "region": {
+            "lo_hz": 190.0,
+            "hi_hz": 210.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "wanted low note"
+          },
+          "expect": [
+            -4.0,
+            null
+          ],
+          "budget_db": 4.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "wind rumble, during the gust",
+          "role": "target",
+          "region": {
+            "lo_hz": 30.0,
+            "hi_hz": 120.0,
+            "start_s": 0.6,
+            "end_s": 0.8,
+            "metric": "rms",
+            "channel": null,
+            "label": "wind rumble, during the gust"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "the fundamental recovery puts half of the attenuation back on the tracked peak, so the low note keeps half of the reduction",
+      "tags": []
+    },
+    "AUR_DIALOGUEISOLATE": {
+      "code": "AUR_DIALOGUEISOLATE",
+      "policy": "transform",
+      "probe": "dialogue_mix",
+      "params": {
+        "Noise Gain": -12.0
+      },
+      "duration_s": 1.0,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "voice",
+          "role": "keep",
+          "region": {
+            "lo_hz": 120.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.05,
+            "end_s": 0.45,
+            "metric": "rms",
+            "channel": null,
+            "label": "voice"
+          },
+          "expect": [
+            -3.0,
+            null
+          ],
+          "budget_db": 3.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "noise bed",
+          "role": "target",
+          "region": {
+            "lo_hz": 12000.0,
+            "hi_hz": 18000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "noise bed"
+          },
+          "expect": [
+            null,
+            -6.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 6.0
+        }
+      ],
+      "note": "the voice has to stay in the voice stem, otherwise the noise gain removes it",
+      "tags": []
+    },
+    "AUR_DITHER": {
+      "code": "AUR_DITHER",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -0.1,
+            0.1
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "dither noise floor",
+          "role": "target",
+          "region": {
+            "lo_hz": 16000.0,
+            "hi_hz": 20000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "dither noise floor"
+          },
+          "expect": [
+            0.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "16 bit TPDF dither: the tone must not move, the noise floor must rise",
+      "tags": []
+    },
+    "AUR_EQ": {
+      "code": "AUR_EQ",
+      "policy": "transform",
+      "probe": "eq_tones",
+      "params": {
+        "Band 2 Gain": 3.0
+      },
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "5 kHz tone",
+          "role": "keep",
+          "region": {
+            "lo_hz": 4800.0,
+            "hi_hz": 5200.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "5 kHz tone"
+          },
+          "expect": [
+            -0.6,
+            0.6
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "1 kHz tone, +3 dB",
+          "role": "target",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "1 kHz tone, +3 dB"
+          },
+          "expect": [
+            1.5,
+            4.5
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the gain of a band runs from -18 to +3.6 dB, so the boost is a third of the cut",
+      "tags": []
+    },
+    "AUR_EQMATCH": {
+      "code": "AUR_EQMATCH",
+      "policy": "transform",
+      "probe": "eq_target",
+      "params": {
+        "Amount": 1.0
+      },
+      "duration_s": 0.5,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "target programme",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "target programme"
+          },
+          "expect": [
+            -2.5,
+            2.5
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "the brightness of the reference",
+          "role": "target",
+          "region": {
+            "lo_hz": 2500.0,
+            "hi_hz": 3500.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the brightness of the reference"
+          },
+          "expect": [
+            6.0,
+            18.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the match curve is the difference between the reference and the target spectrum, so a band the reference does not carry is unbounded",
+      "tags": []
+    },
+    "AUR_FADE": {
+      "code": "AUR_FADE",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {
+        "Fade Length": 0.1
+      },
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "steady part",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.15,
+            "end_s": 0.35,
+            "metric": "rms",
+            "channel": null,
+            "label": "steady part"
+          },
+          "expect": [
+            -0.3,
+            0.3
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "head of the fade",
+          "role": "target",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": 0.02,
+            "metric": "rms",
+            "channel": null,
+            "label": "head of the fade"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_FINDSIMILAR": {
+      "code": "AUR_FINDSIMILAR",
+      "policy": "passthrough",
+      "probe": "repeated_phrase",
+      "params": {},
+      "duration_s": 1.0,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "the whole signal",
+          "role": "keep",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the whole signal"
+          },
+          "expect": [
+            -0.2,
+            0.2
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "a measurement module: the audio passes through untouched",
+      "tags": []
+    },
+    "AUR_GAIN": {
+      "code": "AUR_GAIN",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {
+        "Gain": -6.0
+      },
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -6.3,
+            -5.7
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_GUITARDENOISE": {
+      "code": "AUR_GUITARDENOISE",
+      "policy": "restoration",
+      "probe": "guitar_squeak",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "guitar harmonics",
+          "role": "keep",
+          "region": {
+            "lo_hz": 250.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "guitar harmonics"
+          },
+          "expect": [
+            -3.0,
+            null
+          ],
+          "budget_db": 3.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "guitar fundamental",
+          "role": "keep",
+          "region": {
+            "lo_hz": 120.0,
+            "hi_hz": 250.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "guitar fundamental"
+          },
+          "expect": [
+            -1.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "string squeak",
+          "role": "target",
+          "region": {
+            "lo_hz": 2800.0,
+            "hi_hz": 3200.0,
+            "start_s": 0.2,
+            "end_s": 0.32,
+            "metric": "rms",
+            "channel": null,
+            "label": "string squeak"
+          },
+          "expect": [
+            null,
+            -3.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 3.0
+        }
+      ],
+      "note": "the squeak detector must not mistake the held fundamental for a squeak",
+      "tags": []
+    },
+    "AUR_INTERPOLATE": {
+      "code": "AUR_INTERPOLATE",
+      "policy": "restoration",
+      "probe": "dropout_tone",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "intact part",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": 0.14,
+            "metric": "rms",
+            "channel": null,
+            "label": "intact part"
+          },
+          "expect": [
+            -1.0,
+            1.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "first dropout",
+          "role": "target",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.149,
+            "end_s": 0.152,
+            "metric": "rms",
+            "channel": null,
+            "label": "first dropout"
+          },
+          "expect": [
+            0.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "second dropout",
+          "role": "target",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.349,
+            "end_s": 0.352,
+            "metric": "rms",
+            "channel": null,
+            "label": "second dropout"
+          },
+          "expect": [
+            0.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_LEVELER": {
+      "code": "AUR_LEVELER",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -21.0,
+            -8.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the leveler rides a slow gain towards -23 LUFS; a -9 dBFS tone has to come down by about 14 dB",
+      "tags": []
+    },
+    "AUR_LOUDNESS": {
+      "code": "AUR_LOUDNESS",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -21.0,
+            -8.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the loudness control rides the programme towards -23 LUFS",
+      "tags": []
+    },
+    "AUR_LOUDNESSOPT": {
+      "code": "AUR_LOUDNESSOPT",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -12.0,
+            12.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_MIXING": {
+      "code": "AUR_MIXING",
+      "policy": "transform",
+      "probe": "stereo_tone",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "left channel",
+          "role": "keep",
+          "region": {
+            "lo_hz": 200.0,
+            "hi_hz": 240.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 0,
+            "label": "left channel"
+          },
+          "expect": [
+            -0.3,
+            0.3
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "right channel",
+          "role": "keep",
+          "region": {
+            "lo_hz": 410.0,
+            "hi_hz": 470.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 1,
+            "label": "right channel"
+          },
+          "expect": [
+            -0.3,
+            0.3
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the shipped defaults are 100 % on both faders",
+      "tags": []
+    },
+    "AUR_MONITOR": {
+      "code": "AUR_MONITOR",
+      "policy": "passthrough",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "the whole signal",
+          "role": "keep",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the whole signal"
+          },
+          "expect": [
+            -0.2,
+            0.2
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "a system module: the audio passes through untouched",
+      "tags": []
+    },
+    "AUR_MOUTHDECLICK": {
+      "code": "AUR_MOUTHDECLICK",
+      "policy": "restoration",
+      "probe": "click_tone",
+      "params": {},
+      "duration_s": 0.8,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "480 Hz bed",
+          "role": "keep",
+          "region": {
+            "lo_hz": 450.0,
+            "hi_hz": 510.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "480 Hz bed"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "click at 0.25 s",
+          "role": "target",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.249,
+            "end_s": 0.251,
+            "metric": "peak",
+            "channel": null,
+            "label": "click at 0.25 s"
+          },
+          "expect": [
+            null,
+            -6.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 6.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_MUSICREBALANCE": {
+      "code": "AUR_MUSICREBALANCE",
+      "policy": "transform",
+      "probe": "music_mix",
+      "params": {
+        "Bass Gain": -12.0
+      },
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "vocal",
+          "role": "keep",
+          "region": {
+            "lo_hz": 400.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "vocal"
+          },
+          "expect": [
+            -1.5,
+            1.5
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "bass stem",
+          "role": "target",
+          "region": {
+            "lo_hz": 95.0,
+            "hi_hz": 130.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "bass stem"
+          },
+          "expect": [
+            -18.0,
+            -6.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_NORMALIZE": {
+      "code": "AUR_NORMALIZE",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "output peak",
+          "role": "keep",
+          "region": {
+            "lo_hz": 0.0,
+            "hi_hz": 24000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "peak",
+            "channel": null,
+            "label": "output peak"
+          },
+          "expect": [
+            4.4,
+            5.6
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the tone peaks at -6 dBFS and the target is -1 dBFS, so the level must rise by 5 dB",
+      "tags": []
+    },
+    "AUR_PHASE": {
+      "code": "AUR_PHASE",
+      "policy": "transform",
+      "probe": "stereo_tone",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "left channel",
+          "role": "keep",
+          "region": {
+            "lo_hz": 200.0,
+            "hi_hz": 240.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 0,
+            "label": "left channel"
+          },
+          "expect": [
+            -0.3,
+            0.3
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "right channel",
+          "role": "keep",
+          "region": {
+            "lo_hz": 410.0,
+            "hi_hz": 470.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": 1,
+            "label": "right channel"
+          },
+          "expect": [
+            -0.3,
+            0.3
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the shipped defaults are neutral (Rotation 0, Adaptive off)",
+      "tags": []
+    },
+    "AUR_REPAIRASSISTANT": {
+      "code": "AUR_REPAIRASSISTANT",
+      "policy": "restoration",
+      "probe": "repair_mix",
+      "params": {
+        "Noise Reduction": 0.5,
+        "Hum Reduction": 0.5,
+        "Click Reduction": 0.5
+      },
+      "duration_s": 1.0,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "the voice",
+          "role": "keep",
+          "region": {
+            "lo_hz": 120.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the voice"
+          },
+          "expect": [
+            -2.0,
+            null
+          ],
+          "budget_db": 2.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "mains hum",
+          "role": "target",
+          "region": {
+            "lo_hz": 42.0,
+            "hi_hz": 108.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "mains hum"
+          },
+          "expect": [
+            null,
+            -2.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 2.0
+        },
+        {
+          "label": "noise bed",
+          "role": "target",
+          "region": {
+            "lo_hz": 6000.0,
+            "hi_hz": 12000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "noise bed"
+          },
+          "expect": [
+            null,
+            -2.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 2.0
+        }
+      ],
+      "note": "the shipped defaults are all zero, so the module does nothing until it is asked to; the depth of every repair is the parameter multiplied by the detection score",
+      "tags": []
+    },
+    "AUR_RESAMPLE": {
+      "code": "AUR_RESAMPLE",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -0.5,
+            0.5
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the default target rate is the rate of the recording, so nothing has to move",
+      "tags": []
+    },
+    "AUR_SIGNALGEN": {
+      "code": "AUR_SIGNALGEN",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {
+        "Frequency": 440.0
+      },
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "incoming programme",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "incoming programme"
+          },
+          "expect": [
+            -0.3,
+            0.3
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "generated tone",
+          "role": "target",
+          "region": {
+            "lo_hz": 430.0,
+            "hi_hz": 450.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "generated tone"
+          },
+          "expect": [
+            0.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_SPATIALSUPPRESSOR": {
+      "code": "AUR_SPATIALSUPPRESSOR",
+      "policy": "restoration",
+      "probe": "spatial_pair",
+      "params": {},
+      "duration_s": 1.0,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "the voice in the middle",
+          "role": "keep",
+          "region": {
+            "lo_hz": 120.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the voice in the middle"
+          },
+          "expect": [
+            -1.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "the hiss on the side",
+          "role": "target",
+          "region": {
+            "lo_hz": 5000.0,
+            "hi_hz": 20000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "the hiss on the side"
+          },
+          "expect": [
+            null,
+            -20.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 20.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_SPECTRALDENOISE": {
+      "code": "AUR_SPECTRALDENOISE",
+      "policy": "restoration",
+      "probe": "spectral_voice",
+      "params": {},
+      "duration_s": 1.0,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "480 Hz partial",
+          "role": "keep",
+          "region": {
+            "lo_hz": 440.0,
+            "hi_hz": 520.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "480 Hz partial"
+          },
+          "expect": [
+            -1.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "noise bed",
+          "role": "target",
+          "region": {
+            "lo_hz": 6000.0,
+            "hi_hz": 10000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "noise bed"
+          },
+          "expect": [
+            null,
+            -6.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 6.0
+        }
+      ],
+      "note": "known defect, in the team brief as defect 1: 6.46 dB of the wanted partial are removed; the fix of the study is history and the defect is still open",
+      "tags": []
+    },
+    "AUR_SPECTRALEDITOR": {
+      "code": "AUR_SPECTRALEDITOR",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {
+        "Mode": "Attenuate"
+      },
+      "duration_s": 0.5,
+      "learn": false,
+      "region": [
+        0.1,
+        0.3,
+        4000.0,
+        8000.0
+      ],
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "outside the region",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "outside the region"
+          },
+          "expect": [
+            -0.2,
+            0.2
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "everything outside the rectangle must be passed through bit for bit",
+      "tags": []
+    },
+    "AUR_SPECTRALRECOVERY": {
+      "code": "AUR_SPECTRALRECOVERY",
+      "policy": "transform",
+      "probe": "band_limited",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "surviving programme",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "surviving programme"
+          },
+          "expect": [
+            -1.5,
+            1.5
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "missing top end",
+          "role": "target",
+          "region": {
+            "lo_hz": 4000.0,
+            "hi_hz": 8000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "missing top end"
+          },
+          "expect": [
+            0.0,
+            null
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the module is non destructive: it adds the missing band, it never removes",
+      "tags": []
+    },
+    "AUR_SPECTRALREPAIR": {
+      "code": "AUR_SPECTRALREPAIR",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {
+        "Mode": "Attenuate"
+      },
+      "duration_s": 0.5,
+      "learn": false,
+      "region": [
+        0.1,
+        0.3,
+        4000.0,
+        8000.0
+      ],
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "outside the region",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "outside the region"
+          },
+          "expect": [
+            -0.2,
+            0.2
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "everything outside the rectangle must be passed through bit for bit",
+      "tags": []
+    },
+    "AUR_STREAMPREVIEW": {
+      "code": "AUR_STREAMPREVIEW",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -12.0,
+            12.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "",
+      "tags": []
+    },
+    "AUR_TIMEPITCH": {
+      "code": "AUR_TIMEPITCH",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.0,
+            1.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the shipped defaults are neutral (ratio 1, shift 0 st)",
+      "tags": []
+    },
+    "AUR_VARIPITCH": {
+      "code": "AUR_VARIPITCH",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.0,
+            1.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the shipped default contour is 0 st, so the pitch must not move",
+      "tags": []
+    },
+    "AUR_VARTIME": {
+      "code": "AUR_VARTIME",
+      "policy": "transform",
+      "probe": "tone_1k",
+      "params": {},
+      "duration_s": 0.5,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "programme 1 kHz",
+          "role": "keep",
+          "region": {
+            "lo_hz": 950.0,
+            "hi_hz": 1050.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "programme 1 kHz"
+          },
+          "expect": [
+            -1.0,
+            1.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 0.0
+        }
+      ],
+      "note": "the shipped default ratio is 1, so the speed must not change",
+      "tags": []
+    },
+    "AUR_VOICEDENOISE": {
+      "code": "AUR_VOICEDENOISE",
+      "policy": "restoration",
+      "probe": "voice_hiss",
+      "params": {},
+      "duration_s": 1.0,
+      "learn": true,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "voice band",
+          "role": "keep",
+          "region": {
+            "lo_hz": 120.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "voice band"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "hiss band",
+          "role": "target",
+          "region": {
+            "lo_hz": 5000.0,
+            "hi_hz": 14000.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "hiss band"
+          },
+          "expect": [
+            null,
+            -6.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 6.0
+        }
+      ],
+      "note": "the module was rewritten: the voice band moves by 0.02 dB and the module is block coherent to -314 dB",
+      "tags": []
+    },
+    "AUR_VOICEREVERB": {
+      "code": "AUR_VOICEREVERB",
+      "policy": "restoration",
+      "probe": "voice_room",
+      "params": {},
+      "duration_s": 1.2,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": null,
+      "checks": [
+        {
+          "label": "the voice",
+          "role": "keep",
+          "region": {
+            "lo_hz": 120.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.29,
+            "end_s": 1.18,
+            "metric": "rms",
+            "channel": null,
+            "label": "the voice"
+          },
+          "expect": [
+            -2.0,
+            null
+          ],
+          "budget_db": 2.0,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "the room in the first gap",
+          "role": "target",
+          "region": {
+            "lo_hz": 120.0,
+            "hi_hz": 3000.0,
+            "start_s": 0.22,
+            "end_s": 0.29,
+            "metric": "rms",
+            "channel": null,
+            "label": "the room in the first gap"
+          },
+          "expect": [
+            null,
+            -4.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 4.0
+        }
+      ],
+      "note": "the module measures the room in the gaps between the words and takes the reverberant field out of the voice; the voice itself has to stay, and what is left in the gap is the room",
+      "tags": []
+    },
+    "AUR_WOWFLUTTER": {
+      "code": "AUR_WOWFLUTTER",
+      "policy": "restoration",
+      "probe": "wow_tone",
+      "params": {},
+      "duration_s": 4.0,
+      "learn": false,
+      "region": null,
+      "latency_tolerance": 64,
+      "checks": [
+        {
+          "label": "440 Hz carrier",
+          "role": "keep",
+          "region": {
+            "lo_hz": 437.0,
+            "hi_hz": 443.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "440 Hz carrier"
+          },
+          "expect": [
+            -1.5,
+            null
+          ],
+          "budget_db": 1.5,
+          "min_removed_db": 0.0
+        },
+        {
+          "label": "lower sideband",
+          "role": "target",
+          "region": {
+            "lo_hz": 434.0,
+            "hi_hz": 438.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "lower sideband"
+          },
+          "expect": [
+            null,
+            -2.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 2.0
+        },
+        {
+          "label": "upper sideband",
+          "role": "target",
+          "region": {
+            "lo_hz": 442.0,
+            "hi_hz": 446.0,
+            "start_s": 0.0,
+            "end_s": null,
+            "metric": "rms",
+            "channel": null,
+            "label": "upper sideband"
+          },
+          "expect": [
+            null,
+            -2.0
+          ],
+          "budget_db": 1.0,
+          "min_removed_db": 2.0
+        }
+      ],
+      "note": "the correction is not symmetric: the sidebands above and below the carrier do not lose the same amount.  The module warps the time axis, so the delay it applies is not a constant: the delay it declares (1024 samples) is the nominal one, and the cross correlation of the output against the input peaks within a block of it (974 samples measured with 0.64 s of probe, 1024 with 0.25 s), so the delay is held to a block",
+      "tags": []
+    }
+  },
+  "verdicts": {
+    "AUR_AMBIENCEMATCH": "PASS",
+    "AUR_AZIMUTH": "PASS",
+    "AUR_BANDRESTORATION": "PASS",
+    "AUR_BREATH": "PASS",
+    "AUR_CENTEREXTRACT": "PASS",
+    "AUR_DEBLEED": "PASS",
+    "AUR_DECLICK": "PASS",
+    "AUR_DECLIP": "PASS",
+    "AUR_DECRACKLE": "PASS",
+    "AUR_DEESS": "PASS",
+    "AUR_DEHUM": "PASS",
+    "AUR_DEPLOSIVE": "PASS",
+    "AUR_DEREVERB": "PASS",
+    "AUR_DERUSTLE": "PASS",
+    "AUR_DEWIND": "PASS",
+    "AUR_DECONSTRUCT": "PASS",
+    "AUR_DIALOGUEISOLATE": "PASS",
+    "AUR_GUITARDENOISE": "PASS",
+    "AUR_MOUTHDECLICK": "PASS",
+    "AUR_MUSICREBALANCE": "PASS",
+    "AUR_REPAIRASSISTANT": "PASS",
+    "AUR_SPATIALSUPPRESSOR": "PASS",
+    "AUR_SPECTRALDENOISE": "EXCEPTION",
+    "AUR_SPECTRALEDITOR": "PASS",
+    "AUR_SPECTRALRECOVERY": "PASS",
+    "AUR_SPECTRALREPAIR": "PASS",
+    "AUR_VOICEDENOISE": "PASS",
+    "AUR_VOICEREVERB": "PASS",
+    "AUR_WOWFLUTTER": "PASS",
+    "AUR_DITHER": "PASS",
+    "AUR_EQ": "PASS",
+    "AUR_EQMATCH": "PASS",
+    "AUR_FADE": "PASS",
+    "AUR_GAIN": "PASS",
+    "AUR_INTERPOLATE": "PASS",
+    "AUR_LEVELER": "PASS",
+    "AUR_LOUDNESS": "PASS",
+    "AUR_LOUDNESSOPT": "PASS",
+    "AUR_MIXING": "PASS",
+    "AUR_NORMALIZE": "PASS",
+    "AUR_PHASE": "PASS",
+    "AUR_RESAMPLE": "PASS",
+    "AUR_SIGNALGEN": "PASS",
+    "AUR_STREAMPREVIEW": "PASS",
+    "AUR_TIMEPITCH": "PASS",
+    "AUR_VARIPITCH": "PASS",
+    "AUR_VARTIME": "PASS",
+    "AUR_CLIPCLASSIFIER": "PASS",
+    "AUR_FINDSIMILAR": "PASS",
+    "AUR_CONNECT": "PASS",
+    "AUR_MONITOR": "PASS"
+  }
+}

@@ -1,0 +1,163 @@
+name: Release
+
+# The manual release build.
+#
+# The workflow runs the checks of the CI, builds the release packages with
+# scripts/build_release.py and attaches the zips and the manifest as
+# artefacts.  Nothing here needs a secret: the non-installer artefacts (the
+# zips and the manifest) are built with the sources alone.  The Windows
+# installer is opt-in and is only compiled when the Inno Setup compiler is
+# on the machine.
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: "the package to build"
+        type: choice
+        options:
+          - both
+          - full
+          - slim
+        default: both
+      version:
+        description: "the version of the release (empty: the version of pyproject.toml)"
+        type: string
+        default: ""
+      installer:
+        description: "compile the Windows installer (needs a Windows runner and Inno Setup)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  PIP_NO_PYTHON_VERSION_WARNING: "1"
+
+jobs:
+  release:
+    name: release (${{ inputs.profile }})
+    # The plug-in family is built on Windows only, and the full package
+    # carries it: a release with the plug-in layer is therefore built on
+    # the Windows runner.  The slim package is built everywhere.
+    runs-on: ${{ (inputs.profile == 'full' || inputs.profile == 'both' || inputs.installer) && 'windows-latest' || 'ubuntu-latest' }}
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      # -- the checks ------------------------------------------------------
+      # The same gates as the pipeline, so a release is never built from a
+      # tree that the pipeline would have rejected.
+      - name: Run the style gate
+        run: python tools/lint_check.py --require js-syntax
+
+      - name: Run the naming gate
+        run: python tools/hygiene_check.py
+
+      - name: Run the test suite
+        run: python -m pytest tests -q -rs --ignore=tests/test_vst3_host.py
+
+      - name: Run the journey
+        run: python -m pytest tests/test_journey.py -q
+
+      - name: Validate the module schema
+        run: python tools/validate_schema.py --strict-modules
+
+      - name: Check the generated artefacts for drift
+        run: python tools/codegen_registry.py --check
+
+      - name: Check the class coverage of the stylesheets
+        run: python qa/check_css_coverage.py
+
+      - name: Run the acceptance check
+        run: python qa/verify_app.py
+
+      - name: Run the interface contract tests
+        run: python -m pytest tests/test_ui_contracts.py -q
+
+      - name: Build the plug-ins and run the host against them
+        # The plug-in build needs the Microsoft build tools, so it runs on
+        # the Windows runner of the release.
+        #
+        # No PYTHONHOME: the plug-in carries the standard library of its
+        # own interpreter and the core finds it by itself.
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          $install = & $vswhere -latest -products * `
+            -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 `
+            -property installationPath
+          $vcvars = Join-Path $install "VC\Auxiliary\Build\vcvars64.bat"
+          "AURALIS_VCVARS64=$vcvars" >> $env:GITHUB_ENV
+          if (-not (Get-Command ninja -ErrorAction SilentlyContinue)) {
+            choco install ninja --no-progress -y
+            if ($env:ChocolateyInstall) {
+              (Join-Path $env:ChocolateyInstall "bin") >> $env:GITHUB_PATH
+            }
+          }
+          python scripts/ci_plugin_gate.py --strict
+
+      # -- the build -------------------------------------------------------
+      - name: Install the installer compiler
+        if: inputs.installer
+        shell: pwsh
+        run: |
+          choco install innosetup --no-progress -y
+          echo "ISCC=$ISCC" >> $env:GITHUB_ENV
+
+      - name: Build the release packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(--profile "${{ inputs.profile }}" --out dist)
+          if [ -n "${{ inputs.version }}" ]; then
+            args+=(--version "${{ inputs.version }}")
+          fi
+          if [ "${{ inputs.installer }}" = "true" ]; then
+            args+=(--installer)
+            if [ -n "${ISCC:-}" ]; then
+              args+=(--iscc "$ISCC")
+            fi
+          else
+            args+=(--no-installer)
+          fi
+          python scripts/build_release.py "${args[@]}"
+
+      # -- the artefacts ---------------------------------------------------
+      - name: Upload the release packages
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: release-packages
+          path: dist/*.zip
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload the release manifest
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: release-manifest
+          path: dist/*/manifest.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### release" >> "$GITHUB_STEP_SUMMARY"
+          echo "profile: ${{ inputs.profile }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "the zips and the manifest are attached as the artefacts 'release-packages' and 'release-manifest'" >> "$GITHUB_STEP_SUMMARY"

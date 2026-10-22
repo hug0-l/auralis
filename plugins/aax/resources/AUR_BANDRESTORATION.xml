@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='BAND' plugID='MONO'>
+			<Desc>Band Restoration</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='BAND' plugID='M2ST'>
+			<Desc>Band Restoration</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='BAND' plugID='STER'>
+			<Desc>Band Restoration</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>260</ID>
+				</Page>
+				<Page num='6'>
+					<ID>259</ID>
+				</Page>
+				<Page num='7'>
+					<ID>261</ID>
+				</Page>
+				<Page num='8'>
+					<ID>262</ID>
+				</Page>
+				<Page num='9'>
+					<ID>266</ID>
+				</Page>
+				<Page num='10'>
+					<ID>263</ID>
+				</Page>
+				<Page num='11'>
+					<ID>264</ID>
+				</Page>
+				<Page num='12'>
+					<ID>265</ID>
+				</Page>
+				<Page num='13'>
+					<ID>267</ID>
+				</Page>
+				<Page num='14'>
+					<ID>268</ID>
+				</Page>
+				<Page num='15'>
+					<ID>269</ID>
+				</Page>
+				<Page num='16'>
+					<ID>270</ID>
+				</Page>
+				<Page num='17'>
+					<ID>271</ID>
+				</Page>
+				<Page num='18'>
+					<ID>272</ID>
+				</Page>
+				<Page num='19'>
+					<ID>273</ID>
+				</Page>
+				<Page num='20'>
+					<ID>274</ID>
+				</Page>
+				<Page num='21'>
+					<ID>275</ID>
+				</Page>
+				<Page num='22'>
+					<ID>276</ID>
+				</Page>
+				<Page num='23'>
+					<ID>277</ID>
+				</Page>
+				<Page num='24'>
+					<ID>278</ID>
+				</Page>
+				<Page num='25'>
+					<ID>279</ID>
+				</Page>
+				<Page num='26'>
+					<ID>280</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>260</ID>
+				</Page>
+				<Page num='3'>
+					<ID>259</ID>
+					<ID>261</ID>
+					<ID>262</ID>
+					<ID>266</ID>
+				</Page>
+				<Page num='4'>
+					<ID>263</ID>
+					<ID>264</ID>
+					<ID>265</ID>
+					<ID>267</ID>
+				</Page>
+				<Page num='5'>
+					<ID>268</ID>
+					<ID>269</ID>
+					<ID>270</ID>
+					<ID>271</ID>
+				</Page>
+				<Page num='6'>
+					<ID>272</ID>
+					<ID>273</ID>
+					<ID>274</ID>
+					<ID>275</ID>
+				</Page>
+				<Page num='7'>
+					<ID>276</ID>
+					<ID>277</ID>
+					<ID>278</ID>
+					<ID>279</ID>
+				</Page>
+				<Page num='8'>
+					<ID>280</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Bands</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Low</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Mid</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Pha</name>
+			<name typ='PgTL' sz='4'>Phas</name>
+			<name typ='PgTL' sz='5'>Phase</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Hig</name>
+			<name typ='PgTL' sz='4'>High</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Res</name>
+			<name typ='PgTL' sz='4'>Rest</name>
+			<name typ='PgTL' sz='5'>Resto</name>
+			<name typ='PgTL' sz='6'>Restor</name>
+			<name typ='PgTL' sz='7'>Restora</name>
+			<name typ='PgTL' sz='8'>Restorat</name>
+			<name typ='PgTL' sz='9'>Restorati</name>
+			<name typ='PgTL' sz='10'>Restoratio</name>
+			<name typ='PgTL' sz='11'>Restoration</name>
+		</Ctrl>
+		<Ctrl ID='262'>
+			<name typ='PgTL' sz='3'>Noi</name>
+			<name typ='PgTL' sz='4'>Nois</name>
+			<name typ='PgTL' sz='5'>Noise</name>
+		</Ctrl>
+		<Ctrl ID='266'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 1</name>
+			<name typ='PgTL' sz='7'>Band 1 </name>
+			<name typ='PgTL' sz='8'>Band 1 S</name>
+			<name typ='PgTL' sz='9'>Band 1 So</name>
+			<name typ='PgTL' sz='10'>Band 1 Sol</name>
+			<name typ='PgTL' sz='11'>Band 1 Solo</name>
+		</Ctrl>
+		<Ctrl ID='263'>
+			<name typ='PgTL' sz='3'>Hig</name>
+			<name typ='PgTL' sz='4'>High</name>
+			<name typ='PgTL' sz='5'>High </name>
+			<name typ='PgTL' sz='6'>High F</name>
+			<name typ='PgTL' sz='7'>High Fr</name>
+			<name typ='PgTL' sz='8'>High Fre</name>
+			<name typ='PgTL' sz='9'>High Freq</name>
+			<name typ='PgTL' sz='10'>High Frequ</name>
+			<name typ='PgTL' sz='11'>High Freque</name>
+			<name typ='PgTL' sz='12'>High Freque…</name>
+		</Ctrl>
+		<Ctrl ID='264'>
+			<name typ='PgTL' sz='3'>Bro</name>
+			<name typ='PgTL' sz='4'>Broa</name>
+			<name typ='PgTL' sz='5'>Broad</name>
+			<name typ='PgTL' sz='6'>Broadb</name>
+			<name typ='PgTL' sz='7'>Broadba</name>
+			<name typ='PgTL' sz='8'>Broadban</name>
+			<name typ='PgTL' sz='9'>Broadband</name>
+		</Ctrl>
+		<Ctrl ID='265'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 1</name>
+			<name typ='PgTL' sz='7'>Band 1 </name>
+			<name typ='PgTL' sz='8'>Band 1 M</name>
+			<name typ='PgTL' sz='9'>Band 1 Mi</name>
+			<name typ='PgTL' sz='10'>Band 1 Mix</name>
+		</Ctrl>
+		<Ctrl ID='267'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 1</name>
+			<name typ='PgTL' sz='7'>Band 1 </name>
+			<name typ='PgTL' sz='8'>Band 1 M</name>
+			<name typ='PgTL' sz='9'>Band 1 Mu</name>
+			<name typ='PgTL' sz='10'>Band 1 Mut</name>
+			<name typ='PgTL' sz='11'>Band 1 Mute</name>
+		</Ctrl>
+		<Ctrl ID='268'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 1</name>
+		</Ctrl>
+		<Ctrl ID='269'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 2</name>
+			<name typ='PgTL' sz='7'>Band 2 </name>
+			<name typ='PgTL' sz='8'>Band 2 M</name>
+			<name typ='PgTL' sz='9'>Band 2 Mi</name>
+			<name typ='PgTL' sz='10'>Band 2 Mix</name>
+		</Ctrl>
+		<Ctrl ID='270'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 2</name>
+			<name typ='PgTL' sz='7'>Band 2 </name>
+			<name typ='PgTL' sz='8'>Band 2 S</name>
+			<name typ='PgTL' sz='9'>Band 2 So</name>
+			<name typ='PgTL' sz='10'>Band 2 Sol</name>
+			<name typ='PgTL' sz='11'>Band 2 Solo</name>
+		</Ctrl>
+		<Ctrl ID='271'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 2</name>
+			<name typ='PgTL' sz='7'>Band 2 </name>
+			<name typ='PgTL' sz='8'>Band 2 M</name>
+			<name typ='PgTL' sz='9'>Band 2 Mu</name>
+			<name typ='PgTL' sz='10'>Band 2 Mut</name>
+			<name typ='PgTL' sz='11'>Band 2 Mute</name>
+		</Ctrl>
+		<Ctrl ID='272'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 2</name>
+		</Ctrl>
+		<Ctrl ID='273'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 3</name>
+			<name typ='PgTL' sz='7'>Band 3 </name>
+			<name typ='PgTL' sz='8'>Band 3 M</name>
+			<name typ='PgTL' sz='9'>Band 3 Mi</name>
+			<name typ='PgTL' sz='10'>Band 3 Mix</name>
+		</Ctrl>
+		<Ctrl ID='274'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 3</name>
+			<name typ='PgTL' sz='7'>Band 3 </name>
+			<name typ='PgTL' sz='8'>Band 3 S</name>
+			<name typ='PgTL' sz='9'>Band 3 So</name>
+			<name typ='PgTL' sz='10'>Band 3 Sol</name>
+			<name typ='PgTL' sz='11'>Band 3 Solo</name>
+		</Ctrl>
+		<Ctrl ID='275'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 3</name>
+			<name typ='PgTL' sz='7'>Band 3 </name>
+			<name typ='PgTL' sz='8'>Band 3 M</name>
+			<name typ='PgTL' sz='9'>Band 3 Mu</name>
+			<name typ='PgTL' sz='10'>Band 3 Mut</name>
+			<name typ='PgTL' sz='11'>Band 3 Mute</name>
+		</Ctrl>
+		<Ctrl ID='276'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 3</name>
+		</Ctrl>
+		<Ctrl ID='277'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 4</name>
+			<name typ='PgTL' sz='7'>Band 4 </name>
+			<name typ='PgTL' sz='8'>Band 4 M</name>
+			<name typ='PgTL' sz='9'>Band 4 Mi</name>
+			<name typ='PgTL' sz='10'>Band 4 Mix</name>
+		</Ctrl>
+		<Ctrl ID='278'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 4</name>
+			<name typ='PgTL' sz='7'>Band 4 </name>
+			<name typ='PgTL' sz='8'>Band 4 S</name>
+			<name typ='PgTL' sz='9'>Band 4 So</name>
+			<name typ='PgTL' sz='10'>Band 4 Sol</name>
+			<name typ='PgTL' sz='11'>Band 4 Solo</name>
+		</Ctrl>
+		<Ctrl ID='279'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 4</name>
+			<name typ='PgTL' sz='7'>Band 4 </name>
+			<name typ='PgTL' sz='8'>Band 4 M</name>
+			<name typ='PgTL' sz='9'>Band 4 Mu</name>
+			<name typ='PgTL' sz='10'>Band 4 Mut</name>
+			<name typ='PgTL' sz='11'>Band 4 Mute</name>
+		</Ctrl>
+		<Ctrl ID='280'>
+			<name typ='PgTL' sz='3'>Ban</name>
+			<name typ='PgTL' sz='4'>Band</name>
+			<name typ='PgTL' sz='5'>Band </name>
+			<name typ='PgTL' sz='6'>Band 4</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

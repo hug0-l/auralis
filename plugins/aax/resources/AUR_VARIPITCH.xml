@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='VARI' plugID='MONO'>
+			<Desc>Variable Pitch</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='VARI' plugID='M2ST'>
+			<Desc>Variable Pitch</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='VARI' plugID='STER'>
+			<Desc>Variable Pitch</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>258</ID>
+				</Page>
+				<Page num='3'>
+					<ID>256</ID>
+				</Page>
+				<Page num='4'>
+					<ID>257</ID>
+				</Page>
+				<Page num='5'>
+					<ID>259</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>258</ID>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>259</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Pre</name>
+			<name typ='PgTL' sz='4'>Pres</name>
+			<name typ='PgTL' sz='5'>Prese</name>
+			<name typ='PgTL' sz='6'>Preser</name>
+			<name typ='PgTL' sz='7'>Preserv</name>
+			<name typ='PgTL' sz='8'>Preserve</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Con</name>
+			<name typ='PgTL' sz='4'>Cont</name>
+			<name typ='PgTL' sz='5'>Conto</name>
+			<name typ='PgTL' sz='6'>Contou</name>
+			<name typ='PgTL' sz='7'>Contour</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Smo</name>
+			<name typ='PgTL' sz='4'>Smoo</name>
+			<name typ='PgTL' sz='5'>Smoot</name>
+			<name typ='PgTL' sz='6'>Smooth</name>
+			<name typ='PgTL' sz='7'>Smoothi</name>
+			<name typ='PgTL' sz='8'>Smoothin</name>
+			<name typ='PgTL' sz='9'>Smoothing</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Pha</name>
+			<name typ='PgTL' sz='4'>Phas</name>
+			<name typ='PgTL' sz='5'>Phase</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

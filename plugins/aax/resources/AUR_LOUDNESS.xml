@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='LOUD' plugID='MONO'>
+			<Desc>Loudness Control</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='LOUD' plugID='M2ST'>
+			<Desc>Loudness Control</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='LOUD' plugID='STER'>
+			<Desc>Loudness Control</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>257</ID>
+				</Page>
+				<Page num='4'>
+					<ID>258</ID>
+				</Page>
+				<Page num='5'>
+					<ID>261</ID>
+				</Page>
+				<Page num='6'>
+					<ID>259</ID>
+				</Page>
+				<Page num='7'>
+					<ID>260</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+					<ID>261</ID>
+				</Page>
+				<Page num='3'>
+					<ID>259</ID>
+					<ID>260</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Tar</name>
+			<name typ='PgTL' sz='4'>Targ</name>
+			<name typ='PgTL' sz='5'>Targe</name>
+			<name typ='PgTL' sz='6'>Target</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Tol</name>
+			<name typ='PgTL' sz='4'>Tole</name>
+			<name typ='PgTL' sz='5'>Toler</name>
+			<name typ='PgTL' sz='6'>Tolera</name>
+			<name typ='PgTL' sz='7'>Toleran</name>
+			<name typ='PgTL' sz='8'>Toleranc</name>
+			<name typ='PgTL' sz='9'>Tolerance</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Sho</name>
+			<name typ='PgTL' sz='4'>Shor</name>
+			<name typ='PgTL' sz='5'>Short</name>
+			<name typ='PgTL' sz='6'>Short </name>
+			<name typ='PgTL' sz='7'>Short T</name>
+			<name typ='PgTL' sz='8'>Short Te</name>
+			<name typ='PgTL' sz='9'>Short Ter</name>
+			<name typ='PgTL' sz='10'>Short Term</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Sta</name>
+			<name typ='PgTL' sz='4'>Stan</name>
+			<name typ='PgTL' sz='5'>Stand</name>
+			<name typ='PgTL' sz='6'>Standa</name>
+			<name typ='PgTL' sz='7'>Standar</name>
+			<name typ='PgTL' sz='8'>Standard</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Mom</name>
+			<name typ='PgTL' sz='4'>Mome</name>
+			<name typ='PgTL' sz='5'>Momen</name>
+			<name typ='PgTL' sz='6'>Moment</name>
+			<name typ='PgTL' sz='7'>Momenta</name>
+			<name typ='PgTL' sz='8'>Momentar</name>
+			<name typ='PgTL' sz='9'>Momentary</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Tru</name>
+			<name typ='PgTL' sz='4'>True</name>
+			<name typ='PgTL' sz='5'>True </name>
+			<name typ='PgTL' sz='6'>True P</name>
+			<name typ='PgTL' sz='7'>True Pe</name>
+			<name typ='PgTL' sz='8'>True Pea</name>
+			<name typ='PgTL' sz='9'>True Peak</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

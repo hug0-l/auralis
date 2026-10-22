@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='MOUT' plugID='MONO'>
+			<Desc>Mouth De-Click</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='MOUT' plugID='M2ST'>
+			<Desc>Mouth De-Click</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='MOUT' plugID='STER'>
+			<Desc>Mouth De-Click</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>259</ID>
+				</Page>
+				<Page num='3'>
+					<ID>256</ID>
+				</Page>
+				<Page num='4'>
+					<ID>257</ID>
+				</Page>
+				<Page num='5'>
+					<ID>258</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>259</ID>
+					<ID>256</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Cli</name>
+			<name typ='PgTL' sz='4'>Clic</name>
+			<name typ='PgTL' sz='5'>Click</name>
+			<name typ='PgTL' sz='6'>Clicks</name>
+			<name typ='PgTL' sz='7'>Clicks </name>
+			<name typ='PgTL' sz='8'>Clicks O</name>
+			<name typ='PgTL' sz='9'>Clicks On</name>
+			<name typ='PgTL' sz='10'>Clicks Onl</name>
+			<name typ='PgTL' sz='11'>Clicks Only</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Sen</name>
+			<name typ='PgTL' sz='4'>Sens</name>
+			<name typ='PgTL' sz='5'>Sensi</name>
+			<name typ='PgTL' sz='6'>Sensit</name>
+			<name typ='PgTL' sz='7'>Sensiti</name>
+			<name typ='PgTL' sz='8'>Sensitiv</name>
+			<name typ='PgTL' sz='9'>Sensitivi</name>
+			<name typ='PgTL' sz='10'>Sensitivit</name>
+			<name typ='PgTL' sz='11'>Sensitivity</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Fre</name>
+			<name typ='PgTL' sz='4'>Freq</name>
+			<name typ='PgTL' sz='5'>Frequ</name>
+			<name typ='PgTL' sz='6'>Freque</name>
+			<name typ='PgTL' sz='7'>Frequen</name>
+			<name typ='PgTL' sz='8'>Frequenc</name>
+			<name typ='PgTL' sz='9'>Frequency</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Cli</name>
+			<name typ='PgTL' sz='4'>Clic</name>
+			<name typ='PgTL' sz='5'>Click</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

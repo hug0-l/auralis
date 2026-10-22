@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- GENERATED FILE, DO NOT EDIT.
+     Generator:       scripts/aax_tables.py
+     Source of truth: aurcore/schema/params.tsv
+
+     This document is a resource of the plug-in: the build copies
+     it into Contents/Resources of the bundle, and the plug-in
+     declares it to the host with AAX_eResourceType_PageTable.
+-->
+<PageTables vers='1.0.0.0'>
+	<PageTableLayouts>
+		<Plugin manID='AURA' prodID='DEES' plugID='MONO'>
+			<Desc>De-Ess</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='DEES' plugID='M2ST'>
+			<Desc>De-Ess</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<Plugin manID='AURA' prodID='DEES' plugID='STER'>
+			<Desc>De-Ess</Desc>
+			<Layout>StandardLayout</Layout>
+		</Plugin>
+		<PTLayout name='StandardLayout'>
+			<PageTable type='PgTL' pgsz='1'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+				</Page>
+				<Page num='3'>
+					<ID>262</ID>
+				</Page>
+				<Page num='4'>
+					<ID>257</ID>
+				</Page>
+				<Page num='5'>
+					<ID>258</ID>
+				</Page>
+				<Page num='6'>
+					<ID>259</ID>
+				</Page>
+				<Page num='7'>
+					<ID>260</ID>
+				</Page>
+				<Page num='8'>
+					<ID>261</ID>
+				</Page>
+				<Page num='9'>
+					<ID>263</ID>
+				</Page>
+			</PageTable>
+			<PageTable type='PgTL' pgsz='4'>
+				<Page num='1'>
+					<ID>1652125811</ID>
+				</Page>
+				<Page num='2'>
+					<ID>256</ID>
+					<ID>262</ID>
+					<ID>257</ID>
+					<ID>258</ID>
+				</Page>
+				<Page num='3'>
+					<ID>259</ID>
+					<ID>260</ID>
+					<ID>261</ID>
+					<ID>263</ID>
+				</Page>
+			</PageTable>
+		</PTLayout>
+	</PageTableLayouts>
+	<ControlNamesVariations>
+		<Ctrl ID='1652125811'>
+			<name typ='PgTL' sz='3'>Byp</name>
+			<name typ='PgTL' sz='4'>Bypa</name>
+			<name typ='PgTL' sz='5'>Bypas</name>
+			<name typ='PgTL' sz='6'>Bypass</name>
+		</Ctrl>
+		<Ctrl ID='256'>
+			<name typ='PgTL' sz='3'>Mod</name>
+			<name typ='PgTL' sz='4'>Mode</name>
+		</Ctrl>
+		<Ctrl ID='262'>
+			<name typ='PgTL' sz='3'>Spe</name>
+			<name typ='PgTL' sz='4'>Spee</name>
+			<name typ='PgTL' sz='5'>Speed</name>
+		</Ctrl>
+		<Ctrl ID='257'>
+			<name typ='PgTL' sz='3'>Thr</name>
+			<name typ='PgTL' sz='4'>Thre</name>
+			<name typ='PgTL' sz='5'>Thres</name>
+			<name typ='PgTL' sz='6'>Thresh</name>
+			<name typ='PgTL' sz='7'>Thresho</name>
+			<name typ='PgTL' sz='8'>Threshol</name>
+			<name typ='PgTL' sz='9'>Threshold</name>
+		</Ctrl>
+		<Ctrl ID='258'>
+			<name typ='PgTL' sz='3'>Abs</name>
+			<name typ='PgTL' sz='4'>Abso</name>
+			<name typ='PgTL' sz='5'>Absol</name>
+			<name typ='PgTL' sz='6'>Absolu</name>
+			<name typ='PgTL' sz='7'>Absolut</name>
+			<name typ='PgTL' sz='8'>Absolute</name>
+		</Ctrl>
+		<Ctrl ID='259'>
+			<name typ='PgTL' sz='3'>Cut</name>
+			<name typ='PgTL' sz='4'>Cuto</name>
+			<name typ='PgTL' sz='5'>Cutof</name>
+			<name typ='PgTL' sz='6'>Cutoff</name>
+		</Ctrl>
+		<Ctrl ID='260'>
+			<name typ='PgTL' sz='3'>Spe</name>
+			<name typ='PgTL' sz='4'>Spec</name>
+			<name typ='PgTL' sz='5'>Spect</name>
+			<name typ='PgTL' sz='6'>Spectr</name>
+			<name typ='PgTL' sz='7'>Spectra</name>
+			<name typ='PgTL' sz='8'>Spectral</name>
+		</Ctrl>
+		<Ctrl ID='261'>
+			<name typ='PgTL' sz='3'>Spe</name>
+			<name typ='PgTL' sz='4'>Spec</name>
+			<name typ='PgTL' sz='5'>Spect</name>
+			<name typ='PgTL' sz='6'>Spectr</name>
+			<name typ='PgTL' sz='7'>Spectra</name>
+			<name typ='PgTL' sz='8'>Spectral</name>
+		</Ctrl>
+		<Ctrl ID='263'>
+			<name typ='PgTL' sz='3'>Out</name>
+			<name typ='PgTL' sz='4'>Outp</name>
+			<name typ='PgTL' sz='5'>Outpu</name>
+			<name typ='PgTL' sz='6'>Output</name>
+			<name typ='PgTL' sz='7'>Output </name>
+			<name typ='PgTL' sz='8'>Output E</name>
+			<name typ='PgTL' sz='9'>Output Es</name>
+			<name typ='PgTL' sz='10'>Output Ess</name>
+		</Ctrl>
+	</ControlNamesVariations>
+</PageTables>

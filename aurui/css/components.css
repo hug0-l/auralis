@@ -1,0 +1,773 @@
+/* Auralis — shared component layer.
+ *
+ * The application shell (css/app.css) styles the page frame; this file holds
+ * the reusable components that several places need: the keyboard help
+ * overlay, toasts, drop-down and context menus, the segmented control, the
+ * progress bar, badges and tooltips.
+ *
+ * Rules
+ *  - Every colour, size and spacing value comes from css/tokens.css.
+ *    Nothing in this file may hard-code a colour: reference the tokens.
+ *  - The shell already themes `.toast` and `.segmented`; this file adds the
+ *    shared API on top of them (regions, items, states) without changing the
+ *    look the shell already has.
+ *  - Every interactive element shows a visible focus ring.
+ */
+
+/* ------------------------------------------------------------------ focus */
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-radius: var(--radius);
+}
+
+/* Interactive components keep the ring even when the browser is in "always
+   show the focus ring" mode. */
+.force-focus:focus,
+.force-focus:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* ------------------------------------------------------------- utilities */
+
+/* Text that only screen readers need. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* A key cap, used by the keyboard help table. */
+.kbd {
+  display: inline-block;
+  min-width: 1.6em;
+  margin: 0 var(--sp-1);
+  padding: 1px var(--sp-2);
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: var(--radius);
+  color: var(--txt-0);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------- help overlay */
+
+.help-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-5);
+}
+
+.help-overlay.hidden {
+  display: none;
+}
+
+.help-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-0);
+  opacity: 0.82;
+}
+
+.help-overlay-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(720px, 94vw);
+  max-height: 84vh;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+
+.help-overlay-head {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.help-overlay-title {
+  margin: 0;
+  font-size: var(--fs-lg);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--txt-0);
+}
+
+.help-overlay-close {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--txt-1);
+  font-size: var(--fs-lg);
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.help-overlay-close:hover {
+  background: var(--bg-4);
+  color: var(--txt-0);
+}
+
+.help-overlay-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: var(--sp-3) var(--sp-4);
+}
+
+.help-overlay-foot {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  border-top: 1px solid var(--line);
+}
+
+/* the keyboard table */
+
+.help-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.help-th {
+  position: sticky;
+  top: 0;
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--line);
+  color: var(--txt-2);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.help-row-group .help-th {
+  padding-top: var(--sp-4);
+  color: var(--accent);
+}
+
+.help-row {
+  transition: background-color 120ms ease;
+}
+
+.help-row:hover {
+  background: var(--bg-3);
+}
+
+.help-td {
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--txt-1);
+  vertical-align: top;
+}
+
+.help-keys {
+  width: 1%;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.help-action {
+  color: var(--txt-0);
+}
+
+.help-context {
+  width: 1%;
+  white-space: nowrap;
+  color: var(--txt-2);
+}
+
+/* ------------------------------------------------------------------ toast */
+
+/* A region that stacks several toasts above the status bar. */
+.toast-region {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--status-h) + var(--sp-5));
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0 var(--sp-4);
+  pointer-events: none;
+}
+
+/* The shell toast lives in its own region, so it is placed by the flow. */
+.toast-region .toast {
+  position: static;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  pointer-events: auto;
+}
+
+/* A toast of the shared component API. */
+.toast-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  max-width: min(560px, 80vw);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--bg-4);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+  color: var(--txt-0);
+  font-size: var(--fs-md);
+  pointer-events: auto;
+}
+
+.toast-item.err {
+  border-left-color: var(--danger);
+}
+
+.toast-item.warn {
+  border-left-color: var(--accent-2);
+}
+
+.toast-item.info {
+  border-left-color: var(--accent);
+}
+
+.toast-title {
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.toast-text {
+  flex: 1 1 auto;
+  color: var(--txt-0);
+}
+
+.toast-action {
+  flex: 0 0 auto;
+  height: 22px;
+  padding: 0 var(--sp-3);
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--txt-1);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+}
+
+.toast-action:hover {
+  background: var(--bg-2);
+  color: var(--txt-0);
+}
+
+.toast-close {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--txt-2);
+  font-size: var(--fs-md);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.toast-close:hover {
+  color: var(--txt-0);
+}
+
+/* --------------------------------------------------------- drop-down menu */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  height: 26px;
+  padding: 0 var(--sp-3);
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--txt-0);
+  font-size: var(--fs-md);
+  cursor: pointer;
+}
+
+.dropdown-trigger:hover {
+  background: var(--bg-4);
+  border-color: var(--txt-3);
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + var(--sp-1));
+  z-index: 40;
+  min-width: 176px;
+  padding: var(--sp-1);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+}
+
+.dropdown-menu[hidden],
+.dropdown-menu.hidden {
+  display: none;
+}
+
+.dropdown-menu.align-left {
+  right: auto;
+  left: 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  height: 24px;
+  padding: 0 var(--sp-3);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--txt-1);
+  font-size: var(--fs-sm);
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: var(--sel);
+  color: var(--txt-0);
+}
+
+.dropdown-item[aria-checked="true"] {
+  color: var(--accent);
+}
+
+.dropdown-item[aria-disabled="true"],
+.dropdown-item.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.dropdown-item.danger {
+  color: var(--danger);
+}
+
+.dropdown-item.danger:hover {
+  background: var(--danger);
+  color: var(--txt-0);
+}
+
+.dropdown-separator {
+  height: 1px;
+  margin: var(--sp-1) 0;
+  background: var(--line);
+  border: 0;
+}
+
+.dropdown-header {
+  padding: var(--sp-2) var(--sp-3) var(--sp-1);
+  color: var(--txt-2);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------- segmented control */
+
+/* The shell themes `.segmented`; these rules add the ARIA states, the icon
+   variant and the focus ring that the shell does not need. */
+.segmented button[aria-checked="true"],
+.segmented button[aria-selected="true"],
+.segmented button[aria-pressed="true"] {
+  background: var(--accent-dim);
+  color: var(--txt-0);
+}
+
+.segmented button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.segmented button[aria-disabled="true"] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.segmented-sm button {
+  height: 20px;
+  padding: 0 var(--sp-2);
+  font-size: var(--fs-xs);
+}
+
+.segmented-icon button {
+  width: 26px;
+  padding: 0;
+  justify-content: center;
+}
+
+.segmented-label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: var(--sp-2);
+  color: var(--txt-2);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------ progress bar */
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  width: 100%;
+  min-width: 0;
+}
+
+.progress-track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 140ms ease;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  color: var(--txt-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+
+.progress-value {
+  color: var(--txt-1);
+}
+
+.progress.error .progress-fill {
+  background: var(--danger);
+}
+
+.progress.busy .progress-fill {
+  background: var(--accent-2);
+}
+
+/* The bar grows on its own while the work has no measurable progress. */
+.progress.indeterminate .progress-fill {
+  width: 35%;
+  animation: progress-slide 1100ms ease-in-out infinite;
+}
+
+@keyframes progress-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+
+/* ------------------------------------------------------------------ badge */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 1px var(--sp-2);
+  background: var(--bg-4);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--txt-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.badge-accent {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.badge-warn {
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
+.badge-danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.badge-outline {
+  background: transparent;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border-radius: 50%;
+  border: 0;
+  background: var(--accent-2);
+}
+
+.badge-dot.accent {
+  background: var(--accent);
+}
+
+.badge-dot.danger {
+  background: var(--danger);
+}
+
+/* ---------------------------------------------------------------- tooltip */
+
+.tooltip-anchor {
+  position: relative;
+  display: inline-flex;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 45;
+  left: 50%;
+  bottom: calc(100% + var(--sp-2));
+  transform: translateX(-50%);
+  padding: var(--sp-1) var(--sp-2);
+  background: var(--bg-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  color: var(--txt-0);
+  font-size: var(--fs-xs);
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tooltip.below {
+  bottom: auto;
+  top: calc(100% + var(--sp-2));
+}
+
+/* A tooltip that is written with the attribute only. */
+[data-tip] {
+  position: relative;
+}
+
+[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  z-index: 45;
+  left: 50%;
+  bottom: calc(100% + var(--sp-2));
+  transform: translateX(-50%);
+  padding: var(--sp-1) var(--sp-2);
+  background: var(--bg-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  color: var(--txt-0);
+  font-size: var(--fs-xs);
+  line-height: 1.4;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+[data-tip]:hover::after,
+[data-tip]:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ------------------------------------------------------------ context menu */
+
+.context-menu {
+  position: fixed;
+  z-index: 65;
+  min-width: 180px;
+  padding: var(--sp-1);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+}
+
+.context-menu.hidden {
+  display: none;
+}
+
+.context-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  width: 100%;
+  height: 26px;
+  padding: 0 var(--sp-3);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--txt-1);
+  font-size: var(--fs-sm);
+  text-align: left;
+  cursor: pointer;
+}
+
+.context-menu-item:hover,
+.context-menu-item:focus-visible {
+  background: var(--sel);
+  color: var(--txt-0);
+}
+
+.context-menu-item[aria-disabled="true"] {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.context-menu-item.danger {
+  color: var(--danger);
+}
+
+.context-menu-item.danger:hover {
+  background: var(--danger);
+  color: var(--txt-0);
+}
+
+.context-menu-separator {
+  height: 1px;
+  margin: var(--sp-1) 0;
+  background: var(--line);
+  border: 0;
+}
+
+.context-menu-label {
+  padding: var(--sp-2) var(--sp-3) var(--sp-1);
+  color: var(--txt-2);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.context-menu-shortcut {
+  color: var(--txt-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+
+/* ------------------------------------------------------------ high contrast
+ *
+ * A high-contrast variant of the chrome.  The surfaces collapse onto the
+ * darkest background, the borders become clearly visible and every step of
+ * the text ramp moves up — so the interface reads with more contrast without
+ * touching the spectrogram ramp (--spec-*), which is left exactly as it is.
+ */
+
+[data-contrast="high"] {
+  --bg-1: var(--bg-0);
+  --bg-2: var(--bg-1);
+  --txt-1: var(--txt-0);
+  --txt-2: var(--txt-1);
+  --txt-3: var(--txt-2);
+  --line: var(--txt-2);
+  --line-soft: var(--bg-4);
+  --sel: var(--accent-dim);
+  --sel-edge: var(--accent);
+}
+
+[data-contrast="high"] :focus-visible {
+  outline-width: 3px;
+  outline-color: var(--txt-0);
+}
+
+[data-contrast="high"] .tbtn {
+  border-color: var(--txt-3);
+}
+
+[data-contrast="high"] .help-th,
+[data-contrast="high"] .insp-title,
+[data-contrast="high"] .group-title,
+[data-contrast="high"] .aw-group-title {
+  color: var(--txt-0);
+}
+
+/* ---------------------------------------------------------- reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .progress.indeterminate .progress-fill {
+    animation: none;
+    width: 100%;
+  }
+
+  [data-tip]::after {
+    transition-duration: 1ms;
+  }
+}

@@ -1,0 +1,480 @@
+name: CI
+
+# The continuous integration of Auralis.
+#
+# Every job below is independent: it checks out the tree, installs what it
+# needs and asserts one thing.  A job that needs a tool the runner does not
+# have says so and fails, because the tool set of the runner is known and a
+# missing tool is a broken runner, not a reason to pass quietly.
+#
+# The eight gates of the repository are in this pipeline:
+#
+#   the lint gate            lint
+#   the hygiene gate         hygiene
+#   the test suite           unit
+#   the journey              journey
+#   the schema validator     schema
+#   the css coverage check   ui-css
+#   the app verifier         ui-app
+#   the VST3 host gate       plugin-build
+#
+# The interface contracts, the core ABI conformance and the coverage report
+# are checks of their own.
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  PIP_NO_PYTHON_VERSION_WARNING: "1"
+
+jobs:
+  # ---------------------------------------------------------------- lint ---
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Run the style gate
+        # The javascript part of the gate needs node.  The runner has node,
+        # so a skip would mean a broken runner: --require turns it into a
+        # failure.
+        run: python tools/lint_check.py --require js-syntax
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### lint" >> "$GITHUB_STEP_SUMMARY"
+          echo "python tools/lint_check.py --require js-syntax" >> "$GITHUB_STEP_SUMMARY"
+          echo "the python style, the third party tokens, the javascript syntax and the stylesheets" >> "$GITHUB_STEP_SUMMARY"
+
+  # ------------------------------------------------------------- hygiene ---
+  hygiene:
+    name: hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Run the naming gate
+        run: python tools/hygiene_check.py
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### hygiene" >> "$GITHUB_STEP_SUMMARY"
+          echo "python tools/hygiene_check.py" >> "$GITHUB_STEP_SUMMARY"
+          echo "no third party name, no absolute path, no stray binary in the tree" >> "$GITHUB_STEP_SUMMARY"
+
+  # ---------------------------------------------------------------- unit ---
+  unit:
+    name: unit (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run the test suite
+        # The VST3 host gate needs the plug-ins, and they are built by the
+        # plugin-build job.  Without them the test would skip itself, and a
+        # gate that skips is not a gate.  -rs prints the reason of every
+        # test that did skip.
+        run: python -m pytest tests -q -rs --ignore=tests/test_vst3_host.py
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### unit (${{ matrix.os }})" >> "$GITHUB_STEP_SUMMARY"
+          echo "python -m pytest tests -q --ignore=tests/test_vst3_host.py" >> "$GITHUB_STEP_SUMMARY"
+
+  # ------------------------------------------------------------- journey ---
+  journey:
+    name: journey
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run the journey
+        run: python -m pytest tests/test_journey.py -q
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### journey" >> "$GITHUB_STEP_SUMMARY"
+          echo "python -m pytest tests/test_journey.py -q" >> "$GITHUB_STEP_SUMMARY"
+          echo "the whole path through the product, from the upload to the render" >> "$GITHUB_STEP_SUMMARY"
+
+  # -------------------------------------------------------------- schema ---
+  schema:
+    name: schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "numpy>=2.0"
+
+      - name: Validate the module schema
+        run: python tools/validate_schema.py --strict-modules
+
+      - name: Check the generated artefacts for drift
+        run: python tools/codegen_registry.py --check
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### schema" >> "$GITHUB_STEP_SUMMARY"
+          echo "python tools/validate_schema.py --strict-modules" >> "$GITHUB_STEP_SUMMARY"
+          echo "python tools/codegen_registry.py --check (the drift gate)" >> "$GITHUB_STEP_SUMMARY"
+
+  # -------------------------------------------------------------- ui-css ---
+  ui-css:
+    name: ui-css
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Check the class coverage of the stylesheets
+        run: python qa/check_css_coverage.py
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### ui-css" >> "$GITHUB_STEP_SUMMARY"
+          echo "python qa/check_css_coverage.py" >> "$GITHUB_STEP_SUMMARY"
+          echo "every class the interface uses is styled" >> "$GITHUB_STEP_SUMMARY"
+
+  # -------------------------------------------------------------- ui-app ---
+  ui-app:
+    name: ui-app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run the acceptance check
+        run: python qa/verify_app.py
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### ui-app" >> "$GITHUB_STEP_SUMMARY"
+          echo "python qa/verify_app.py" >> "$GITHUB_STEP_SUMMARY"
+          echo "the server starts and every user visible flow works" >> "$GITHUB_STEP_SUMMARY"
+
+  # -------------------------------------------------------- ui-contracts ---
+  ui-contracts:
+    name: ui-contracts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "numpy>=2.0" "pytest>=8"
+
+      - name: Run the interface contract tests
+        run: python -m pytest tests/test_ui_contracts.py -q
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### ui-contracts" >> "$GITHUB_STEP_SUMMARY"
+          echo "python -m pytest tests/test_ui_contracts.py -q" >> "$GITHUB_STEP_SUMMARY"
+          echo "the element ids, the css classes, the colours, the keyboard map and the localisation" >> "$GITHUB_STEP_SUMMARY"
+
+  # ----------------------------------------------------------- plugin-abi ---
+  plugin-abi:
+    name: plugin-abi (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "numpy>=2.0" "pytest>=8"
+
+      - name: Set up the build tools
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          $install = & $vswhere -latest -products * `
+            -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 `
+            -property installationPath
+          if (-not $install) {
+            Write-Error "no Visual Studio with the C++ build tools was found on the runner"
+            exit 1
+          }
+          $vcvars = Join-Path $install "VC\Auxiliary\Build\vcvars64.bat"
+          "AURALIS_VCVARS64=$vcvars" >> $env:GITHUB_ENV
+          Write-Output "compiler environment: $vcvars"
+
+      - name: Make the Python library findable for the ABI build
+        if: runner.os != 'Windows'
+        shell: bash
+        run: |
+          set -euo pipefail
+          libdir="$(python -c 'import sysconfig; print(sysconfig.get_config_var("LIBDIR") or "")')"
+          if [ -n "$libdir" ]; then
+            for candidate in "$libdir"/libpython*.so.1.0; do
+              [ -e "$candidate" ] || continue
+              link="${candidate%.1.0}.so"
+              if [ ! -e "$link" ]; then
+                ln -s "$candidate" "$link"
+              fi
+              echo "python library: $link"
+            done
+            echo "LD_LIBRARY_PATH=$libdir:${LD_LIBRARY_PATH:-}" >> "$GITHUB_ENV"
+          fi
+
+      - name: Show the compiler
+        if: runner.os != 'Windows'
+        run: |
+          set -euo pipefail
+          cc --version
+          echo "the runner has a C compiler, so the ABI library is built, not skipped"
+
+      - name: Build the core ABI library
+        if: runner.os != 'Windows'
+        # A build that fails here is a failure of the tree, not a missing
+        # tool: the runner has a compiler, so the job fails.
+        run: |
+          set -euo pipefail
+          if ! python tools/build_abi.py; then
+            echo "::error::the core ABI library could not be built on this runner"
+            exit 1
+          fi
+
+      - name: Build the core ABI library with the Microsoft build tools
+        if: runner.os == 'Windows'
+        run: cmd /c tools\msvc.bat python plugins\abi\build_abi.py --msvc
+
+      - name: Check that the library loads
+        if: runner.os == 'Windows'
+        run: python tools/build_abi.py --check
+
+      - name: Run the ABI conformance tests
+        run: python -m pytest tests/test_plugin_abi.py -q
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### plugin-abi (${{ matrix.os }})" >> "$GITHUB_STEP_SUMMARY"
+          echo "the core ABI library is built and loaded" >> "$GITHUB_STEP_SUMMARY"
+          echo "python -m pytest tests/test_plugin_abi.py -q" >> "$GITHUB_STEP_SUMMARY"
+
+  # --------------------------------------------------------- plugin-build ---
+  plugin-build:
+    name: plugin-build
+    runs-on: windows-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+        with:
+          submodules: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Set up the build tools
+        shell: pwsh
+        run: |
+          # The Microsoft build tools: the plug-in build needs a compiler.
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          if (-not (Test-Path $vswhere)) {
+            Write-Error "the Visual Studio installer was not found on the runner"
+            exit 1
+          }
+          $install = & $vswhere -latest -products * `
+            -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 `
+            -property installationPath
+          if (-not $install) {
+            Write-Error "no Visual Studio with the C++ build tools was found on the runner"
+            exit 1
+          }
+          $vcvars = Join-Path $install "VC\Auxiliary\Build\vcvars64.bat"
+          if (-not (Test-Path $vcvars)) {
+            Write-Error "the compiler environment was not found: $vcvars"
+            exit 1
+          }
+          "AURALIS_VCVARS64=$vcvars" >> $env:GITHUB_ENV
+          Write-Output "compiler environment: $vcvars"
+
+          # cmake and ninja.  cmake is on the image; ninja is installed when
+          # it is not, because the build needs a generator.
+          if (-not (Get-Command cmake -ErrorAction SilentlyContinue)) {
+            Write-Error "cmake was not found on the runner"
+            exit 1
+          }
+          cmake --version
+          if (-not (Get-Command ninja -ErrorAction SilentlyContinue)) {
+            choco install ninja --no-progress -y
+            if ($env:ChocolateyInstall) {
+              (Join-Path $env:ChocolateyInstall "bin") >> $env:GITHUB_PATH
+            }
+          }
+          ninja --version
+
+      - name: Build the plug-ins and run the host against them
+        # The gate builds the core library, the host and the modules, runs
+        # the host against every module and then runs the host gate of the
+        # test suite.  --strict: a missing tool is a failure, not a skip.
+        #
+        # No PYTHONHOME: the plug-in carries the standard library of its
+        # own interpreter and the core finds it by itself.  A runner that
+        # sets the variable hides the defect the variable was there for.
+        run: python scripts/ci_plugin_gate.py --strict
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### plugin-build" >> "$GITHUB_STEP_SUMMARY"
+          echo "python scripts/ci_plugin_gate.py --strict" >> "$GITHUB_STEP_SUMMARY"
+          echo "the plug-ins are built, the host loads them and the host gate of the test suite runs without a skip" >> "$GITHUB_STEP_SUMMARY"
+
+  # ------------------------------------------------------------ coverage ---
+  coverage:
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tree
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install "pytest-cov>=5"
+
+      - name: Run the test suite with coverage
+        run: |
+          mkdir -p var/ci
+          python -m pytest tests -q \
+            --ignore=tests/test_vst3_host.py \
+            --cov=aurcore \
+            --cov=aurserver \
+            --cov-report=xml:var/ci/coverage.xml \
+            --cov-report=html:var/ci/htmlcov \
+            --cov-report=term
+
+      - name: Upload the coverage report
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: coverage-report
+          path: |
+            var/ci/coverage.xml
+            var/ci/htmlcov
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Report the result
+        if: always()
+        run: |
+          echo "### coverage" >> "$GITHUB_STEP_SUMMARY"
+          echo "the report is attached as the artefact 'coverage-report'" >> "$GITHUB_STEP_SUMMARY"

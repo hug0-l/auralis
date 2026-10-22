@@ -1,0 +1,345 @@
+# Auralis canonical parameter table — THE SINGLE SOURCE OF TRUTH
+# Every module implementation, the UI panel, the preset writer, the plugin
+# adapter and the docs generator read this file.  Do not fork it.
+#
+# Format (tab separated, 17 columns, every data row has all 17):
+#   code  display_name  category  edition  element  param  type  default
+#   min  max  curve  exponent  unit  choices  group  help  aliases
+# Lines starting with '#' are comments; blank lines ignored.
+# type   : float | int | bool | enum
+# default/min/max are in NATURAL units (dB, Hz, ms, %, st). The UI maps to 0..1.
+#
+# Conventions
+#   * unit      : the unit the module actually works in ("" when the value is
+#                 a plain ratio).  A frequency is always in Hz, a level in dB
+#                 (dBFS when it is measured against full scale), a time in ms
+#                 or s.
+#   * choices   : the strings of an enum, separated by "|", in the order the
+#                 module expects them.  Empty for every other type.
+#   * min / max : the domain of a float or an int.  For an enum they are the
+#                 0-based index range of the choices: 0 .. len(choices) - 1.
+#   * a bool    : min 0, max 1.
+#   * curve     : the law the travel of the parameter follows.
+#                   linear  a straight line between min and max.  A threshold
+#                           is judged against the signal, not against unity,
+#                           so a threshold stays on a straight line.
+#                   log     a straight line in the logarithm of the value.
+#                           Every hertz parameter whose range starts above zero
+#                           uses it, so that one percent of the travel moves
+#                           the frequency by the same number of octaves at the
+#                           bottom of the range as at the top.
+#                   taper   v = lo + (hi - lo) * n ** p, the shape of a gain
+#                           fader: a wide cut, a narrow boost, unity in the
+#                           middle of the travel.
+#   * exponent  : the p of the taper law.  It is carried beside the range
+#                 because the shape belongs to the parameter, not to the law.
+#   * help      : the sentence that says what the parameter does.  It is the
+#                 same sentence the module publishes for the parameter.
+#   * aliases   : the names the parameter had before it was renamed, separated
+#                 by "|".  A document that carries an old name still loads and
+#                 the old name is still accepted.
+#   * the id of a parameter is its position inside its own module, so a
+#     parameter is appended at the end of its module's block.  Removing one
+#     in the middle renumbers the ones after it; the hole that would avoid
+#     that is an open question (var/patches/f1_open_questions.md, Q3).
+#
+# Shared parameter names are reused verbatim across modules so the UI can offer
+# consistent tooltips and the preset layer can be generic.  One word names one
+# idea: the amount that is taken out of a signal is a Reduction, a level
+# applied to a source is a Gain, a level at which a module starts to act is a
+# Threshold and how eagerly a detector reacts is a Sensitivity.
+AUR_DECLICK	De-Click	Repair	standard	DeClicker	Algorithm	enum	Single Band	0	3	linear			Single Band|MB Periodic|MB Random|Low Latency	Algorithm	Repair strategy: broadband, periodic buzz, multi-band or low latency.	
+AUR_DECLICK	De-Click	Repair	standard	DeClicker	Sensitivity	float	3.0	0	10	linear				Sensitivity	How eagerly transients are detected. Higher values catch quieter events.	
+AUR_DECLICK	De-Click	Repair	standard	DeClicker	Frequency Skew	float	0.0	-1	1	linear				Frequency Skew	Bias detection towards high (positive) or low (negative) frequencies.	
+AUR_DECLICK	De-Click	Repair	standard	DeClicker	Click Widening	float	0.0	0	1	linear				Click Widening	Widens the spectral band that is replaced around a detected event.	
+AUR_DECLICK	De-Click	Repair	standard	DeClicker	Output Clicks Only	bool	False	0	1	linear				Output	Render only the detected click signal instead of the repaired audio.	
+AUR_DECLICK	De-Click	Repair	standard	DeClicker	Removed Mix	float	0.0	0	100	linear		%		Mix	Mixes the removed clicks back into the output: 0 % leaves the processed signal as it is, 100 % plays the removed clicks alone.	
+AUR_DECRACKLE	De-Crackle	Repair	standard	DeClicker	Quality	enum	Medium	0	2	linear			Low|Medium|High	Algorithm	Detection aggressiveness and the bandwidth that is repaired.	
+AUR_DECRACKLE	De-Crackle	Repair	standard	DeClicker	Reduction	float	0.5	0	1	linear				Reduction	How much of the detected crackle is removed.	Strength
+AUR_DECRACKLE	De-Crackle	Repair	standard	DeClicker	Amplitude Skew	float	0.0	-1	1	linear				Amplitude Skew	Positive values favour quiet crackle, negative values favour loud crackle.	
+AUR_DECRACKLE	De-Crackle	Repair	standard	DeClicker	Output Crackle Only	bool	False	0	1	linear				Output	Render only the detected crackle instead of the repaired audio.	
+AUR_DECLIP	De-Clip	Repair	standard	Declipper	Threshold	float	-0.1	-6	0	linear		dB		Threshold	How far below the peak of the material a flat top may sit and still be counted as a clipped peak.	
+AUR_DECLIP	De-Clip	Repair	standard	Declipper	Link Threshold	bool	True	0	1	linear				Threshold	Use one threshold for both polarities. When off the negative polarity is detected 1 dB earlier.	
+AUR_DECLIP	De-Clip	Repair	standard	Declipper	Quality	enum	Medium	0	2	linear			Low|Medium|High	Algorithm	Interpolation order and bandwidth of the reconstructed peak.	
+AUR_DECLIP	De-Clip	Repair	standard	Declipper	Makeup Gain	float	0.0	-12	24	linear		dB		Gain	Gain applied after the peaks have been reconstructed.	
+AUR_DECLIP	De-Clip	Repair	standard	Declipper	Post Limiter	bool	False	0	1	linear				Gain	Soft limiter after the makeup gain, to catch reconstruction overshoot.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Mode	enum	Static	0	1	linear			Static|Dynamic	Algorithm	Static notch bank, or an adaptive bank that follows a drifting hum.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Base Frequency	float	50.0	20	500	log		Hz		Static	Fundamental frequency of the hum.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Filter Q	float	1.0	0.1	30	log				Static	Width of the notch, relative to the fundamental.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Number of Harmonics	int	8	0	16	linear				Static	How many harmonics above the fundamental are notched.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Link Harmonics	enum	All	0	2	linear			All|Odd/Even|None	Static	Which harmonics take part: All, odd harmonics only, or the fundamental alone.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Harmonic Slope	float	0.0	-12	12	linear		dB		Static	Gain tilt applied to each successive harmonic.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Enable Learning	bool	False	0	1	linear				Learning	Analyse an excerpt and use the hum frequency found in it.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Adaptive	bool	True	0	1	linear				Learning	Keep re-estimating the hum frequency while the audio runs.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Enable Highpass	bool	False	0	1	linear				Filters	Remove everything below the high-pass frequency.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Highpass Frequency	float	20.0	20	500	log		Hz		Filters	Corner frequency of the optional high-pass.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Enable Lowpass	bool	False	0	1	linear				Filters	Remove everything above the low-pass frequency.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Lowpass Frequency	float	20000.0	500	22050	log		Hz		Filters	Corner frequency of the optional low-pass.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Linear Phase Filters	bool	False	0	1	linear				Filters	Use a linear-phase FIR instead of the IIR biquad bank.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Enable DC Offset	bool	False	0	1	linear				Filters	Remove a constant DC offset from the signal.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Dynamic Sensitivity	float	0.5	0	1	linear				Dynamic	How aggressively the adaptive bank suppresses the hum.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Dynamic Bands	int	3	1	12	linear				Dynamic	Number of adaptive filters (fundamental plus harmonics).	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Dynamic Low Cutoff	float	20.0	20	500	log		Hz		Dynamic	Lowest frequency the adaptive bank looks at.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Dynamic High Cutoff	float	20000.0	500	22050	log		Hz		Dynamic	Highest frequency the adaptive bank looks at.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Output Hum Only	bool	False	0	1	linear				Output	Render the estimated hum component on its own.	
+AUR_DEHUM	De-Hum	Repair	standard	HumRemoval	Removed Mix	float	0.0	0	100	linear		%		Mix	Mixes the removed hum back into the output: 0 % leaves the processed signal as it is, 100 % plays the removed hum alone.	
+AUR_DEESS	De-Ess	Repair	standard	DeEsser	Mode	enum	Classic	0	1	linear			Classic|Spectral	Algorithm	Broadband band reduction, or per-bin spectral shaping.	
+AUR_DEESS	De-Ess	Repair	standard	DeEsser	Threshold	float	-30.0	-60	0	linear		dB		Threshold	Level above which the band counts as sibilant.	
+AUR_DEESS	De-Ess	Repair	standard	DeEsser	Absolute Mode	bool	False	0	1	linear				Threshold	Measure the band against an absolute level instead of the whole signal.	
+AUR_DEESS	De-Ess	Repair	standard	DeEsser	Cutoff Frequency	float	6000.0	1000	16000	log		Hz		Threshold	Lowest frequency of the sibilant band.	
+AUR_DEESS	De-Ess	Repair	standard	DeEsser	Spectral Flattening	float	0.5	0	1	linear				Tone	Pull the sibilant band towards its own average.	
+AUR_DEESS	De-Ess	Repair	standard	DeEsser	Spectral Tilt	float	0.0	-1	1	linear				Tone	Weight the reduction towards the low or the high end of the band.	
+AUR_DEESS	De-Ess	Repair	standard	DeEsser	Speed	enum	Fast	0	1	linear			Fast|Slow	Algorithm	Attack and release of the gain reduction.	
+AUR_DEESS	De-Ess	Repair	standard	DeEsser	Output Ess Only	bool	False	0	1	linear				Output	Render the sibilance that was removed.	
+AUR_DEPLOSIVE	De-Plosive	Repair	standard	DePlosive	Sensitivity	float	3.0	0	10	linear				Sensitivity	How far above the reference level a burst has to sit to count.	
+AUR_DEPLOSIVE	De-Plosive	Repair	standard	DePlosive	Reduction	float	2.5	0	10	linear				Reduction	How hard the detected burst is pulled down.	Strength
+AUR_DEPLOSIVE	De-Plosive	Repair	standard	DePlosive	Frequency Limit	float	300.0	20	500	log		Hz		Band	Upper edge of the band the plosive is looked for in.	
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Reduction	float	0.5	0	1	linear				Reduction	How much of the reverberant field is removed.	
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Tail Length	float	1.0	0.1	10	linear		s		Tail	Decay time used to separate the sustained field from the direct one.	
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Artifact Smoothing	float	0.5	0	1	linear				Smoothing	Smooths the gain curve to avoid audible artefacts.	
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Band Reduction Low	float	1.0	0	1	linear				Bands	How much of the band below 250 Hz is removed.	Band Strength Low
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Band Reduction Low-Mid	float	1.0	0	1	linear				Bands	How much of the band from 250 Hz to 2 kHz is removed.	Band Strength Low-Mid
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Band Reduction High-Mid	float	1.0	0	1	linear				Bands	How much of the band from 2 kHz to 8 kHz is removed.	Band Strength High-Mid
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Band Reduction High	float	1.0	0	1	linear				Bands	How much of the band above 8 kHz is removed.	Band Strength High
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Enhance Dry Signal	bool	False	0	1	linear				Mix	Compensates the direct signal for the energy that was removed.	
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Output Reverb Only	bool	False	0	1	linear				Output	Renders the removed reverberant component instead of the cleaned signal.	
+AUR_DEREVERB	De-Reverb	Repair	standard	Dereverb	Removed Mix	float	0.0	0	100	linear		%		Mix	Mixes the removed reverberant field back into the output: 0 % leaves the processed signal as it is, 100 % plays the removed reverberant field alone.	
+AUR_DERUSTLE	De-Rustle	Repair	advanced	DeRustle	Reduction	float	0.5	0	1	linear				Reduction	How much of the estimated floor is subtracted.	Reduction Strength
+AUR_DERUSTLE	De-Rustle	Repair	advanced	DeRustle	Ambience Preservation	float	0.5	0	1	linear				Reduction	How much of the ambience is left in the signal.	
+AUR_DERUSTLE	De-Rustle	Repair	advanced	DeRustle	Separation Algorithm	enum	Channel Independent	0	2	linear			Channel Independent|Joint|Advanced Joint	Algorithm	Whether the channels are cleaned on their own or together.	
+AUR_DEWIND	De-Wind	Repair	advanced	DeWind	Reduction	float	0.5	0	1	linear				Reduction	How much of the detected rumble is taken away.	
+AUR_DEWIND	De-Wind	Repair	advanced	DeWind	Crossover Frequency	float	500.0	50	2000	log		Hz		Band	Frequency that separates the rumble band from the signal.	
+AUR_DEWIND	De-Wind	Repair	advanced	DeWind	Fundamental Recovery	float	0.5	0	1	linear				Recovery	How much of the wanted fundamental is put back.	
+AUR_DEWIND	De-Wind	Repair	advanced	DeWind	Artifact Smoothing	float	0.5	0	1	linear				Smoothing	How slowly the gain is allowed to move.	
+AUR_DEWIND	De-Wind	Repair	advanced	DeWind	Removed Mix	float	0.0	0	100	linear		%		Mix	Mixes the removed rumble back into the output: 0 % leaves the processed signal as it is, 100 % plays the removed rumble alone.	
+AUR_DEBLEED	De-Bleed	Repair	standard	DeBleed	Reduction	float	0.5	0	1	linear				Reduction	How much of the target the estimated bleed is taken out of. At 0 nothing is touched, at 1 the bleed is taken out of every bin the reference explains.	Strength
+AUR_DEBLEED	De-Bleed	Repair	standard	DeBleed	Artifact Smoothing	float	0.5	0	1	linear				Smoothing	How much of the original target is protected from artefacts. A high value widens the soft edge of the decision and slows the mask down.	
+AUR_BREATH	Breath Control	Repair	standard	DeBreath	Mode	enum	Gain Mode	0	1	linear			Gain Mode|Target Mode	Algorithm	Apply a fixed gain, or pull the breath down to a target level.	
+AUR_BREATH	Breath Control	Repair	standard	DeBreath	Gain	float	-9.0	-24	0	linear		dB		Gain	Gain applied to a detected breath in Gain Mode.	
+AUR_BREATH	Breath Control	Repair	standard	DeBreath	Target Level	float	-30.0	-60	0	linear		dBFS		Gain	Level a detected breath is pulled down to in Target Mode.	
+AUR_BREATH	Breath Control	Repair	standard	DeBreath	Sensitivity	float	0.5	0	1	linear				Sensitivity	How easily a breath is recognised.	
+AUR_BREATH	Breath Control	Repair	standard	DeBreath	Output Breaths Only	bool	False	0	1	linear				Output	Render the breathing that was removed.	
+AUR_BREATH	Breath Control	Repair	standard	DeBreath	Removed Mix	float	0.0	0	100	linear		%		Mix	Mixes the removed breathing back into the output: 0 % leaves the processed signal as it is, 100 % plays the removed breathing alone.	
+AUR_MOUTHDECLICK	Mouth De-Click	Repair	standard	MouthDeclick	Sensitivity	float	3.0	0	10	linear				Sensitivity	How eagerly mouth clicks are detected.	
+AUR_MOUTHDECLICK	Mouth De-Click	Repair	standard	MouthDeclick	Frequency Skew	float	0.0	-1	1	linear				Frequency Skew	Bias detection towards high (positive) or low (negative) frequencies.	
+AUR_MOUTHDECLICK	Mouth De-Click	Repair	standard	MouthDeclick	Click Widening	float	0.0	0	1	linear				Click Widening	Widens the spectral band that is replaced around a detected click.	
+AUR_MOUTHDECLICK	Mouth De-Click	Repair	standard	MouthDeclick	Output Clicks Only	bool	False	0	1	linear				Output	Render only the detected click signal instead of the repaired audio.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Processing Mode	enum	realtime	0	1	linear			realtime|offline	Algorithm	Realtime keeps the module inside the budget of a block; offline uses the best configuration the module has and declares the look-ahead it costs.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Optimize For	enum	Dialogue	0	1	linear			Dialogue|Music	Algorithm	Dialogue favours speech intelligibility, Music keeps the spectrum natural.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Filter Type	enum	Surgical	0	1	linear			Surgical|Gentle	Algorithm	Surgical removes more, Gentle keeps more of the original texture.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Adaptive Mode	bool	True	0	1	linear				Adaptive	Keep tracking the noise reference while processing.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Threshold	float	-15.0	-90	0	linear		dB		Threshold	Global threshold offset applied to every band group.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Threshold 1	float	-40.0	-90	0	linear		dB		Bands	Threshold of the highest band group.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Threshold 2	float	-50.0	-90	0	linear		dB		Bands	Threshold of the second band group.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Threshold 3	float	-60.0	-90	0	linear		dB		Bands	Threshold of the third band group.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Threshold 4	float	-70.0	-90	0	linear		dB		Bands	Threshold of the fourth band group.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Threshold 5	float	-80.0	-90	0	linear		dB		Bands	Threshold of the fifth band group.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Threshold 6	float	-90.0	-90	0	linear		dB		Bands	Threshold of the lowest band group.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Reduction	float	18.0	0	30	linear		dB		Reduction	Maximum gain reduction per band.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Learn	bool	False	0	1	linear				Learning	Capture the noise profile of the incoming audio.	
+AUR_VOICEDENOISE	Voice De-Noise	Repair	standard	DenoiserZL	Removed Mix	float	0.0	0	100	linear		%		Mix	Mixes the removed noise back into the output: 0 % leaves the processed signal as it is, 100 % plays the removed noise alone.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Processing Mode	enum	realtime	0	1	linear			realtime|offline	Algorithm	Realtime keeps the module inside the budget of a block; offline uses the best configuration the module has and declares the look-ahead it costs.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Algorithm	enum	Advanced	0	2	linear			Simple|Advanced|Extreme	Algorithm	Simple: single resolution subtraction. Advanced: OM-LSA refinement. Extreme: multi resolution plus stronger artifact control.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Quality	enum	B	0	3	linear			A|B|C|D	Quality	A is the fastest and least accurate, D the slowest and most accurate.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	FFT Size	float	20.0	5	60	linear		ms		Analysis	Length of the analysis window.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Multi Resolution	bool	True	0	1	linear				Analysis	Analyse several window sizes and combine the gain curves.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Learning Time	float	2.0	0.5	30	linear		s		Learning	How long the noise profile is captured.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Adaptive	bool	True	0	1	linear				Learning	Keep tracking the noise profile while processing.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Noise Threshold	float	0.0	-40	20	linear		dB		Threshold	Estimated signal to noise ratio below which a bin counts as noise.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Tonal Threshold	float	0.0	-40	20	linear		dB		Threshold	Same, measured against the broadband floor for tonal components.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Noise Reduction	float	15.0	0	40	linear		dB		Reduction	Maximum broadband attenuation.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Tonal Reduction	float	12.0	0	40	linear		dB		Reduction	Maximum attenuation applied to tonal components.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Artifact Control	float	0.5	0	1	linear				Smoothing	Temporal smoothing of the gain curve (musical noise control).	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Smoothing	float	0.5	0	1	linear				Smoothing	Frequency smoothing width of the gain curve.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Knee	float	0.5	0	1	linear				Dynamics	Soft knee width of the reduction law.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Release	float	100.0	10	1000	linear		ms		Dynamics	Gain release time once wanted content returns.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Noise Floor Synthesis	float	0.5	0	1	linear				Noise Floor	Regenerate the removed noise floor instead of leaving a hole.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Masking	float	0.5	0	1	linear				Noise Floor	Psychoacoustic masking model limits how far a bin may be attenuated.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Enhancement	float	0.5	0	1	linear				Noise Floor	Re-add low level but wanted content.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Whitening	float	0.5	0	1	linear				Noise Floor	Flatten the long term spectrum towards a target curve.	
+AUR_SPECTRALDENOISE	Spectral De-Noise	Repair	standard	Denoiser	Output Noise Only	bool	False	0	1	linear				Output	Render only the noise that was removed.	
+AUR_SPECTRALREPAIR	Spectral Repair	Repair	standard	SpectralRepair	Mode	enum	Attenuate	0	4	linear			Attenuate|Replace|Gain|Pattern|Partials	Algorithm	What happens inside the selected region.	
+AUR_SPECTRALREPAIR	Spectral Repair	Repair	standard	SpectralRepair	Reduction	float	0.5	0	1	linear				Attenuate	How strongly the edit is applied.	Strength
+AUR_SPECTRALREPAIR	Spectral Repair	Repair	standard	SpectralRepair	Region Length	float	0.25	0.02	10	linear		s		Attenuate	Length of the edited region in seconds.	
+AUR_SPECTRALREPAIR	Spectral Repair	Repair	standard	SpectralRepair	Direction	enum	2D	0	2	linear			Horizontal|Vertical|2D	Attenuate	Horizontal smears in time, Vertical in frequency, 2D in both.	
+AUR_SPECTRALREPAIR	Spectral Repair	Repair	standard	SpectralRepair	Multi Resolution	bool	True	0	1	linear				Attenuate	Analyse the region with more than one window size.	
+AUR_SPECTRALREPAIR	Spectral Repair	Repair	standard	SpectralRepair	Before Weighting	float	0.5	0	1	linear				Attenuate	Cross fade weight at the start of the region.	
+AUR_SPECTRALREPAIR	Spectral Repair	Repair	standard	SpectralRepair	After Weighting	float	0.5	0	1	linear				Attenuate	Cross fade weight at the end of the region.	
+AUR_SPECTRALRECOVERY	Spectral Recovery	Repair	advanced	SpectralRecovery	Spectral Patching	bool	True	0	1	linear				Recovery	Regenerate the band above the detected cutoff.	
+AUR_SPECTRALRECOVERY	Spectral Recovery	Repair	advanced	SpectralRecovery	Low Gain	float	-20.0	-60	12	taper	0.264	dB		Recovery	Level below the low cutoff.	
+AUR_SPECTRALRECOVERY	Spectral Recovery	Repair	advanced	SpectralRecovery	Low Cutoff	float	200.0	20	2000	log		Hz		Recovery	Frequency where the low shelf starts.	
+AUR_SPECTRALRECOVERY	Spectral Recovery	Repair	advanced	SpectralRecovery	High Cutoff	float	4000.0	2000	16000	log		Hz		Recovery	Frequency where the high shelf starts.	
+AUR_SPECTRALRECOVERY	Spectral Recovery	Repair	advanced	SpectralRecovery	High Gain	float	0.0	-12	2.4	taper	0.264	dB		Recovery	Level above the high cutoff.	
+AUR_GUITARDENOISE	Guitar De-Noise	Repair	standard	GuitarDenoiser	Amp Sensitivity	float	0.5	0	1	linear				Amp	How hard the amp buzz and rumble are notched out.	
+AUR_GUITARDENOISE	Guitar De-Noise	Repair	standard	GuitarDenoiser	Amp Resolution	int	128	16	512	linear				Amp	Length (in samples) of the analysis the amp detector reads the rumble level with.	
+AUR_GUITARDENOISE	Guitar De-Noise	Repair	standard	GuitarDenoiser	Squeak Sensitivity	float	0.5	0	1	linear				Squeak	How sensitive the string squeak detector is.	
+AUR_GUITARDENOISE	Guitar De-Noise	Repair	standard	GuitarDenoiser	Squeak Reduction	float	0.5	0	1	linear				Squeak	How much of a detected squeak is removed.	
+AUR_GUITARDENOISE	Guitar De-Noise	Repair	standard	GuitarDenoiser	Squeak Duration	enum	Short	0	1	linear			Short|Long	Squeak	How long a squeak has to last to count.	
+AUR_GUITARDENOISE	Guitar De-Noise	Repair	standard	GuitarDenoiser	Pick Sensitivity	float	0.5	0	1	linear				Pick	How sensitive the pick attack detector is.	
+AUR_GUITARDENOISE	Guitar De-Noise	Repair	standard	GuitarDenoiser	Pick Reduction	float	0.5	0	1	linear				Pick	How much of the pick attack is removed.	
+AUR_GUITARDENOISE	Guitar De-Noise	Repair	standard	GuitarDenoiser	Pick Attack	float	0.5	0	1	linear				Pick	How tightly the attack window follows the onset.	
+AUR_DECONSTRUCT	Deconstruct	Repair	advanced	Deconstruct	Tonal Gain	float	0.0	-12	2.4	taper	0.264	dB		Tonal	Level of the harmonic component.	
+AUR_DECONSTRUCT	Deconstruct	Repair	advanced	Deconstruct	Noisy Gain	float	0.0	-12	2.4	taper	0.264	dB		Noisy	Level of the stationary broadband component.	
+AUR_DECONSTRUCT	Deconstruct	Repair	advanced	Deconstruct	Separate Transients	bool	True	0	1	linear				Transients	Keep the percussive part as its own component.	
+AUR_DECONSTRUCT	Deconstruct	Repair	advanced	Deconstruct	Transient Gain	float	0.0	-12	2.4	taper	0.264	dB		Transients	Level of the percussive component.	
+AUR_DECONSTRUCT	Deconstruct	Repair	advanced	Deconstruct	Balance	enum	Noisy	0	1	linear			Noisy|Tonal	Balance	Tilt the balance between the noisy and the tonal part.	
+AUR_DECONSTRUCT	Deconstruct	Repair	advanced	Deconstruct	Artifact Smoothing	float	0.5	0	1	linear				Smoothing	Smooths the component masks so the split does not chatter.	
+AUR_DIALOGUEISOLATE	Dialogue Isolate	Repair	advanced	DialogueExtract	Voice Gain	float	0.0	-24	4.8	taper	0.264	dB		Mix	Level of the isolated voice stem.	
+AUR_DIALOGUEISOLATE	Dialogue Isolate	Repair	advanced	DialogueExtract	Reverb Gain	float	0.0	-24	4.8	taper	0.264	dB		Mix	Level of the isolated room-reverb stem.	
+AUR_DIALOGUEISOLATE	Dialogue Isolate	Repair	advanced	DialogueExtract	Noise Gain	float	0.0	-24	4.8	taper	0.264	dB		Mix	Level of the isolated noise stem.	
+AUR_DIALOGUEISOLATE	Dialogue Isolate	Repair	advanced	DialogueExtract	Sensitivity	float	0.5	0	1	linear				Sensitivity	Softness of the separation boundaries and the voice-detection threshold.	
+AUR_DIALOGUEISOLATE	Dialogue Isolate	Repair	advanced	DialogueExtract	Quality	enum	Good	0	1	linear			Good|Best	Quality	Good: fast transform. Best: finer transform and a longer analysis window.	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Vocal Gain	float	0.0	-24	4.8	taper	0.264	dB		Stems	Level of the vocal stem.	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Bass Gain	float	0.0	-24	4.8	taper	0.264	dB		Stems	Level of the bass stem (everything below 250 Hz).	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Drums Gain	float	0.0	-24	4.8	taper	0.264	dB		Stems	Level of the drum stem (transient broadband content).	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Other Gain	float	0.0	-24	4.8	taper	0.264	dB		Stems	Level of the remaining instruments.	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Vocal Mute	bool	False	0	1	linear				Stems	Silence the vocal stem.	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Bass Mute	bool	False	0	1	linear				Stems	Silence the bass stem.	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Drums Mute	bool	False	0	1	linear				Stems	Silence the drum stem.	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Other Mute	bool	False	0	1	linear				Stems	Silence the remaining instruments.	
+AUR_MUSICREBALANCE	Music Rebalance	Repair	standard	MusicSourceSeparate	Quality	enum	Good	0	2	linear			Good|Better|Best	Quality	Mask resolution. Best uses a 4096-point transform.	
+AUR_AMBIENCEMATCH	Ambience Match	Repair	advanced	MatchAmbience	Ambience Type	enum	Complex	0	1	linear			Complex|Static	Algorithm	Complex: a modulated, living room tone. Static: an unmodulated bed.	
+AUR_AMBIENCEMATCH	Ambience Match	Repair	advanced	MatchAmbience	Ambience Threshold	float	-60.0	-100	0	linear		dB		Threshold	How far below the active level the source is treated as ambience.	
+AUR_AMBIENCEMATCH	Ambience Match	Repair	advanced	MatchAmbience	Movement	float	0.5	0	1	linear				Movement	How strongly the ambience is modulated.	
+AUR_AMBIENCEMATCH	Ambience Match	Repair	advanced	MatchAmbience	Randomness	float	0.5	0	1	linear				Movement	How chaotic the modulation is.	
+AUR_AMBIENCEMATCH	Ambience Match	Repair	advanced	MatchAmbience	Gain	float	0.0	-24	4.8	taper	0.264	dB		Gain	Level of the matched ambience relative to the reference profile.	
+AUR_AMBIENCEMATCH	Ambience Match	Repair	advanced	MatchAmbience	Output Ambience Only	bool	False	0	1	linear				Output	Render the synthesised ambience without the source.	
+AUR_REPAIRASSISTANT	Repair Assistant	Repair	standard	RepairAssistant	Processing Mode	enum	realtime	0	1	linear			realtime|offline	Algorithm	Realtime keeps the module inside the budget of a block; offline uses the best configuration the module has and declares the look-ahead it costs.	
+AUR_REPAIRASSISTANT	Repair Assistant	Repair	standard	RepairAssistant	Mode	enum	Voice	0	1	linear			Voice|Music	Algorithm	Voice tunes the detectors for speech, Music for a full mix.	
+AUR_REPAIRASSISTANT	Repair Assistant	Repair	standard	RepairAssistant	Noise Reduction	float	0.0	0	1	linear				Clean Up	How much of the detected noise floor to remove.	
+AUR_REPAIRASSISTANT	Repair Assistant	Repair	standard	RepairAssistant	Reverb Reduction	float	0.0	0	1	linear				Clean Up	How much of the detected room reverb to remove.	
+AUR_REPAIRASSISTANT	Repair Assistant	Repair	standard	RepairAssistant	Hum Reduction	float	0.0	0	1	linear				Clean Up	How much of the detected mains hum to remove.	
+AUR_REPAIRASSISTANT	Repair Assistant	Repair	standard	RepairAssistant	Click Reduction	float	0.0	0	1	linear				Clean Up	How much of the detected clicks to remove.	
+AUR_REPAIRASSISTANT	Repair Assistant	Repair	standard	RepairAssistant	De-Ess Reduction	float	0.0	0	1	linear				Tone	How much of the detected sibilance to tame.	
+AUR_REPAIRASSISTANT	Repair Assistant	Repair	standard	RepairAssistant	De-Clip Reduction	float	0.0	0	1	linear				Tone	How much of the detected clipping to repair.	
+AUR_LEVELER	Leveler	Utility	advanced	Leveler	Optimize For	enum	Dialogue	0	1	linear			Dialogue|Music	Algorithm	Dialogue rides the short-term loudness, music the momentary one.	
+AUR_LEVELER	Leveler	Utility	advanced	Leveler	Target Level	float	-23.0	-40	0	linear		LUFS		Target	Loudness the leveler steers towards.	
+AUR_LEVELER	Leveler	Utility	advanced	Leveler	Responsiveness	float	0.5	0	1	linear				Response	How quickly the leveler follows the target.	
+AUR_LEVELER	Leveler	Utility	advanced	Leveler	Preserve Dynamics	float	0.5	0	1	linear				Dynamics	Keeps the original level differences; less gain riding.	
+AUR_LEVELER	Leveler	Utility	advanced	Leveler	Ess Reduction	float	0.0	0	12	linear		dB		Ess	Amount of sibilance reduction.	
+AUR_LEVELER	Leveler	Utility	advanced	Leveler	Limiter	float	-1.0	-12	0	linear		dBTP		Limiter	True-peak ceiling of the output.	
+AUR_LOUDNESS	Loudness Control	Utility	standard	Loudness	Target Loudness	float	-23.0	-36	0	linear		LUFS		Target	Integrated loudness the programme is brought to.	
+AUR_LOUDNESS	Loudness Control	Utility	standard	Loudness	Tolerance	float	0.5	0.5	2	linear		LU		Target	Deviation that is accepted before the gain is moved.	
+AUR_LOUDNESS	Loudness Control	Utility	standard	Loudness	Short Term Loudness	float	-23.0	-36	0	linear		LUFS		Target	Target for the three second short-term loudness.	
+AUR_LOUDNESS	Loudness Control	Utility	standard	Loudness	Momentary Loudness	float	-23.0	-36	0	linear		LUFS		Target	Target for the 400 ms momentary loudness.	
+AUR_LOUDNESS	Loudness Control	Utility	standard	Loudness	True Peak	float	-1.0	-9	0	linear		dBTP		Target	True-peak ceiling of the output.	
+AUR_LOUDNESS	Loudness Control	Utility	standard	Loudness	Standard	enum	EBU R128	0	9	linear			EBU R128|EBU R128 s1|BS.1770-2|BS.1770-4|ATSC A/85|ARIB TR-B32|AES TD1006.1.17-10|OP-59|Portaria 354|Custom	Target	Loudness standard; picking one overwrites the target fields.	
+AUR_LOUDNESSOPT	Loudness Optimize	Utility	standard	LoudnessOptimize	Boost	float	0.0	0	12	linear		dB		Boost	Maximum lift applied to quiet passages.	
+AUR_LOUDNESSOPT	Loudness Optimize	Utility	standard	LoudnessOptimize	Threshold	float	-12.0	-30	0	linear		dBFS		Compressor	Level the quiet passages are lifted towards.	
+AUR_LOUDNESSOPT	Loudness Optimize	Utility	standard	LoudnessOptimize	Ratio	float	4.0	1	20	linear				Compressor	Compression ratio above the threshold.	
+AUR_LOUDNESSOPT	Loudness Optimize	Utility	standard	LoudnessOptimize	Speed	float	120.0	10	1000	linear		ms		Compressor	Time the level follower takes to settle.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Type	enum	Analog IIR	0	1	linear			Analog IIR|Digital Linear Phase FIR	Algorithm	Filter topology used for the four bands.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 1 Frequency	float	100.0	20	20000	log		Hz		Band 1	Centre frequency of the band.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 1 Gain	float	0.0	-18	3.6	taper	0.264	dB		Band 1	Gain of the band in decibels.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 1 Q	float	1.0	0.1	20	log				Band 1	Bandwidth of the band.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 2 Frequency	float	1000.0	20	20000	log		Hz		Band 2	Centre frequency of the band.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 2 Gain	float	0.0	-18	3.6	taper	0.264	dB		Band 2	Gain of the band in decibels.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 2 Q	float	1.0	0.1	20	log				Band 2	Bandwidth of the band.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 3 Frequency	float	5000.0	20	20000	log		Hz		Band 3	Centre frequency of the band.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 3 Gain	float	0.0	-18	3.6	taper	0.264	dB		Band 3	Gain of the band in decibels.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 3 Q	float	1.0	0.1	20	log				Band 3	Bandwidth of the band.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 4 Frequency	float	10000.0	20	20000	log		Hz		Band 4	Centre frequency of the band.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 4 Gain	float	0.0	-18	3.6	taper	0.264	dB		Band 4	Gain of the band in decibels.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Band 4 Q	float	1.0	0.1	20	log				Band 4	Bandwidth of the band.	
+AUR_EQ	EQ	Utility	standard	ParametricEQ	Output Gain	float	0.0	-18	3.6	taper	0.264	dB		Gain	Gain applied after the filter chain.	
+AUR_EQMATCH	EQ Match	Utility	advanced	MatchEQ	Amount	float	0.25	0	1	linear				Match	How much of the difference is applied.	
+AUR_GAIN	Gain	Utility	standard	GainStage	Gain	float	0.0	-60	12	taper	0.264	dB		Gain	Output gain applied to the signal.	
+AUR_FADE	Fade	Utility	standard	GainStage	Fade Type	enum	Log	0	3	linear			Log|Linear|Cosine|Equal Power	Algorithm	Shape of the fade curve.	
+AUR_FADE	Fade	Utility	standard	GainStage	Fade Length	float	1.0	0.01	30	linear		s		Fade	Duration of the fade-in and the fade-out.	
+AUR_NORMALIZE	Normalize	Utility	standard	GainStage	Target Peak Level	float	-1.0	-24	0	linear		dBFS		Gain	Peak level the signal is normalised to.	
+AUR_PHASE	Phase	Utility	standard	ChannelOperations	Rotation	float	0.0	-180	180	linear		deg		Phase	Phase rotation of the right channel relative to the left.	
+AUR_PHASE	Phase	Utility	standard	ChannelOperations	Adaptive Rotation	bool	False	0	1	linear				Phase	Aligns the channels automatically by cross correlation.	
+AUR_MIXING	Mixing	Utility	standard	ChannelOperations	Left Output Mix	float	100.0	0	200	linear		%		Mix	Level of the left output bus (100 % = unity, 200 % = +6 dB).	
+AUR_MIXING	Mixing	Utility	standard	ChannelOperations	Right Output Mix	float	100.0	0	200	linear		%		Mix	Level of the right output bus (100 % = unity, 200 % = +6 dB).	
+AUR_CENTEREXTRACT	Center Extract	Repair	advanced	ChannelOperations	Algorithm	enum	True Phase	0	1	linear			True Phase|Pseudo Pan	Algorithm	How the centred part of the image is estimated.	
+AUR_CENTEREXTRACT	Center Extract	Repair	advanced	ChannelOperations	Reduction	float	1.0	0	1	linear				Reduction	How much of the non centred content is removed.	Reduction Strength
+AUR_CENTEREXTRACT	Center Extract	Repair	advanced	ChannelOperations	Artifact Smoothing	float	0.5	0	1	linear				Smoothing	Smoothing of the per bin masks; higher values reduce musical noise.	
+AUR_CENTEREXTRACT	Center Extract	Repair	advanced	ChannelOperations	Dry Mix	float	0.0	0	100	linear		%		Mix	Percentage of the untouched signal blended into the result.	
+AUR_AZIMUTH	Azimuth	Repair	advanced	ChannelOperations	Gain	float	0.0	-12	12	linear		dB		Gain	Gain trim of the right channel against the left one.	Level
+AUR_AZIMUTH	Azimuth	Repair	advanced	ChannelOperations	Delay	float	0.0	-10	10	linear		ms		Delay	Relative shift between the channels; positive delays the right channel.	
+AUR_AZIMUTH	Azimuth	Repair	advanced	ChannelOperations	Adaptive Matching	bool	False	0	1	linear				Matching	Measure and correct the level and time offset between the channels.	
+AUR_DITHER	Dither	Utility	standard	Dither	Bit Depth	enum	16	0	4	linear			24|20|16|12|8	Output	Output word length.	
+AUR_DITHER	Dither	Utility	standard	Dither	Noise Shaping	enum	None	0	6	linear			None|Shape 1|Shape 2|Shape 3|Shape 4|Shape 5|Ultra	Output	Error feedback filter applied to the quantisation error.	
+AUR_DITHER	Dither	Utility	standard	Dither	Dither Amount	enum	Medium	0	3	linear			None|Low|Medium|High	Output	Amount of dither added to the signal.	
+AUR_DITHER	Dither	Utility	standard	Dither	Auto Blanking	enum	If Quantized	0	2	linear			If Quantized|On Silence|Off	Output	When the dither is suppressed.	
+AUR_RESAMPLE	Resample	Utility	standard	Resampler	Sample Rate	enum	48000	0	7	linear			22050|32000|44100|48000|88200|96000|176400|192000	Output	Sample rate the signal is converted to.	
+AUR_RESAMPLE	Resample	Utility	standard	Resampler	Filter Steepness	float	0.5	0	1	linear				Filter	How sharp the anti-aliasing filter is.	
+AUR_RESAMPLE	Resample	Utility	standard	Resampler	Pre Ringing	float	0.0	0	1	linear				Filter	Zero is a minimum phase kernel, one a linear phase kernel.	
+AUR_RESAMPLE	Resample	Utility	standard	Resampler	Post Limiter	bool	False	0	1	linear				Output	Catches peaks that appear after the conversion.	
+AUR_TIMEPITCH	Time & Pitch	Utility	standard	TimeStretchPitchShift	Algorithm	enum	Radius	0	2	linear			Radius|Radius RT|Solo	Algorithm	Variant of the phase vocoder.	
+AUR_TIMEPITCH	Time & Pitch	Utility	standard	TimeStretchPitchShift	Stretch Ratio	float	1.0	0.125	8	linear				Time	Duration multiplier; two means twice as long.	
+AUR_TIMEPITCH	Time & Pitch	Utility	standard	TimeStretchPitchShift	Pitch Shift	float	0.0	-24	24	linear		st		Pitch	Pitch change in semitones.	
+AUR_TIMEPITCH	Time & Pitch	Utility	standard	TimeStretchPitchShift	Adaptive Window	float	37.0	10	120	linear		ms		Quality	Length of the analysis window.	
+AUR_TIMEPITCH	Time & Pitch	Utility	standard	TimeStretchPitchShift	Transient Sensitivity	float	1.0	0	2	linear				Quality	How strongly attacks are detected and kept sharp.	
+AUR_TIMEPITCH	Time & Pitch	Utility	standard	TimeStretchPitchShift	Phase Coherence	float	0.5	0	1	linear				Quality	Amount of identity phase locking.	
+AUR_TIMEPITCH	Time & Pitch	Utility	standard	TimeStretchPitchShift	Shift Formants	bool	False	0	1	linear				Pitch	Keeps the vocal character when the pitch is shifted.	
+AUR_VARIPITCH	Variable Pitch	Utility	standard	PitchContour	Contour	float	0.0	-24	24	linear		st		Contour	Pitch of the contour in semitones.	
+AUR_VARIPITCH	Variable Pitch	Utility	standard	PitchContour	Smoothing	float	0.5	0	1	linear				Contour	How much the phase is locked while the pitch moves.	
+AUR_VARIPITCH	Variable Pitch	Utility	standard	PitchContour	Preserve Time	bool	True	0	1	linear				Pitch	Keeps the duration while the pitch moves.	
+AUR_VARIPITCH	Variable Pitch	Utility	standard	PitchContour	Phase Coherence	float	0.5	0	1	linear				Quality	Amount of identity phase locking.	
+AUR_VARTIME	Variable Time	Utility	standard	VariableTime	Ratio	float	1.0	0.125	8	linear				Time	Duration multiplier; two means twice as long.	
+AUR_VARTIME	Variable Time	Utility	standard	VariableTime	Smoothing	float	0.5	0	1	linear				Time	How strongly the phase of neighbouring peaks is locked.	
+AUR_VARTIME	Variable Time	Utility	standard	VariableTime	Phase Coherence	float	0.5	0	1	linear				Quality	Amount of identity phase locking.	
+AUR_WOWFLUTTER	Wow & Flutter	Repair	advanced	WowAndFlutter	Wow	float	1.0	0	5	linear		Hz		Wow	Rate of the slow pitch drift that is corrected.	
+AUR_WOWFLUTTER	Wow & Flutter	Repair	advanced	WowAndFlutter	Flutter	float	20.0	8	40	log		Hz		Flutter	Rate of the fast pitch flutter that is corrected.	
+AUR_WOWFLUTTER	Wow & Flutter	Repair	advanced	WowAndFlutter	Sensitivity	float	0.5	0	1	linear				Sensitivity	How much of the measured modulation is removed.	
+AUR_WOWFLUTTER	Wow & Flutter	Repair	advanced	WowAndFlutter	Center Global Pitch	float	440.0	380	500	log		Hz		Pitch	Frequency the pitch tracker follows.	
+AUR_INTERPOLATE	Interpolate	Utility	standard	Interpolate	Quality	int	3	1	8	linear				Quality	Order of the interpolation used to replace the damaged samples.	
+AUR_SIGNALGEN	Signal Generator	Utility	standard	SignalGenerator	Tone Shape	enum	Sine	0	4	linear			Sine|Triangle|Saw|Square|Pulses	Generator	Shape of the generated tone.	
+AUR_SIGNALGEN	Signal Generator	Utility	standard	SignalGenerator	Frequency	float	440.0	20	20000	log		Hz		Generator	Frequency of the generated tone.	
+AUR_SIGNALGEN	Signal Generator	Utility	standard	SignalGenerator	Amplitude	float	-18.0	-96	0	linear		dBFS		Generator	Peak level of the generated tone.	
+AUR_SIGNALGEN	Signal Generator	Utility	standard	SignalGenerator	Noise Type	enum	White Gaussian	0	5	linear			White Gaussian|White Triangular|White Uniform|White Binary|Pink|Brown	Generator	Flavour of the generated noise.	
+AUR_SIGNALGEN	Signal Generator	Utility	standard	SignalGenerator	Level	float	-60.0	-96	0	linear		dBFS		Generator	Level of the generated noise.	
+AUR_STREAMPREVIEW	Streaming Preview	Utility	standard	StreamingPreview	Playback Loudness	float	-16.0	-36	0	linear		LUFS		Preview	Loudness the preview is played back at.	
+AUR_STREAMPREVIEW	Streaming Preview	Utility	standard	StreamingPreview	Apply Positive Gain	bool	True	0	1	linear				Preview	Allows the preview to be louder than the incoming signal.	
+AUR_STREAMPREVIEW	Streaming Preview	Utility	standard	StreamingPreview	Codec	enum	Lossless	0	4	linear			Lossless|OGG|MP3|AAC|OPUS	Preview	Delivery format the preview imitates.	
+AUR_STREAMPREVIEW	Streaming Preview	Utility	standard	StreamingPreview	Quality	enum	Medium	0	2	linear			Low|Medium|High	Preview	Quality of the delivery format.	
+AUR_FINDSIMILAR	Find Similar	Measurement	standard	FindSimilar	Similarity	float	0.8	0	1	linear				Search	Minimum score a region has to reach to be reported as a match.	
+AUR_CONNECT	Connect	System	standard	Connect	Auto Send	bool	False	0	1	linear				Transfer	Send every processed block to the host application automatically.	
+AUR_CONNECT	Connect	System	standard	Connect	Keep Source	bool	True	0	1	linear				Transfer	Keep the source material in the timeline next to the edit.	
+AUR_MONITOR	Monitor	System	standard	Monitor	Monitor Loudness	bool	True	0	1	linear				Monitor	Run the BS.1770-4 loudness analysis.	
+AUR_CLIPCLASSIFIER	Clip Classifier	Measurement	standard	ClipClassifier	Detected Class	enum	Piano	0	9	linear			Piano|Bass|Drums|Guitar|Vocals|Synth|Strings|Woodwind|Brass|Organ	Result	The source family the classifier believes dominates the clip.	
+AUR_CLIPCLASSIFIER	Clip Classifier	Measurement	standard	ClipClassifier	Confidence	float	0.0	0	1	linear				Result	How strongly the clip matches the detected class.	
+AUR_CLIPCLASSIFIER	Clip Classifier	Measurement	standard	ClipClassifier	Similarity	float	0.0	0	1	linear				Result	Normalised distance to the best-matching reference.	Match Strength
+AUR_CLIPCLASSIFIER	Clip Classifier	Measurement	standard	ClipClassifier	Highlight Match	bool	False	0	1	linear				Display	Flag the detected class for the interface to highlight.	
+AUR_CLIPCLASSIFIER	Clip Classifier	Measurement	standard	ClipClassifier	Analysis Length	float	4.0	0.5	30	linear		s		Analysis	How much audio from the start of the clip is analysed.	
+AUR_SPECTRALEDITOR	Spectral Editor	Repair	standard	SpectralEditor	Mode	enum	Attenuate	0	4	linear			Attenuate|Replace|Gain|Pattern|Partials	Algorithm	What happens inside the selected region.	
+AUR_SPECTRALEDITOR	Spectral Editor	Repair	standard	SpectralEditor	Reduction	float	0.5	0	1	linear				Edit	How strongly the edit is applied.	Strength
+AUR_SPECTRALEDITOR	Spectral Editor	Repair	standard	SpectralEditor	Region Length	float	0.25	0.02	10	linear		s		Edit	Length of the edited region in seconds.	
+AUR_SPECTRALEDITOR	Spectral Editor	Repair	standard	SpectralEditor	Direction	enum	2D	0	2	linear			Horizontal|Vertical|2D	Edit	Axis the cross fade runs along: in time, in frequency, or both.	
+AUR_SPECTRALEDITOR	Spectral Editor	Repair	standard	SpectralEditor	Multi Resolution	bool	True	0	1	linear				Edit	Analyse the region with more than one window size.	
+AUR_SPECTRALEDITOR	Spectral Editor	Repair	standard	SpectralEditor	Before Weighting	float	0.5	0	1	linear				Edit	Cross fade weight at the start of the region: 0 is a hard edge, 1 a 20 ms fade.	
+AUR_SPECTRALEDITOR	Spectral Editor	Repair	standard	SpectralEditor	After Weighting	float	0.5	0	1	linear				Edit	Cross fade weight at the end of the region: 0 is a hard edge, 1 a 20 ms fade.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Bands	int	4	1	4	linear				Crossover	How many bands the signal is split into.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Low Crossover	float	200.0	20	2000	log		Hz		Crossover	The edge between the first band and the second one.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Mid Crossover	float	2000.0	200	10000	log		Hz		Crossover	The edge between the second band and the third one.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	High Crossover	float	10000.0	1000	20000	log		Hz		Crossover	The edge between the third band and the fourth one.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Phase Linearity	enum	Efficient	0	1	linear			Efficient|Linear Phase	Crossover	Efficient is an IIR crossover that adds no delay, Linear Phase is a FIR crossover whose bands carry no phase error and which delays the signal.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Restoration Depth	float	20.0	0	40	linear		dB		Restoration	The deepest cut the restoration may make in a band.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Noise Threshold	float	6.0	0	24	linear		dB		Restoration	How far above the learned noise level a band has to rise before the restoration leaves it alone.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	High Frequency Transparency	float	100.0	0	100	linear		%		Restoration	How much of the restoration the top band is spared; at 100 % the top band is left alone.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Broadband Mix	float	0.0	0	100	linear		%		Mix	How much of the untouched signal is mixed back against the band path.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 1 Mix	float	0.0	-60	12	taper	0.264	dB		Band 1	The level of band 1 in the output.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 1 Solo	bool	False	0	1	linear				Band 1	Audition band 1 on its own.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 1 Mute	bool	False	0	1	linear				Band 1	Take band 1 out of the recording.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 1 Bypass	bool	False	0	1	linear				Band 1	Leave band 1 as the crossover made it, without the restoration.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 2 Mix	float	0.0	-60	12	taper	0.264	dB		Band 2	The level of band 2 in the output.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 2 Solo	bool	False	0	1	linear				Band 2	Audition band 2 on its own.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 2 Mute	bool	False	0	1	linear				Band 2	Take band 2 out of the recording.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 2 Bypass	bool	False	0	1	linear				Band 2	Leave band 2 as the crossover made it, without the restoration.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 3 Mix	float	0.0	-60	12	taper	0.264	dB		Band 3	The level of band 3 in the output.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 3 Solo	bool	False	0	1	linear				Band 3	Audition band 3 on its own.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 3 Mute	bool	False	0	1	linear				Band 3	Take band 3 out of the recording.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 3 Bypass	bool	False	0	1	linear				Band 3	Leave band 3 as the crossover made it, without the restoration.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 4 Mix	float	0.0	-60	12	taper	0.264	dB		Band 4	The level of band 4 in the output.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 4 Solo	bool	False	0	1	linear				Band 4	Audition band 4 on its own.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 4 Mute	bool	False	0	1	linear				Band 4	Take band 4 out of the recording.	
+AUR_BANDRESTORATION	Band Restoration	Repair	standard	BandRestoration	Band 4 Bypass	bool	False	0	1	linear				Band 4	Leave band 4 as the crossover made it, without the restoration.	
+AUR_VOICEREVERB	Voice Reverb	Repair	standard	Dereverb	Reduction	float	12.0	0	24	linear		dB		Reduction	How much of the reverberant field is removed.	
+AUR_VOICEREVERB	Voice Reverb	Repair	standard	Dereverb	Tail Length	float	1.0	0.1	5	linear		s		Tail	Decay time used to separate the sustained field from the direct one.	
+AUR_VOICEREVERB	Voice Reverb	Repair	standard	Dereverb	Voice Band Low	float	80.0	40	400	log		Hz		Bands	The lowest frequency in Hz the module treats as part of the voice.	
+AUR_VOICEREVERB	Voice Reverb	Repair	standard	Dereverb	Voice Band High	float	12000.0	3000	20000	log		Hz		Bands	The highest frequency in Hz the module treats as part of the voice.	
+AUR_VOICEREVERB	Voice Reverb	Repair	standard	Dereverb	Sensitivity	float	0.5	0	1	linear				Sensitivity	How deeply the level has to fall before the module looks for a room.	
+AUR_VOICEREVERB	Voice Reverb	Repair	standard	Dereverb	Output Reverb Only	bool	False	0	1	linear				Output	Renders the removed reverberant component instead of the cleaned signal.	
+AUR_SPATIALSUPPRESSOR	Spatial Suppressor	Repair	advanced	ChannelOperations	Reduction	float	1.0	0.0	1.0	linear				Reduction	How much of the content the channels do not share is removed. At 0 nothing is touched, at 1 all of it is removed.	Reduction Strength
+AUR_SPATIALSUPPRESSOR	Spatial Suppressor	Repair	advanced	ChannelOperations	Artifact Smoothing	float	0.5	0.0	1.0	linear				Smoothing	The width of the soft edge around the decision. A high value widens the edge and trades the removal for a smoother gain curve.	
